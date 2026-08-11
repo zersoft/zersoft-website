@@ -1,0 +1,20 @@
+# Yerel geliştirme SQLite veritabanı (cPanel MySQL kullanılacak)
+config/zersoft_local.sqlite
+
+# PHP hata ayıklama dosyaları
+*.log
+
+# macOS sistemi
+.DS_Store
+**/.DS_Store
+
+# Test cookie dosyaları
+cookies.txt
+admin_cookies.txt
+
+# IDE ayarları
+.vscode/
+.idea/
+
+# Hassas konfigürasyon
+# config/database.php dosyasını repoya ekleyip cPanel için DB bilgilerini düzenlemeyi unutmayın!
