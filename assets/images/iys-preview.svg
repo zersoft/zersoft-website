@@ -8,6 +8,10 @@
       <stop offset="0%" stop-color="#7f00ff" />
       <stop offset="100%" stop-color="#e100ff" />
     </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="100%" stop-color="#4facfe" />
+    </linearGradient>
   </defs>
 
   <rect x="0" y="0" width="900" height="550" rx="16" fill="url(#bgGrad)" stroke="rgba(255,255,255,0.1)" stroke-width="2"/>
@@ -16,53 +20,103 @@
   <circle cx="25" cy="25" r="6" fill="#ef4444"/>
   <circle cx="45" cy="25" r="6" fill="#f59e0b"/>
   <circle cx="65" cy="25" r="6" fill="#10b981"/>
-  <text x="100" y="30" fill="#f8fafc" font-family="sans-serif" font-weight="700" font-size="14">IYS — İş &amp; Süreç Yönetim Platformu (iys.zersoft.net)</text>
+  <text x="100" y="30" fill="#f8fafc" font-family="sans-serif" font-weight="700" font-size="14">IYS — İmalat &amp; Süreç Yönetim Platformu (iys.zersoft.net)</text>
 
-  <!-- Top Metrics -->
-  <rect x="30" y="70" width="190" height="90" rx="10" fill="#121a2d" stroke="rgba(255,255,255,0.05)"/>
-  <text x="50" y="95" fill="#94a3b8" font-family="sans-serif" font-size="11">AKTİF İŞ SÜREÇLERİ</text>
-  <text x="50" y="135" fill="#fff" font-family="sans-serif" font-weight="900" font-size="28">148 Adet</text>
+  <!-- 5 Manufacturing Stage Pipeline Header -->
+  <g transform="translate(30, 70)">
+    <!-- Stage 1: Sipariş -->
+    <rect x="0" y="0" width="155" height="50" rx="8" fill="#121a2d" stroke="#3b82f6" stroke-width="1.5"/>
+    <text x="15" y="22" fill="#3b82f6" font-family="sans-serif" font-weight="800" font-size="11">1. SİPARİŞ</text>
+    <text x="15" y="38" fill="#cbd5e1" font-family="sans-serif" font-size="10">Talep &amp; Teklif Onayı</text>
 
-  <rect x="245" y="70" width="190" height="90" rx="10" fill="#121a2d" stroke="rgba(255,255,255,0.05)"/>
-  <text x="265" y="95" fill="#94a3b8" font-family="sans-serif" font-size="11">SAHA CARİ BAKİYESİ</text>
-  <text x="265" y="135" fill="#e100ff" font-family="monospace" font-weight="900" font-size="26">₺2.840.500</text>
+    <text x="163" y="30" fill="#64748b" font-family="sans-serif" font-weight="900" font-size="16">➔</text>
 
-  <rect x="460" y="70" width="190" height="90" rx="10" fill="#121a2d" stroke="rgba(255,255,255,0.05)"/>
-  <text x="480" y="95" fill="#94a3b8" font-family="sans-serif" font-size="11">TAMAMLANAN İRSALİYE</text>
-  <text x="480" y="135" fill="#10b981" font-family="sans-serif" font-weight="900" font-size="28">12.450</text>
+    <!-- Stage 2: Planlama -->
+    <rect x="180" y="0" width="155" height="50" rx="8" fill="#121a2d" stroke="#f59e0b" stroke-width="1.5"/>
+    <text x="195" y="22" fill="#f59e0b" font-family="sans-serif" font-weight="800" font-size="11">2. PLANLAMA</text>
+    <text x="195" y="38" fill="#cbd5e1" font-family="sans-serif" font-size="10">Hammadde &amp; Kapasite</text>
 
-  <rect x="675" y="70" width="195" height="90" rx="10" fill="#121a2d" stroke="rgba(255,255,255,0.05)"/>
-  <text x="695" y="95" fill="#94a3b8" font-family="sans-serif" font-size="11">OTONOM VERİMLİLİK</text>
-  <text x="695" y="135" fill="#00f2fe" font-family="sans-serif" font-weight="900" font-size="28">%99.4</text>
+    <text x="343" y="30" fill="#64748b" font-family="sans-serif" font-weight="900" font-size="16">➔</text>
 
-  <!-- Process Kanban Chart -->
-  <rect x="30" y="180" width="840" height="345" rx="12" fill="#121a2d" stroke="rgba(255,255,255,0.08)"/>
-  <text x="50" y="215" fill="#fff" font-family="sans-serif" font-weight="700" font-size="15">Saha ve Ofis Operasyon Süreç Takibi</text>
+    <!-- Stage 3: Tasarım -->
+    <rect x="360" y="0" width="155" height="50" rx="8" fill="#121a2d" stroke="#e100ff" stroke-width="1.5"/>
+    <text x="375" y="22" fill="#e100ff" font-family="sans-serif" font-weight="800" font-size="11">3. TASARIM</text>
+    <text x="375" y="38" fill="#cbd5e1" font-family="sans-serif" font-size="10">3D CAD / Ürün Reçetesi</text>
 
-  <!-- Columns -->
-  <rect x="50" y="235" width="250" height="270" rx="8" fill="#0d1322"/>
-  <text x="65" y="260" fill="#f59e0b" font-family="sans-serif" font-weight="700" font-size="12">⏳ Talep / Saha Beklemede (4)</text>
-  <rect x="65" y="275" width="220" height="60" rx="6" fill="#121a2d"/>
-  <text x="75" y="295" fill="#fff" font-family="sans-serif" font-weight="600" font-size="11">Hafriyat İzin Onayı — Saha #3</text>
-  <text x="75" y="315" fill="#94a3b8" font-family="sans-serif" font-size="10">Müşteri: Özkan A.Ş. • 12 Araç</text>
+    <text x="523" y="30" fill="#64748b" font-family="sans-serif" font-weight="900" font-size="16">➔</text>
 
-  <rect x="65" y="345" width="220" height="60" rx="6" fill="#121a2d"/>
-  <text x="75" y="365" fill="#fff" font-family="sans-serif" font-weight="600" font-size="11">Katı Atık İrsaliye Eşleşme</text>
-  <text x="75" y="385" fill="#94a3b8" font-family="sans-serif" font-size="10">Belediye Saha #1 • Otomatik</text>
+    <!-- Stage 4: Üretim -->
+    <rect x="540" y="0" width="155" height="50" rx="8" fill="#121a2d" stroke="#00f2fe" stroke-width="1.5"/>
+    <text x="555" y="22" fill="#00f2fe" font-family="sans-serif" font-weight="800" font-size="11">4. ÜRETİM</text>
+    <text x="555" y="38" fill="#cbd5e1" font-family="sans-serif" font-size="10">İş Emri &amp; Atölye Takibi</text>
 
-  <rect x="320" y="235" width="260" height="270" rx="8" fill="#0d1322"/>
-  <text x="335" y="260" fill="#00f2fe" font-family="sans-serif" font-weight="700" font-size="12">⚡ Devam Eden Tartım &amp; İşlem (8)</text>
-  <rect x="335" y="275" width="230" height="60" rx="6" fill="#121a2d" stroke="#00f2fe" stroke-width="1"/>
-  <text x="345" y="295" fill="#fff" font-family="sans-serif" font-weight="600" font-size="11">Plaka 16 ZER 34 — Kantar 2</text>
-  <text x="345" y="315" fill="#00f2fe" font-family="sans-serif" font-size="10">Otomatik Kameralı Okuma Yapılıyor</text>
+    <text x="703" y="30" fill="#64748b" font-family="sans-serif" font-weight="900" font-size="16">➔</text>
 
-  <rect x="335" y="345" width="230" height="60" rx="6" fill="#121a2d"/>
-  <text x="345" y="365" fill="#fff" font-family="sans-serif" font-weight="600" font-size="11">Maden Ocağı Döküm Girişi</text>
-  <text x="345" y="385" fill="#94a3b8" font-family="sans-serif" font-size="10">Cari Bakiye Düşüldü</text>
+    <!-- Stage 5: Teslimat -->
+    <rect x="720" y="0" width="120" height="50" rx="8" fill="#121a2d" stroke="#10b981" stroke-width="1.5"/>
+    <text x="732" y="22" fill="#10b981" font-family="sans-serif" font-weight="800" font-size="11">5. TESLİMAT</text>
+    <text x="732" y="38" fill="#cbd5e1" font-family="sans-serif" font-size="10">e-İrsaliye &amp; Sevkiyat</text>
+  </g>
 
-  <rect x="600" y="235" width="250" height="270" rx="8" fill="#0d1322"/>
-  <text x="615" y="260" fill="#10b981" font-family="sans-serif" font-weight="700" font-size="12">✓ Tamamlanan &amp; Faturamlanan (136)</text>
-  <rect x="615" y="275" width="220" height="60" rx="6" fill="#121a2d"/>
-  <text x="625" y="295" fill="#fff" font-family="sans-serif" font-weight="600" font-size="11">e-Fatura Entegrasyonu #9941</text>
-  <text x="625" y="315" fill="#10b981" font-family="sans-serif" font-size="10">Resmi Muhasebe Kaydı Açıldı</text>
+  <!-- Production Kanban & Work Orders View -->
+  <rect x="30" y="140" width="840" height="385" rx="12" fill="#121a2d" stroke="rgba(255,255,255,0.08)"/>
+
+  <!-- Panel Title -->
+  <text x="50" y="175" fill="#fff" font-family="sans-serif" font-weight="700" font-size="15">İmalat İş Emirleri ve Üretim İstasyonları Kontrol Paneli</text>
+
+  <!-- Table Header -->
+  <rect x="50" y="195" width="800" height="32" fill="#0d1322" rx="6"/>
+  <text x="65" y="216" fill="#94a3b8" font-family="sans-serif" font-size="11" font-weight="700">İŞ EMRİ NO</text>
+  <text x="160" y="216" fill="#94a3b8" font-family="sans-serif" font-size="11" font-weight="700">MÜŞTERİ / PROJE</text>
+  <text x="310" y="216" fill="#94a3b8" font-family="sans-serif" font-size="11" font-weight="700">ÜRÜN / PARÇA</text>
+  <text x="470" y="216" fill="#94a3b8" font-family="sans-serif" font-size="11" font-weight="700">MEVCUT AŞAMA</text>
+  <text x="640" y="216" fill="#94a3b8" font-family="sans-serif" font-size="11" font-weight="700">TERMİN</text>
+  <text x="740" y="216" fill="#94a3b8" font-family="sans-serif" font-size="11" font-weight="700">DURUM</text>
+
+  <!-- Order Row 1 -->
+  <text x="65" y="255" fill="#00f2fe" font-family="monospace" font-weight="700" font-size="12">#PRD-2026-081</text>
+  <text x="160" y="255" fill="#fff" font-family="sans-serif" font-size="12">Alman Otomotiv A.Ş.</text>
+  <text x="310" y="255" fill="#cbd5e1" font-family="sans-serif" font-size="12">CNC Alüminyum Gövde Parçası</text>
+  <rect x="470" y="240" width="130" height="24" rx="12" fill="rgba(0,242,254,0.15)"/>
+  <text x="482" y="256" fill="#00f2fe" font-family="sans-serif" font-weight="700" font-size="11">⚙️ 4. Üretim / CNC</text>
+  <text x="640" y="255" fill="#94a3b8" font-family="sans-serif" font-size="12">18.08.2026</text>
+  <text x="740" y="255" fill="#10b981" font-family="sans-serif" font-weight="700" font-size="11">● Üretimde</text>
+
+  <line x1="50" y1="275" x2="850" y2="275" stroke="rgba(255,255,255,0.05)"/>
+
+  <!-- Order Row 2 -->
+  <text x="65" y="305" fill="#00f2fe" font-family="monospace" font-weight="700" font-size="12">#PRD-2026-082</text>
+  <text x="160" y="305" fill="#fff" font-family="sans-serif" font-size="12">Tekno Makine Ltd.</text>
+  <text x="310" y="305" fill="#cbd5e1" font-family="sans-serif" font-size="12">Hidrolik Redüktör Şasesi</text>
+  <rect x="470" y="290" width="130" height="24" rx="12" fill="rgba(225,0,255,0.15)"/>
+  <text x="482" y="306" fill="#e100ff" font-family="sans-serif" font-weight="700" font-size="11">🎨 3. CAD Tasarım</text>
+  <text x="640" y="305" fill="#94a3b8" font-family="sans-serif" font-size="12">22.08.2026</text>
+  <text x="740" y="305" fill="#f59e0b" font-family="sans-serif" font-weight="700" font-size="11">● Çizim Onayında</text>
+
+  <line x1="50" y1="325" x2="850" y2="325" stroke="rgba(255,255,255,0.05)"/>
+
+  <!-- Order Row 3 -->
+  <text x="65" y="355" fill="#00f2fe" font-family="monospace" font-weight="700" font-size="12">#PRD-2026-083</text>
+  <text x="160" y="355" fill="#fff" font-family="sans-serif" font-size="12">Bursa Plastik Sanayi</text>
+  <text x="310" y="355" fill="#cbd5e1" font-family="sans-serif" font-size="12">Özel Enjeksiyon Kalıbı</text>
+  <rect x="470" y="340" width="130" height="24" rx="12" fill="rgba(245,158,11,0.15)"/>
+  <text x="482" y="356" fill="#f59e0b" font-family="sans-serif" font-weight="700" font-size="11">📋 2. Planlama</text>
+  <text x="640" y="355" fill="#94a3b8" font-family="sans-serif" font-size="12">25.08.2026</text>
+  <text x="740" y="355" fill="#3b82f6" font-family="sans-serif" font-weight="700" font-size="11">● Hammadde Siparişi</text>
+
+  <line x1="50" y1="375" x2="850" y2="375" stroke="rgba(255,255,255,0.05)"/>
+
+  <!-- Order Row 4 -->
+  <text x="65" y="405" fill="#00f2fe" font-family="monospace" font-weight="700" font-size="12">#PRD-2026-080</text>
+  <text x="160" y="405" fill="#fff" font-family="sans-serif" font-size="12">Global Lojistik A.Ş.</text>
+  <text x="310" y="405" fill="#cbd5e1" font-family="sans-serif" font-size="12">Konveyör Bant Taşıma Sistemi</text>
+  <rect x="470" y="390" width="130" height="24" rx="12" fill="rgba(16,185,129,0.15)"/>
+  <text x="482" y="406" fill="#10b981" font-family="sans-serif" font-weight="700" font-size="11">🚚 5. Sevkiyat</text>
+  <text x="640" y="405" fill="#94a3b8" font-family="sans-serif" font-size="12">14.08.2026</text>
+  <text x="740" y="405" fill="#10b981" font-family="sans-serif" font-weight="700" font-size="11">✓ Teslim Edildi</text>
+
+  <!-- Summary Footer -->
+  <rect x="50" y="445" width="800" height="60" rx="8" fill="#0d1322" stroke="rgba(0,242,254,0.15)"/>
+  <text x="70" y="480" fill="#00f2fe" font-family="sans-serif" font-weight="700" font-size="12">💡 Microsoft Access Altyapısı Uyumlu &bull; Web ve Mobil Dönüşüm Modülü Hazır</text>
+  <text x="590" y="480" fill="#94a3b8" font-family="sans-serif" font-size="11">Canlı Tanıtım: iys.zersoft.net 🔗</text>
 </svg>

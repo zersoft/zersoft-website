@@ -60,15 +60,16 @@ require_once __DIR__ . '/includes/header.php';
         </div>
 
         <div>
-          <span class="badge" style="margin-bottom: 12px; background: rgba(225,0,255,0.1); color:#e100ff; border-color:rgba(225,0,255,0.3);"><i class="fa-solid fa-cubes-stacked"></i> SÜREÇ YÖNETİMİ</span>
-          <h2 style="font-size: 2.2rem; margin-bottom: 16px;">IYS — İş &amp; Süreç Yönetim Platformu</h2>
+          <span class="badge" style="margin-bottom: 12px; background: rgba(225,0,255,0.1); color:#e100ff; border-color:rgba(225,0,255,0.3);"><i class="fa-solid fa-industry"></i> İMALAT SEKTÖRÜ ERP</span>
+          <h2 style="font-size: 2.2rem; margin-bottom: 16px;">IYS — İmalat &amp; Süreç Yönetim Programı</h2>
           <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.8; margin-bottom: 24px;">
-            Müşteri cari takibi, irsaliye dijitalleştirme, Kanban görev kartları ve saha ekiplerinin anlık kontrolünü sağlayan entegre platform.
+            İmalat sektörüne özel <strong>Sipariş &rarr; Planlama &rarr; Tasarım &rarr; Üretim &rarr; Teslimat</strong> aşamalarını detaylı yöneten, Microsoft Access altyapılı ve web dönüşüm uyumlu kurumsal ERP platformu.
           </p>
 
           <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-            <a href="https://iys.zersoft.net" target="_blank" class="btn btn-primary"><i class="fa-solid fa-globe"></i> iys.zersoft.net Canlı İncele 🔗</a>
-            <a href="assets/images/iys-preview.svg" class="lightbox-trigger btn btn-outline" data-caption="IYS İş &amp; Süreç Yönetim Ekran Görüntüsü"><i class="fa-solid fa-expand"></i> Görseli Büyüt</a>
+            <a href="iys.php" class="btn btn-primary"><i class="fa-solid fa-circle-info"></i> İmalat Çözümünü İncele</a>
+            <a href="https://iys.zersoft.net" target="_blank" class="btn btn-outline"><i class="fa-solid fa-globe"></i> iys.zersoft.net Canlı 🔗</a>
+            <a href="assets/images/iys-preview.svg" class="lightbox-trigger btn btn-outline" data-caption="IYS İmalat Süreç Yönetim Ekran Görüntüsü"><i class="fa-solid fa-expand"></i> Görseli Büyüt</a>
           </div>
         </div>
       </div>

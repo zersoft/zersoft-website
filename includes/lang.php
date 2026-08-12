@@ -42,11 +42,11 @@ $translations = [
         'slide1_btn1' => 'Çözümlerimizi İnceleyin',
         'slide1_btn2' => 'Canlı Demo İste',
 
-        'slide2_badge' => 'Kurumsal Süreç Yönetimi',
-        'slide2_title' => 'IYS — İş & Süreç Yönetim Platformu',
-        'slide2_desc' => 'Müşteri cari takibi, irsaliye dijitalleştirme ve saha operasyonlarınızı tek bir otonom platformdan kontrol edin.',
-        'slide2_btn1' => 'IYS Platformunu Keşfet',
-        'slide2_btn2' => 'Hemen İletişime Geçin',
+        'slide2_badge' => 'İmalat Sektörüne Özel ERP & CRM',
+        'slide2_title' => 'IYS — İmalat & Süreç Yönetim Programı',
+        'slide2_desc' => 'İmalat işletmeleri için Sipariş ➔ Planlama ➔ Tasarım ➔ Üretim ➔ Teslimat aşamalarını uçtan uca yöneten özel süreç kontrol platformu.',
+        'slide2_btn1' => 'IYS İmalat Sistemini Keşfet',
+        'slide2_btn2' => 'Canlı Tanıtım (iys.zersoft.net)',
 
         'slide3_badge' => 'Yerel Doküman Zekası',
         'slide3_title' => 'Kurumsal RAG & Özel LLM Asistanı',
