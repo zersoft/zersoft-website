@@ -18,3 +18,5 @@ admin_cookies.txt
 
 # Hassas konfigürasyon
 # config/database.php dosyasını repoya ekleyip cPanel için DB bilgilerini düzenlemeyi unutmayın!
+
+.env
