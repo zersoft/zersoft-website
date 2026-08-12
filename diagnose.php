@@ -41,7 +41,7 @@ if ($envExists) {
     echo "<h2>📋 .env İçeriği (şifre maskelenmiş)</h2><pre>";
     $lines = file($envPath, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
     foreach ($lines as $line) {
-        if (str_starts_with(trim($line), '#')) {
+        if (substr(trim($line), 0, 1) === '#') {
             echo "<span style='color:#555'>" . htmlspecialchars($line) . "</span>\n";
         } elseif (stripos($line, 'PASS') !== false || stripos($line, 'SECRET') !== false) {
             $parts = explode('=', $line, 2);
@@ -86,7 +86,7 @@ if ($envExists && $envPhpExists) {
 // 7. PDO Sürücüleri
 echo "<h2>🔌 PDO Sürücüleri</h2>";
 $drivers = PDO::getAvailableDrivers();
-echo "<p>" . implode(', ', array_map(fn($d) => "<span class='" . (in_array($d, ['mysql','sqlite']) ? 'ok' : '') . "'>$d</span>", $drivers)) . "</p>";
+    echo "<p>" . implode(', ', array_map(function($d) use ($drivers) { return "<span class='" . (in_array($d, array('mysql','sqlite')) ? 'ok' : '') . "'>$d</span>"; }, $drivers)) . "</p>";
 
 // 8. session_start testi
 echo "<h2>🔐 Session Testi</h2>";

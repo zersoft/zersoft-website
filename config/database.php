@@ -28,7 +28,7 @@ if (session_status() === PHP_SESSION_NONE) {
  * 1. Öncelik: .env → MySQL / MariaDB (cPanel üretim)
  * 2. Öncelik: MySQL bağlantısı başarısız olursa SQLite (yerel geliştirme)
  */
-function getDBConnection(): PDO {
+function getDBConnection() {
     static $pdo = null;
     if ($pdo !== null) {
         return $pdo;
@@ -76,7 +76,7 @@ function getDBConnection(): PDO {
 /**
  * Yerel test ortamı için otomatik SQLite veritabanı ilklendirmesi
  */
-function autoInitSQLite(PDO $pdo): void {
+function autoInitSQLite(PDO $pdo) {
     $sqlFile = __DIR__ . '/../database.sql';
     if (!file_exists($sqlFile)) return;
 
