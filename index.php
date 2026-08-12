@@ -107,43 +107,43 @@ $projects = getProjects(4);
       <p><?php echo __('section_products_sub'); ?></p>
     </div>
 
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 30px;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
       <!-- Product 1: Kantar -->
-      <div class="glass-card" style="padding: 24px;">
+      <div class="glass-card" style="padding: 24px; display: flex; flex-direction: column;">
         <a href="assets/images/kantar-preview.svg" class="lightbox-trigger" data-caption="Hafriyat &amp; Saha Kantar Otomasyonu — Canlı Kantar Tartım ve ALPR Plaka Tanıma">
           <img src="assets/images/kantar-preview.svg" alt="Hafriyat ve Saha Kantar Otomasyonu Yazılımı Ekran Görüntüsü" style="border-radius: 12px; margin-bottom: 20px; border: 1px solid var(--border-glow);">
         </a>
         <h3 style="font-size: 1.3rem; margin-bottom: 10px; color: #fff;">Hafriyat &amp; Saha Kantar Otomasyonu</h3>
-        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 16px;">Kameralı plaka okuma, otomatik bariyer tetikleme, canlı tartım ve irsaliye basım modülleri.</p>
-        <div style="display:flex; justify-content:space-between; align-items:center;">
-          <a href="products.php" class="btn btn-outline btn-sm"><?php echo __('btn_details'); ?></a>
-          <a href="assets/images/kantar-preview.svg" class="lightbox-trigger text-gradient" style="font-weight:700; font-size:0.85rem;"><?php echo __('btn_preview'); ?> 🔍</a>
+        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px; flex-grow: 1;">Kameralı plaka okuma, otomatik bariyer tetikleme, canlı tartım ve irsaliye basım modülleri.</p>
+        <div style="display:flex; justify-content:space-between; align-items:center; gap:12px; margin-top:auto; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.05);">
+          <a href="products.php" class="btn btn-outline btn-sm" style="white-space:nowrap; flex-shrink:0;"><?php echo __('btn_details'); ?></a>
+          <a href="assets/images/kantar-preview.svg" class="lightbox-trigger text-gradient" style="font-weight:700; font-size:0.85rem; white-space:nowrap;"><i class="fa-solid fa-expand"></i> <?php echo __('btn_preview'); ?> 🔍</a>
         </div>
       </div>
 
       <!-- Product 2: IYS -->
-      <div class="glass-card" style="padding: 24px;">
-        <a href="assets/images/iys-preview.svg" class="lightbox-trigger" data-caption="IYS — İş ve Süreç Yönetim Platformu (iys.zersoft.net)">
-          <img src="assets/images/iys-preview.svg" alt="IYS İş ve Süreç Yönetim Programı Ekran Görüntüsü" style="border-radius: 12px; margin-bottom: 20px; border: 1px solid rgba(225,0,255,0.3);">
+      <div class="glass-card" style="padding: 24px; display: flex; flex-direction: column;">
+        <a href="assets/images/iys-preview.svg" class="lightbox-trigger" data-caption="IYS — İmalat &amp; Süreç Yönetim Platformu (iys.zersoft.net)">
+          <img src="assets/images/iys-preview.svg" alt="IYS İmalat ve Süreç Yönetim Programı Ekran Görüntüsü" style="border-radius: 12px; margin-bottom: 20px; border: 1px solid rgba(225,0,255,0.3);">
         </a>
-        <h3 style="font-size: 1.3rem; margin-bottom: 10px; color: #fff;">IYS — İş &amp; Süreç Yönetim Platformu</h3>
-        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 16px;">Saha operasyonları, müşteri cari takibi, irsaliye onayları ve Kanban süreç kontrol paneli.</p>
-        <div style="display:flex; justify-content:space-between; align-items:center;">
-          <a href="https://iys.zersoft.net" target="_blank" class="btn btn-outline btn-sm">iys.zersoft.net 🔗</a>
-          <a href="assets/images/iys-preview.svg" class="lightbox-trigger text-gradient-accent" style="font-weight:700; font-size:0.85rem;"><?php echo __('btn_preview'); ?> 🔍</a>
+        <h3 style="font-size: 1.3rem; margin-bottom: 10px; color: #fff;">IYS — İmalat &amp; Süreç Yönetimi</h3>
+        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px; flex-grow: 1;">İmalat sektörüne özel Sipariş &rarr; Planlama &rarr; Tasarım &rarr; Üretim &rarr; Teslimat aşamalarını yöneten kurumsal ERP altyapısı.</p>
+        <div style="display:flex; justify-content:space-between; align-items:center; gap:12px; margin-top:auto; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.05);">
+          <a href="iys.php" class="btn btn-outline btn-sm" style="white-space:nowrap; flex-shrink:0;"><?php echo __('btn_details'); ?></a>
+          <a href="assets/images/iys-preview.svg" class="lightbox-trigger text-gradient-accent" style="font-weight:700; font-size:0.85rem; white-space:nowrap;"><i class="fa-solid fa-expand"></i> <?php echo __('btn_preview'); ?> 🔍</a>
         </div>
       </div>
 
       <!-- Product 3: RAG AI -->
-      <div class="glass-card" style="padding: 24px;">
+      <div class="glass-card" style="padding: 24px; display: flex; flex-direction: column;">
         <a href="assets/images/ai-rag-preview.svg" class="lightbox-trigger" data-caption="Kurumsal RAG Doküman &amp; Kantar Veri Asistanı">
           <img src="assets/images/ai-rag-preview.svg" alt="Kurumsal RAG Doküman Zekası Ekran Görüntüsü" style="border-radius: 12px; margin-bottom: 20px; border: 1px solid var(--border-glow);">
         </a>
         <h3 style="font-size: 1.3rem; margin-bottom: 10px; color: #fff;">Kurumsal RAG &amp; Doküman Zekası</h3>
-        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 16px;">On-premise yerel sunucuda çalışan KVKK garantili vektör veritabanı ve akıllı doğal dil arama asistanı.</p>
-        <div style="display:flex; justify-content:space-between; align-items:center;">
-          <a href="ai-solutions.php" class="btn btn-outline btn-sm"><?php echo __('btn_details'); ?></a>
-          <a href="assets/images/ai-rag-preview.svg" class="lightbox-trigger text-gradient-ai" style="font-weight:700; font-size:0.85rem;"><?php echo __('btn_preview'); ?> 🔍</a>
+        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px; flex-grow: 1;">On-premise yerel sunucuda çalışan KVKK garantili vektör veritabanı ve akıllı doğal dil arama asistanı.</p>
+        <div style="display:flex; justify-content:space-between; align-items:center; gap:12px; margin-top:auto; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.05);">
+          <a href="ai-solutions.php" class="btn btn-outline btn-sm" style="white-space:nowrap; flex-shrink:0;"><?php echo __('btn_details'); ?></a>
+          <a href="assets/images/ai-rag-preview.svg" class="lightbox-trigger text-gradient-ai" style="font-weight:700; font-size:0.85rem; white-space:nowrap;"><i class="fa-solid fa-expand"></i> <?php echo __('btn_preview'); ?> 🔍</a>
         </div>
       </div>
     </div>
