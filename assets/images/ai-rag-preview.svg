@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 550" width="900" height="550">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1322" />
+      <stop offset="100%" stop-color="#090d16" />
+    </linearGradient>
+    <linearGradient id="aiGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="100%" stop-color="#7f00ff" />
+    </linearGradient>
+  </defs>
+
+  <rect x="0" y="0" width="900" height="550" rx="16" fill="url(#bgGrad)" stroke="rgba(255,255,255,0.1)" stroke-width="2"/>
+  <rect x="0" y="0" width="900" height="50" rx="16" fill="#121a2d"/>
+  <rect x="0" y="48" width="900" height="2" fill="url(#aiGrad)"/>
+  <circle cx="25" cy="25" r="6" fill="#ef4444"/>
+  <circle cx="45" cy="25" r="6" fill="#f59e0b"/>
+  <circle cx="65" cy="25" r="6" fill="#10b981"/>
+  <text x="100" y="30" fill="#f8fafc" font-family="sans-serif" font-weight="700" font-size="14">Zersoft Enterprise AI — RAG Doküman &amp; Kantar Veri Asistanı</text>
+
+  <!-- Left Sidebar (Vector DB & Docs) -->
+  <rect x="20" y="70" width="220" height="455" rx="10" fill="#0d1322" stroke="rgba(255,255,255,0.05)"/>
+  <text x="35" y="100" fill="#00f2fe" font-family="sans-serif" font-weight="700" font-size="12">📚 İNDEKSLENMİŞ DOKÜMANLAR</text>
+  <rect x="35" y="115" width="190" height="35" rx="6" fill="#121a2d"/>
+  <text x="45" y="137" fill="#fff" font-family="sans-serif" font-size="11">📄 2026 Saha Tartım Mevzuatı.pdf</text>
+  <rect x="35" y="160" width="190" height="35" rx="6" fill="#121a2d"/>
+  <text x="45" y="182" fill="#fff" font-family="sans-serif" font-size="11">📑 Katı Atık Sözleşmesi v2.docx</text>
+  <rect x="35" y="205" width="190" height="35" rx="6" fill="#121a2d"/>
+  <text x="45" y="227" fill="#fff" font-family="sans-serif" font-size="11">📊 Ağustoz_Cari_Raporu.xlsx</text>
+
+  <rect x="35" y="475" width="190" height="35" rx="6" fill="rgba(0,242,254,0.15)"/>
+  <text x="45" y="497" fill="#00f2fe" font-family="sans-serif" font-weight="700" font-size="11">🔒 Local On-Premise Vektör DB</text>
+
+  <!-- Chat Area -->
+  <rect x="255" y="70" width="625" height="455" rx="12" fill="#121a2d" stroke="rgba(255,255,255,0.08)"/>
+
+  <!-- User Bubble -->
+  <rect x="375" y="100" width="485" height="50" rx="12" fill="#7f00ff"/>
+  <text x="395" y="130" fill="#fff" font-family="sans-serif" font-size="13">"Geçen ay hafriyat sahasında en çok döküm yapan 3 firmanın bakiye durumunu raporla."</text>
+
+  <!-- AI Bubble -->
+  <rect x="275" y="170" width="585" height="220" rx="12" fill="#0d1322" stroke="url(#aiGrad)" stroke-width="1.5"/>
+  <text x="295" y="200" fill="#00f2fe" font-family="sans-serif" font-weight="700" font-size="13">🤖 Zersoft AI Asistanı (RAG Motoru):</text>
+  <text x="295" y="225" fill="#f8fafc" font-family="sans-serif" font-size="13">Vektör veritabanınızdaki Ağustos 2026 canlı kantar kayıtları analiz edildi:</text>
+  <text x="315" y="255" fill="#cbd5e1" font-family="sans-serif" font-size="12">1. Demirkan Hafriyat Ltd. — 1.450 Ton Döküm | Kalan Bakiye: ₺48.200 (Risk: Yok)</text>
+  <text x="315" y="285" fill="#cbd5e1" font-family="sans-serif" font-size="12">2. Özkan İnşaat A.Ş. — 980 Ton Döküm | Kalan Bakiye: ₺12.400 (Uyarı: Bakiye Azaldı)</text>
+  <text x="315" y="315" fill="#cbd5e1" font-family="sans-serif" font-size="12">3. Maden Ocağı İşletmesi — 820 Ton Döküm | Kalan Bakiye: ₺95.000 (Aktif)</text>
+  <text x="295" y="360" fill="#94a3b8" font-family="sans-serif" font-size="11" font-style="italic">Kaynaklar: Ağustoz_Cari_Raporu.xlsx (Sayfa 4) • Yanıt Süresi: 0.18 saniye</text>
+
+  <!-- Input Bar -->
+  <rect x="275" y="450" width="585" height="50" rx="25" fill="#090d16" stroke="rgba(0,242,254,0.3)"/>
+  <text x="300" y="480" fill="#64748b" font-family="sans-serif" font-size="13">Kurumsal yapay zeka asistanına bir soru sorun veya doküman yükleyin...</text>
+  <circle cx="835" cy="475" r="18" fill="url(#aiGrad)"/>
+  <text x="830" y="480" fill="#fff" font-family="sans-serif" font-weight="900" font-size="14">➔</text>
+</svg>

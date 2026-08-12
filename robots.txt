@@ -1,0 +1,9 @@
+# Robots.txt for Zersoft Technology
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /config/
+Disallow: /includes/
+Disallow: /api/
+
+Sitemap: https://zersoft.net/sitemap.xml

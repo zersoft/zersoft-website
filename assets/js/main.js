@@ -1,165 +1,200 @@
 /**
- * ZERSOFT TECHNOLOGY - FRONTEND INTERACTIVE LOGIC
+ * ZERSOFT TECHNOLOGY — Main Interactive Script
+ * Theme Toggle, i18n Language Switcher, Hero Slider, Lightbox, Cookie Banner
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  initNavbar();
-  initAIChatSimulator();
-  initContactForm();
-  initStatsCounter();
+  initTheme();
   initMobileNav();
+  initHeroSlider();
+  initLightbox();
+  initCookieConsent();
 });
 
-/* Navbar Scroll Listener */
-function initNavbar() {
-  const navbar = document.querySelector('.navbar');
-  if (!navbar) return;
+/* ==========================================
+   1. Theme Toggle (Dark / Light Mode)
+   ========================================== */
+function initTheme() {
+  const savedTheme = localStorage.getItem('zersoft_theme') || 
+    (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
 
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 50) {
-      navbar.classList.add('scrolled');
+  setTheme(savedTheme);
+
+  const themeToggles = document.querySelectorAll('.theme-toggle-btn');
+  themeToggles.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      setTheme(newTheme);
+    });
+  });
+}
+
+function setTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  localStorage.setItem('zersoft_theme', theme);
+
+  const themeIcons = document.querySelectorAll('.theme-toggle-btn i');
+  themeIcons.forEach(icon => {
+    if (theme === 'light') {
+      icon.className = 'fa-solid fa-moon';
+      icon.setAttribute('title', 'Koyu Temaya Geç');
     } else {
-      navbar.classList.remove('scrolled');
+      icon.className = 'fa-solid fa-sun';
+      icon.setAttribute('title', 'Açık Temaya Geç');
     }
   });
 }
 
-/* Hero Section AI Interactive Chat Simulator */
-function initAIChatSimulator() {
-  const chatBody = document.getElementById('aiChatBody');
-  if (!chatBody) return;
+/* ==========================================
+   2. Mobile Navigation Toggle
+   ========================================== */
+function initMobileNav() {
+  const toggleBtn = document.querySelector('.mobile-toggle');
+  const navLinks = document.querySelector('.nav-links');
 
-  const demoMessages = [
-    { sender: 'user', text: "Merhaba Zersoft AI, şirket dokümanlarımızı nasıl akıllı hale getirebiliriz?" },
-    { sender: 'bot', text: "Zersoft Enterprise RAG mimarisi ile 100.000+ PDF ve sözleşmenizi güvenli vektör veritabanımıza aktarıyor, milisaniyeler içinde KVKK uyumlu akıllı asistana dönüştürüyoruz." },
-    { sender: 'user', text: "Harika! Mobil uygulama entegrasyonu da mümkün mü?" },
-    { sender: 'bot', text: "Evet! iOS, Android ve Web platformlarınız için uçtan uca özel AI agent servisleri kuruyoruz." }
-  ];
+  if (toggleBtn && navLinks) {
+    toggleBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      const icon = toggleBtn.querySelector('i');
+      if (icon) {
+        icon.classList.toggle('fa-bars');
+        icon.classList.toggle('fa-xmark');
+      }
+    });
+  }
+}
 
-  let index = 0;
+/* ==========================================
+   3. Hero Interactive Slider (Carousel)
+   ========================================== */
+function initHeroSlider() {
+  const slider = document.querySelector('.hero-slider');
+  if (!slider) return;
 
-  function renderNextMessage() {
-    if (index >= demoMessages.length) return;
+  const slides = slider.querySelectorAll('.slide');
+  const dotsContainer = slider.querySelector('.slider-dots');
+  if (slides.length <= 1) return;
 
-    const msg = demoMessages[index];
-    const bubble = document.createElement('div');
-    bubble.className = `chat-bubble ${msg.sender}`;
-    bubble.innerHTML = msg.text;
+  let currentSlide = 0;
+  let slideInterval;
 
-    // Shake animation
-    bubble.style.opacity = '0';
-    bubble.style.transform = 'translateY(10px)';
-    chatBody.appendChild(bubble);
+  // Build pagination dots
+  slides.forEach((_, idx) => {
+    const dot = document.createElement('button');
+    dot.className = `slider-dot ${idx === 0 ? 'active' : ''}`;
+    dot.setAttribute('aria-label', `Slide ${idx + 1}`);
+    dot.addEventListener('click', () => goToSlide(idx));
+    if (dotsContainer) dotsContainer.appendChild(dot);
+  });
 
-    setTimeout(() => {
-      bubble.style.transition = 'all 0.4s ease';
-      bubble.style.opacity = '1';
-      bubble.style.transform = 'translateY(0)';
-      chatBody.scrollTop = chatBody.scrollHeight;
-    }, 100);
+  function goToSlide(n) {
+    slides[currentSlide].classList.remove('active');
+    const dots = slider.querySelectorAll('.slider-dot');
+    if (dots[currentSlide]) dots[currentSlide].classList.remove('active');
 
-    index++;
-    if (index < demoMessages.length) {
-      setTimeout(renderNextMessage, 2800);
-    }
+    currentSlide = (n + slides.length) % slides.length;
+
+    slides[currentSlide].classList.add('active');
+    if (dots[currentSlide]) dots[currentSlide].classList.add('active');
   }
 
-  // Start after 1 second
-  setTimeout(renderNextMessage, 1000);
+  function startAutoplay() {
+    slideInterval = setInterval(() => {
+      goToSlide(currentSlide + 1);
+    }, 6000);
+  }
+
+  function stopAutoplay() {
+    clearInterval(slideInterval);
+  }
+
+  slider.addEventListener('mouseenter', stopAutoplay);
+  slider.addEventListener('mouseleave', startAutoplay);
+
+  startAutoplay();
 }
 
-/* AJAX Contact Form */
-function initContactForm() {
-  const form = document.getElementById('contactForm');
-  const alertBox = document.getElementById('contactAlert');
-  if (!form) return;
+/* ==========================================
+   4. Image Lightbox (Full Screen Modal Preview)
+   ========================================== */
+function initLightbox() {
+  const lightboxTargets = document.querySelectorAll('.lightbox-trigger');
+  if (lightboxTargets.length === 0) return;
 
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const btn = form.querySelector('button[type="submit"]');
-    const originalBtnText = btn.innerHTML;
+  // Create Modal element dynamically
+  const modal = document.createElement('div');
+  modal.className = 'lightbox-modal';
+  modal.innerHTML = `
+    <div class="lightbox-overlay"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-close" aria-label="Kapat">&times;</button>
+      <img src="" alt="Önizleme" class="lightbox-img">
+      <div class="lightbox-caption"></div>
+    </div>
+  `;
+  document.body.appendChild(modal);
 
-    btn.disabled = true;
-    btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Gönderiliyor...';
+  const imgEl = modal.querySelector('.lightbox-img');
+  const captionEl = modal.querySelector('.lightbox-caption');
+  const closeBtn = modal.querySelector('.lightbox-close');
+  const overlay = modal.querySelector('.lightbox-overlay');
 
-    const formData = new FormData(form);
+  lightboxTargets.forEach(trigger => {
+    trigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      const src = trigger.getAttribute('data-img') || trigger.getAttribute('href') || trigger.querySelector('img')?.src;
+      const caption = trigger.getAttribute('data-caption') || trigger.getAttribute('title') || '';
 
-    try {
-      const response = await fetch('api/contact.php', {
-        method: 'POST',
-        body: formData
-      });
-
-      const res = await response.json();
-
-      if (res.success) {
-        alertBox.className = 'alert-box alert-success';
-        alertBox.style.display = 'block';
-        alertBox.innerHTML = `<i class="fa-solid fa-circle-check"></i> ${res.message}`;
-        form.reset();
-      } else {
-        alertBox.className = 'alert-box alert-error';
-        alertBox.style.display = 'block';
-        alertBox.innerHTML = `<i class="fa-solid fa-circle-xmark"></i> ${res.message}`;
+      if (src) {
+        imgEl.src = src;
+        captionEl.textContent = caption;
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
       }
-    } catch (error) {
-      alertBox.className = 'alert-box alert-error';
-      alertBox.style.display = 'block';
-      alertBox.innerHTML = '<i class="fa-solid fa-circle-xmark"></i> Bir bağlantı hatası oluştu. Lütfen tekrar deneyiniz.';
-    } finally {
-      btn.disabled = false;
-      btn.innerHTML = originalBtnText;
-    }
+    });
+  });
+
+  function closeModal() {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  closeBtn.addEventListener('click', closeModal);
+  overlay.addEventListener('click', closeModal);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && modal.classList.contains('active')) closeModal();
   });
 }
 
-/* Counter Animation */
-function initStatsCounter() {
-  const statElements = document.querySelectorAll('.stat-number');
-  if (statElements.length === 0) return;
+/* ==========================================
+   5. Cookie Consent Banner (KVKK & GDPR)
+   ========================================== */
+function initCookieConsent() {
+  if (localStorage.getItem('zersoft_cookie_consent')) return;
 
-  let animated = false;
+  const banner = document.createElement('div');
+  banner.className = 'cookie-banner';
+  banner.innerHTML = `
+    <div class="cookie-container">
+      <div class="cookie-text">
+        <i class="fa-solid fa-cookie-bite text-gradient"></i>
+        <span><strong>Çerez Kullanımı &amp; Gizlilik Bildirimi:</strong> Deneyiminizi iyileştirmek, site trafiğini analiz etmek ve güvenliği sağlamak için çerezler kullanıyoruz. Detaylar için <a href="privacy-policy.php" target="_blank" style="text-decoration:underline;">Gizlilik Politikamızı</a> inceleyebilirsiniz.</span>
+      </div>
+      <button class="btn btn-primary btn-sm cookie-accept-btn">Kabul Et ve Kapat</button>
+    </div>
+  `;
 
-  window.addEventListener('scroll', () => {
-    const section = document.querySelector('.stats-section');
-    if (!section || animated) return;
+  document.body.appendChild(banner);
 
-    const rect = section.getBoundingClientRect();
-    if (rect.top <= window.innerHeight - 100) {
-      animated = true;
-      statElements.forEach(el => {
-        const target = parseInt(el.getAttribute('data-target') || '0', 10);
-        let count = 0;
-        const speed = target / 50;
+  setTimeout(() => {
+    banner.classList.add('show');
+  }, 1000);
 
-        const updateCount = () => {
-          count += speed;
-          if (count < target) {
-            el.innerText = Math.ceil(count) + '+';
-            setTimeout(updateCount, 30);
-          } else {
-            el.innerText = target + '+';
-          }
-        };
-        updateCount();
-      });
-    }
-  });
-}
-
-/* Mobile Nav Toggle */
-function initMobileNav() {
-  const toggle = document.querySelector('.mobile-toggle');
-  const links = document.querySelector('.nav-links');
-  if (!toggle || !links) return;
-
-  toggle.addEventListener('click', () => {
-    links.classList.toggle('active');
-    const icon = toggle.querySelector('i');
-    if (links.classList.contains('active')) {
-      icon.className = 'fa-solid fa-xmark';
-    } else {
-      icon.className = 'fa-solid fa-bars';
-    }
+  const acceptBtn = banner.querySelector('.cookie-accept-btn');
+  acceptBtn.addEventListener('click', () => {
+    localStorage.setItem('zersoft_cookie_consent', 'accepted');
+    banner.classList.remove('show');
+    setTimeout(() => banner.remove(), 400);
   });
 }

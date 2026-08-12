@@ -1,17 +1,22 @@
 <?php
 /**
- * Zersoft Technology - İletişim Sayfası
+ * Zersoft Technology - İletişim Sayfası (Honeypot + Math CAPTCHA + i18n)
  */
 $pageTitle = "İletişim & Proje Teklifi Alın";
-$pageDescription = "Zersoft ekibiyle iletişime geçin, yapay zeka ve özel yazılım projeleriniz için ücretsiz teklif alın.";
+$pageDescription = "Zersoft ekibiyle iletişime geçin, yapay zeka ve kantar otomasyon projeleriniz için teklif alın.";
 require_once __DIR__ . '/includes/header.php';
+
+// Math CAPTCHA Oluştur
+$num1 = rand(2, 9);
+$num2 = rand(1, 9);
+$_SESSION['captcha_answer'] = $num1 + $num2;
 ?>
 
 <section class="hero-section" style="min-height: 35vh; padding: 140px 0 40px 0;">
   <div class="container text-center" style="max-width: 800px; margin: 0 auto;">
-    <span class="badge badge-ai"><i class="fa-solid fa-headset"></i> İLETİŞİM & DESTEK</span>
+    <span class="badge badge-ai"><i class="fa-solid fa-headset"></i> <?php echo __('contact_title'); ?></span>
     <h1 style="font-size: 3rem; margin: 20px 0;">Bizimle <span class="text-gradient-ai">İletişime Geçin</span></h1>
-    <p style="color: var(--text-muted); font-size: 1.15rem;">Proje fikirlerinizi paylaşın, yapay zeka dönüşüm yol haritanızı birlikte belirleyelim.</p>
+    <p style="color: var(--text-muted); font-size: 1.15rem;"><?php echo __('contact_sub'); ?></p>
   </div>
 </section>
 
@@ -59,43 +64,102 @@ require_once __DIR__ . '/includes/header.php';
 
       <!-- Form -->
       <div class="glass-card">
-        <h3 style="font-size: 1.5rem; margin-bottom: 20px;">Teklif & İletişim Formu</h3>
+        <h3 style="font-size: 1.5rem; margin-bottom: 20px;"><?php echo __('nav_get_quote'); ?></h3>
         <div id="contactAlert" class="alert-box"></div>
 
         <form id="contactForm">
           <input type="hidden" name="csrf_token" value="<?php echo generateCSRFToken(); ?>">
+          
+          <!-- Honeypot SPAM Trap (Invisible) -->
+          <input type="text" name="website" style="display:none !important;" tabindex="-1" autocomplete="off">
 
           <div class="form-group">
-            <label class="form-label">Adınız Soyadınız *</label>
+            <label class="form-label"><?php echo __('form_name'); ?> *</label>
             <input type="text" name="full_name" class="form-control" placeholder="Ahmet Yılmaz" required>
           </div>
 
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
             <div class="form-group">
-              <label class="form-label">E-Posta Adresi *</label>
+              <label class="form-label"><?php echo __('form_email'); ?> *</label>
               <input type="email" name="email" class="form-control" placeholder="ahmet@firma.com" required>
             </div>
             <div class="form-group">
-              <label class="form-label">Telefon</label>
+              <label class="form-label"><?php echo __('form_phone'); ?></label>
               <input type="text" name="phone" class="form-control" placeholder="+90 5XX XXX XX XX">
             </div>
           </div>
 
           <div class="form-group">
-            <label class="form-label">Konu / Hizmet Türü *</label>
+            <label class="form-label"><?php echo __('form_subject'); ?> *</label>
             <input type="text" name="subject" class="form-control" placeholder="Örn: Yapay Zeka RAG Projesi" required>
           </div>
 
           <div class="form-group">
-            <label class="form-label">Mesajınız *</label>
+            <label class="form-label"><?php echo __('form_message'); ?> *</label>
             <textarea name="message" class="form-control" placeholder="Projeniz ve beklentileriniz hakkında bilgi veriniz..." required></textarea>
           </div>
 
-          <button type="submit" class="btn btn-primary" style="width: 100%;"><i class="fa-solid fa-paper-plane"></i> Gönder</button>
+          <!-- Math CAPTCHA Field -->
+          <div class="form-group" style="background: rgba(0, 242, 254, 0.05); padding: 14px; border-radius: 8px; border: 1px solid var(--border-glow);">
+            <label class="form-label" style="color: #00f2fe; font-weight: 700;">
+              🛡️ SPAM Koruması: <?php echo $num1; ?> + <?php echo $num2; ?> Kaç Eder? *
+            </label>
+            <input type="number" name="captcha_answer" class="form-control" placeholder="Sonucu buraya yazınız..." required style="margin-top: 6px;">
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%;"><i class="fa-solid fa-paper-plane"></i> <?php echo __('btn_send'); ?></button>
         </form>
       </div>
     </div>
   </div>
 </section>
+
+<!-- AJAX Form Handler -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('contactForm');
+  const alertBox = document.getElementById('contactAlert');
+
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const btn = form.querySelector('button[type="submit"]');
+      const originalText = btn.innerHTML;
+      btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Gönderiliyor...';
+      btn.disabled = true;
+
+      const formData = new FormData(form);
+
+      fetch('api/contact.php', {
+        method: 'POST',
+        body: formData
+      })
+      .then(res => res.json())
+      .then(data => {
+        btn.innerHTML = originalText;
+        btn.disabled = false;
+        alertBox.style.display = 'block';
+
+        if (data.success) {
+          alertBox.className = 'alert-box alert-success';
+          alertBox.innerHTML = '<i class="fa-solid fa-circle-check"></i> ' + data.message;
+          form.reset();
+        } else {
+          alertBox.className = 'alert-box alert-error';
+          alertBox.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i> ' + data.message;
+        }
+      })
+      .catch(err => {
+        btn.innerHTML = originalText;
+        btn.disabled = false;
+        alertBox.style.display = 'block';
+        alertBox.className = 'alert-box alert-error';
+        alertBox.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i> Bağlantı hatası oluştu.';
+      });
+    });
+  }
+});
+</script>
 
 <?php require_once __DIR__ . '/includes/footer.php'; ?>

@@ -1,6 +1,6 @@
 <?php
 /**
- * Zersoft Technology - Footer Template
+ * Zersoft Technology - Footer Template (KVKK & SEO & i18n Uyumlu)
  */
 $settings = getSiteSettings();
 ?>
@@ -10,10 +10,7 @@ $settings = getSiteSettings();
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.php" class="brand-logo">
-            <div class="logo-icon">
-              <i class="fa-solid fa-code-branch"></i>
-            </div>
-            <span>ZER<span class="text-gradient">SOFT</span></span>
+            <img src="assets/images/logo.svg" alt="Zersoft Teknoloji" width="160" height="40" style="height:40px; width:auto;">
           </a>
           <p><?php echo sanitize($settings['site_tagline']); ?></p>
           <div class="social-links">
@@ -33,47 +30,47 @@ $settings = getSiteSettings();
         </div>
 
         <div>
-          <h4 class="footer-heading">Hızlı Bağlantılar</h4>
+          <h4 class="footer-heading"><?php echo getCurrentLang() === 'tr' ? 'Hızlı Bağlantılar' : 'Quick Links'; ?></h4>
           <ul class="footer-links">
-            <li><a href="index.php">Ana Sayfa</a></li>
-            <li><a href="about.php">Hakkımızda & Vizyon</a></li>
-            <li><a href="services.php">Kurumsal Hizmetler</a></li>
-            <li><a href="products.php">Yazılım Ürünlerimiz</a></li>
-            <li><a href="ai-solutions.php">Yapay Zeka Çözümleri</a></li>
-            <li><a href="portfolio.php">Projelerimiz</a></li>
-            <li><a href="contact.php">İletişim & Teklif</a></li>
+            <li><a href="index.php"><?php echo __('nav_home'); ?></a></li>
+            <li><a href="about.php"><?php echo __('nav_about'); ?></a></li>
+            <li><a href="services.php"><?php echo __('nav_services'); ?></a></li>
+            <li><a href="products.php"><?php echo __('nav_products'); ?></a></li>
+            <li><a href="ai-solutions.php"><?php echo __('nav_ai'); ?></a></li>
+            <li><a href="portfolio.php"><?php echo __('nav_portfolio'); ?></a></li>
+            <li><a href="contact.php"><?php echo __('nav_contact'); ?></a></li>
+            <li><a href="privacy-policy.php" style="color: #00f2fe; font-weight: 700;">🔒 <?php echo __('cookie_policy'); ?></a></li>
           </ul>
         </div>
 
         <div>
-          <h4 class="footer-heading">Hizmetlerimiz</h4>
+          <h4 class="footer-heading"><?php echo getCurrentLang() === 'tr' ? 'Yazılım Çözümlerimiz' : 'Software Solutions'; ?></h4>
           <ul class="footer-links">
-            <li><a href="services.php">Yapay Zeka & Otomasyon</a></li>
-            <li><a href="services.php">Özel Kurumsal SaaS</a></li>
-            <li><a href="services.php">Mobil Uygulamalar</a></li>
-            <li><a href="services.php">Bulut & DevOps</a></li>
-            <li><a href="services.php">API Entegrasyonları</a></li>
+            <li><a href="products.php">Hafriyat &amp; Saha Kantar Otomasyonu</a></li>
+            <li><a href="products.php">IYS — İş &amp; Süreç Yönetim Platformu</a></li>
+            <li><a href="products.php">Katı Atık &amp; Maden Ocağı Kantarı</a></li>
+            <li><a href="ai-solutions.php">Kurumsal RAG &amp; Doküman Zekası</a></li>
+            <li><a href="services.php">Özel Ön Muhasebe &amp; ERP</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 class="footer-heading">İletişim Bilgileri</h4>
-          <ul class="footer-links" style="line-height: 1.8;">
-            <li><i class="fa-solid fa-location-dot text-gradient"></i> <?php echo sanitize($settings['address']); ?></li>
+          <h4 class="footer-heading"><?php echo getCurrentLang() === 'tr' ? 'İletişim Bilgileri' : 'Contact Details'; ?></h4>
+          <ul class="footer-links">
             <li><i class="fa-solid fa-phone text-gradient"></i> <?php echo sanitize($settings['phone']); ?></li>
             <li><i class="fa-solid fa-envelope text-gradient"></i> <?php echo sanitize($settings['email']); ?></li>
+            <li><i class="fa-solid fa-location-dot text-gradient"></i> <?php echo sanitize($settings['address']); ?></li>
             <li><i class="fa-solid fa-clock text-gradient"></i> <?php echo sanitize($settings['working_hours']); ?></li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; <?php echo date('Y'); ?> <?php echo sanitize($settings['site_name']); ?>. Tüm hakları saklıdır. | Designed & Built for Modern Enterprise</p>
+        <p>&copy; <?php echo date('Y'); ?> ZERSOFT Technology. Tüm Hakları Saklıdır.</p>
+        <p style="font-size:0.85rem; color:var(--text-dim);">KVKK &amp; GDPR Uyumlu Kurumsal Saha Otomasyonları</p>
       </div>
     </div>
   </footer>
 
-  <!-- Main JavaScript File -->
-  <script src="assets/js/main.js"></script>
 </body>
 </html>
