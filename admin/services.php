@@ -116,23 +116,23 @@ $services = getServices();
     <div style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 16px; margin-bottom: 16px;">
       <div>
         <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px;">Hizmet Başlığı *</label>
-        <input type="text" name="title" class="form-control" style="background: #090d16;" value="<?php echo sanitize($editItem['title'] ?? ''); ?>" placeholder="Örn: Yapay Zeka & Otomasyon" required>
+        <input type="text" name="title" class="form-control" style="background: #090d16; color: #ffffff;" value="<?php echo sanitize($editItem['title'] ?? ''); ?>" placeholder="Örn: Yapay Zeka & Otomasyon" required>
       </div>
 
       <div>
         <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px;">FontAwesome İkon *</label>
-        <input type="text" name="icon" class="form-control" style="background: #090d16;" value="<?php echo sanitize($editItem['icon'] ?? 'fa-code'); ?>" placeholder="fa-brain" required>
+        <input type="text" name="icon" class="form-control" style="background: #090d16; color: #ffffff;" value="<?php echo sanitize($editItem['icon'] ?? 'fa-code'); ?>" placeholder="fa-brain" required>
       </div>
 
       <div>
         <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px;">Sıra No</label>
-        <input type="number" name="sort_order" class="form-control" style="background: #090d16;" value="<?php echo sanitize($editItem['sort_order'] ?? 0); ?>">
+        <input type="number" name="sort_order" class="form-control" style="background: #090d16; color: #ffffff;" value="<?php echo sanitize($editItem['sort_order'] ?? 0); ?>">
       </div>
     </div>
 
     <div style="margin-bottom: 16px;">
       <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px;">Kısa Açıklama (Ana Sayfa Kartında Görünür) *</label>
-      <input type="text" name="short_description" class="form-control" style="background: #090d16;" value="<?php echo sanitize($editItem['short_description'] ?? ''); ?>" placeholder="İş süreçlerinizi otonom hale getiren çözümler..." required>
+      <input type="text" name="short_description" class="form-control" style="background: #090d16; color: #ffffff;" value="<?php echo sanitize($editItem['short_description'] ?? ''); ?>" placeholder="İş süreçlerinizi otonom hale getiren çözümler..." required>
     </div>
 
     <div style="margin-bottom: 20px;">

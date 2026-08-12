@@ -116,28 +116,28 @@ $aiSolutions = getAISolutions();
     <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 16px; margin-bottom: 16px;">
       <div>
         <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px;">Çözüm Başlığı *</label>
-        <input type="text" name="title" class="form-control" style="background: #090d16;" value="<?php echo sanitize($editItem['title'] ?? ''); ?>" placeholder="Örn: Kurumsal RAG & Doküman Zekası" required>
+        <input type="text" name="title" class="form-control" style="background: #090d16; color: #ffffff;" value="<?php echo sanitize($editItem['title'] ?? ''); ?>" placeholder="Örn: Kurumsal RAG & Doküman Zekası" required>
       </div>
 
       <div>
         <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px;">Rozet Metni</label>
-        <input type="text" name="badge_text" class="form-control" style="background: #090d16;" value="<?php echo sanitize($editItem['badge_text'] ?? 'Enterprise AI'); ?>" placeholder="Enterprise AI">
+        <input type="text" name="badge_text" class="form-control" style="background: #090d16; color: #ffffff;" value="<?php echo sanitize($editItem['badge_text'] ?? 'Enterprise AI'); ?>" placeholder="Enterprise AI">
       </div>
 
       <div>
         <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px;">İkon (FA)</label>
-        <input type="text" name="icon" class="form-control" style="background: #090d16;" value="<?php echo sanitize($editItem['icon'] ?? 'fa-robot'); ?>" placeholder="fa-robot">
+        <input type="text" name="icon" class="form-control" style="background: #090d16; color: #ffffff;" value="<?php echo sanitize($editItem['icon'] ?? 'fa-robot'); ?>" placeholder="fa-robot">
       </div>
 
       <div>
         <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px;">Sıra</label>
-        <input type="number" name="sort_order" class="form-control" style="background: #090d16;" value="<?php echo sanitize($editItem['sort_order'] ?? 0); ?>">
+        <input type="number" name="sort_order" class="form-control" style="background: #090d16; color: #ffffff;" value="<?php echo sanitize($editItem['sort_order'] ?? 0); ?>">
       </div>
     </div>
 
     <div style="margin-bottom: 16px;">
       <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px;">Çözüm Özeti *</label>
-      <textarea name="summary" class="form-control" style="background: #090d16;" required><?php echo sanitize($editItem['summary'] ?? ''); ?></textarea>
+      <textarea name="summary" class="form-control" style="background: #090d16; color: #ffffff;" required><?php echo sanitize($editItem['summary'] ?? ''); ?></textarea>
     </div>
 
     <div style="margin-bottom: 20px;">

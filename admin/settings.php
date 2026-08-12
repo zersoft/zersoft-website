@@ -113,12 +113,12 @@ $settings = getSiteSettings();
     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
       <div>
         <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px;">Firma / Site Adı</label>
-        <input type="text" name="site_name" class="form-control" style="background: #090d16;" value="<?php echo sanitize($settings['site_name']); ?>" required>
+        <input type="text" name="site_name" class="form-control" style="background: #090d16; color: #ffffff;" value="<?php echo sanitize($settings['site_name']); ?>" required>
       </div>
 
       <div>
         <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px;">Slogan / Tagline</label>
-        <input type="text" name="site_tagline" class="form-control" style="background: #090d16;" value="<?php echo sanitize($settings['site_tagline']); ?>" required>
+        <input type="text" name="site_tagline" class="form-control" style="background: #090d16; color: #ffffff;" value="<?php echo sanitize($settings['site_tagline']); ?>" required>
       </div>
     </div>
 
@@ -130,42 +130,42 @@ $settings = getSiteSettings();
     <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; margin-bottom: 16px;">
       <div>
         <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px;">Telefon</label>
-        <input type="text" name="phone" class="form-control" style="background: #090d16;" value="<?php echo sanitize($settings['phone']); ?>">
+        <input type="text" name="phone" class="form-control" style="background: #090d16; color: #ffffff;" value="<?php echo sanitize($settings['phone']); ?>">
       </div>
 
       <div>
         <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px;">E-Posta</label>
-        <input type="email" name="email" class="form-control" style="background: #090d16;" value="<?php echo sanitize($settings['email']); ?>">
+        <input type="email" name="email" class="form-control" style="background: #090d16; color: #ffffff;" value="<?php echo sanitize($settings['email']); ?>">
       </div>
 
       <div>
         <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px;">Çalışma Saatleri</label>
-        <input type="text" name="working_hours" class="form-control" style="background: #090d16;" value="<?php echo sanitize($settings['working_hours']); ?>">
+        <input type="text" name="working_hours" class="form-control" style="background: #090d16; color: #ffffff;" value="<?php echo sanitize($settings['working_hours']); ?>">
       </div>
     </div>
 
     <div style="margin-bottom: 20px;">
       <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px;">Adres</label>
-      <input type="text" name="address" class="form-control" style="background: #090d16;" value="<?php echo sanitize($settings['address']); ?>">
+      <input type="text" name="address" class="form-control" style="background: #090d16; color: #ffffff;" value="<?php echo sanitize($settings['address']); ?>">
     </div>
 
     <h4 style="font-size: 1rem; color: #fff; margin-bottom: 12px;">Sosyal Medya Linkleri</h4>
     <div style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 16px; margin-bottom: 24px;">
       <div>
         <label style="font-size: 0.8rem; color: var(--admin-text-muted);">LinkedIn</label>
-        <input type="text" name="linkedin" class="form-control" style="background: #090d16;" value="<?php echo sanitize($settings['linkedin']); ?>">
+        <input type="text" name="linkedin" class="form-control" style="background: #090d16; color: #ffffff;" value="<?php echo sanitize($settings['linkedin']); ?>">
       </div>
       <div>
         <label style="font-size: 0.8rem; color: var(--admin-text-muted);">GitHub</label>
-        <input type="text" name="github" class="form-control" style="background: #090d16;" value="<?php echo sanitize($settings['github']); ?>">
+        <input type="text" name="github" class="form-control" style="background: #090d16; color: #ffffff;" value="<?php echo sanitize($settings['github']); ?>">
       </div>
       <div>
         <label style="font-size: 0.8rem; color: var(--admin-text-muted);">Twitter / X</label>
-        <input type="text" name="twitter" class="form-control" style="background: #090d16;" value="<?php echo sanitize($settings['twitter']); ?>">
+        <input type="text" name="twitter" class="form-control" style="background: #090d16; color: #ffffff;" value="<?php echo sanitize($settings['twitter']); ?>">
       </div>
       <div>
         <label style="font-size: 0.8rem; color: var(--admin-text-muted);">Facebook</label>
-        <input type="text" name="facebook" class="form-control" style="background: #090d16;" value="<?php echo sanitize($settings['facebook']); ?>">
+        <input type="text" name="facebook" class="form-control" style="background: #090d16; color: #ffffff;" value="<?php echo sanitize($settings['facebook']); ?>">
       </div>
     </div>
 
@@ -185,17 +185,17 @@ $settings = getSiteSettings();
 
     <div style="margin-bottom: 16px;">
       <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px;">Mevcut Şifreniz</label>
-      <input type="password" name="old_password" class="form-control" style="background: #090d16;" required>
+      <input type="password" name="old_password" class="form-control" style="background: #090d16; color: #ffffff;" required>
     </div>
 
     <div style="margin-bottom: 16px;">
       <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px;">Yeni Şifre</label>
-      <input type="password" name="new_password" class="form-control" style="background: #090d16;" required>
+      <input type="password" name="new_password" class="form-control" style="background: #090d16; color: #ffffff;" required>
     </div>
 
     <div style="margin-bottom: 20px;">
       <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px;">Yeni Şifre (Tekrar)</label>
-      <input type="password" name="confirm_password" class="form-control" style="background: #090d16;" required>
+      <input type="password" name="confirm_password" class="form-control" style="background: #090d16; color: #ffffff;" required>
     </div>
 
     <button type="submit" class="btn-admin-primary">

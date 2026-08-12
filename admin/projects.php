@@ -114,35 +114,35 @@ $projects = getProjects();
     <div style="display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 16px; margin-bottom: 16px;">
       <div>
         <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px;">Proje Adı *</label>
-        <input type="text" name="title" class="form-control" style="background: #090d16;" value="<?php echo sanitize($editItem['title'] ?? ''); ?>" required>
+        <input type="text" name="title" class="form-control" style="background: #090d16; color: #ffffff;" value="<?php echo sanitize($editItem['title'] ?? ''); ?>" required>
       </div>
 
       <div>
         <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px;">Müşteri / Kurum *</label>
-        <input type="text" name="client" class="form-control" style="background: #090d16;" value="<?php echo sanitize($editItem['client'] ?? ''); ?>" required>
+        <input type="text" name="client" class="form-control" style="background: #090d16; color: #ffffff;" value="<?php echo sanitize($editItem['client'] ?? ''); ?>" required>
       </div>
 
       <div>
         <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px;">Kategori</label>
-        <input type="text" name="category" class="form-control" style="background: #090d16;" value="<?php echo sanitize($editItem['category'] ?? 'Yapay Zeka'); ?>">
+        <input type="text" name="category" class="form-control" style="background: #090d16; color: #ffffff;" value="<?php echo sanitize($editItem['category'] ?? 'Yapay Zeka'); ?>">
       </div>
     </div>
 
     <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 16px; margin-bottom: 16px;">
       <div>
         <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px;">Kullanılan Teknolojiler (Virgülle ayırın)</label>
-        <input type="text" name="tech_stack" class="form-control" style="background: #090d16;" value="<?php echo sanitize($editItem['tech_stack'] ?? ''); ?>" placeholder="Python, React, PHP 8, OpenAI">
+        <input type="text" name="tech_stack" class="form-control" style="background: #090d16; color: #ffffff;" value="<?php echo sanitize($editItem['tech_stack'] ?? ''); ?>" placeholder="Python, React, PHP 8, OpenAI">
       </div>
 
       <div>
         <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px;">Canlı Link / URL</label>
-        <input type="text" name="live_url" class="form-control" style="background: #090d16;" value="<?php echo sanitize($editItem['live_url'] ?? '#'); ?>">
+        <input type="text" name="live_url" class="form-control" style="background: #090d16; color: #ffffff;" value="<?php echo sanitize($editItem['live_url'] ?? '#'); ?>">
       </div>
     </div>
 
     <div style="margin-bottom: 20px;">
       <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 6px;">Proje Açıklaması *</label>
-      <textarea name="description" class="form-control" style="background: #090d16;" required><?php echo sanitize($editItem['description'] ?? ''); ?></textarea>
+      <textarea name="description" class="form-control" style="background: #090d16; color: #ffffff;" required><?php echo sanitize($editItem['description'] ?? ''); ?></textarea>
     </div>
 
     <button type="submit" class="btn-admin-primary">
