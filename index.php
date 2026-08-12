@@ -25,9 +25,9 @@ $projects = getProjects(4);
             <a href="contact.php" class="btn btn-outline"><i class="fa-solid fa-headset"></i> <?php echo __('slide1_btn2'); ?></a>
           </div>
         </div>
-        <div style="position: absolute; right: 40px; top: 40px; width: 42%; display: none; @media(min-width:992px){display:block;}">
+        <div class="slide-visual">
           <a href="assets/images/kantar-preview.svg" class="lightbox-trigger" data-caption="Hafriyat &amp; Saha Kantar Otomasyonu v4.2">
-            <img src="assets/images/kantar-preview.svg" alt="Zersoft Kantar Otomasyonu Ekran Görüntüsü" style="border-radius:12px; border:1px solid var(--border-glow); box-shadow:0 15px 35px rgba(0,0,0,0.5);">
+            <img src="assets/images/kantar-preview.svg" alt="Zersoft Kantar Otomasyonu Ekran Görüntüsü">
           </a>
         </div>
       </div>
@@ -43,9 +43,9 @@ $projects = getProjects(4);
             <a href="contact.php" class="btn btn-outline"><i class="fa-solid fa-paper-plane"></i> <?php echo __('slide2_btn2'); ?></a>
           </div>
         </div>
-        <div style="position: absolute; right: 40px; top: 40px; width: 42%; display: none; @media(min-width:992px){display:block;}">
+        <div class="slide-visual">
           <a href="assets/images/iys-preview.svg" class="lightbox-trigger" data-caption="IYS İş &amp; Süreç Yönetim Platformu (iys.zersoft.net)">
-            <img src="assets/images/iys-preview.svg" alt="IYS İş Süreç Yönetimi Ekran Görüntüsü" style="border-radius:12px; border:1px solid rgba(225,0,255,0.3); box-shadow:0 15px 35px rgba(0,0,0,0.5);">
+            <img src="assets/images/iys-preview.svg" alt="IYS İş Süreç Yönetimi Ekran Görüntüsü">
           </a>
         </div>
       </div>
@@ -61,9 +61,9 @@ $projects = getProjects(4);
             <a href="contact.php" class="btn btn-outline"><i class="fa-solid fa-file-code"></i> <?php echo __('slide3_btn2'); ?></a>
           </div>
         </div>
-        <div style="position: absolute; right: 40px; top: 40px; width: 42%; display: none; @media(min-width:992px){display:block;}">
+        <div class="slide-visual">
           <a href="assets/images/ai-rag-preview.svg" class="lightbox-trigger" data-caption="Enterprise RAG &amp; Doküman Zekası Asistanı">
-            <img src="assets/images/ai-rag-preview.svg" alt="Kurumsal RAG Doküman Zekası Ekran Görüntüsü" style="border-radius:12px; border:1px solid var(--border-glow); box-shadow:0 15px 35px rgba(0,0,0,0.5);">
+            <img src="assets/images/ai-rag-preview.svg" alt="Kurumsal RAG Doküman Zekası Ekran Görüntüsü">
           </a>
         </div>
       </div>
