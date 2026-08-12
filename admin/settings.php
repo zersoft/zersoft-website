@@ -14,17 +14,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_settings'])) {
     if (!verifyCSRFToken($csrf)) {
         $error = 'Güvenlik hatası.';
     } else {
-        $site_name = sanitize($_POST['site_name'] ?? '');
-        $site_tagline = sanitize($_POST['site_tagline'] ?? '');
-        $meta_description = sanitize($_POST['meta_description'] ?? '');
-        $phone = sanitize($_POST['phone'] ?? '');
-        $email = sanitize($_POST['email'] ?? '');
-        $address = sanitize($_POST['address'] ?? '');
-        $working_hours = sanitize($_POST['working_hours'] ?? '');
-        $facebook = sanitize($_POST['facebook'] ?? '');
-        $twitter = sanitize($_POST['twitter'] ?? '');
-        $linkedin = sanitize($_POST['linkedin'] ?? '');
-        $github = sanitize($_POST['github'] ?? '');
+        $site_name = trim($_POST['site_name'] ?? '');
+        $site_tagline = trim($_POST['site_tagline'] ?? '');
+        $meta_description = trim($_POST['meta_description'] ?? '');
+        $phone = trim($_POST['phone'] ?? '');
+        $email = trim($_POST['email'] ?? '');
+        $address = trim($_POST['address'] ?? '');
+        $working_hours = trim($_POST['working_hours'] ?? '');
+        $facebook = trim($_POST['facebook'] ?? '');
+        $twitter = trim($_POST['twitter'] ?? '');
+        $linkedin = trim($_POST['linkedin'] ?? '');
+        $github = trim($_POST['github'] ?? '');
 
         try {
             $stmt = $db->prepare("UPDATE site_settings SET site_name = :site_name, site_tagline = :site_tagline, meta_description = :meta_description, phone = :phone, email = :email, address = :address, working_hours = :working_hours, facebook = :facebook, twitter = :twitter, linkedin = :linkedin, github = :github WHERE id = 1");

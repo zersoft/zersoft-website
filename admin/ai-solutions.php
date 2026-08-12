@@ -28,15 +28,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $error = 'Güvenlik doğrulaması hatası.';
     } else {
         $id = isset($_POST['id']) ? (int)$_POST['id'] : 0;
-        $title = sanitize($_POST['title'] ?? '');
-        $badge_text = sanitize($_POST['badge_text'] ?? 'AI Powered');
-        $summary = sanitize($_POST['summary'] ?? '');
-        $icon = sanitize($_POST['icon'] ?? 'fa-robot');
+        $title = trim($_POST['title'] ?? '');
+        $badge_text = trim($_POST['badge_text'] ?? 'AI Powered');
+        $summary = trim($_POST['summary'] ?? '');
+        $icon = trim($_POST['icon'] ?? 'fa-robot');
         $sort_order = (int)($_POST['sort_order'] ?? 0);
         
         $features_raw = $_POST['features'] ?? '';
         $features_array = array_values(array_filter(array_map('trim', explode("\n", $features_raw))));
-        $features_json = json_json_encode($features_array);
+        $features_json = json_encode($features_array, JSON_UNESCAPED_UNICODE);
 
         if (empty($title) || empty($summary)) {
             $error = 'Lütfen çözüm başlığını ve özetini doldurunuz.';
@@ -151,7 +151,7 @@ $aiSolutions = getAISolutions();
           }
         }
       ?>
-      <textarea name="features" class="form-control" style="background: #090d16; min-height: 80px;" placeholder="On-Premise Çalışma&#10;KVKK Uyumluluğu&#10;Vektör DB Entegrasyonu"><?php echo sanitize($featuresStr); ?></textarea>
+      <textarea name="features" class="form-control" style="background: #090d16; color: #ffffff; min-height: 100px;" placeholder="On-Premise Çalışma&#10;KVKK Uyumluluğu&#10;Vektör DB Entegrasyonu"><?php echo sanitize($featuresStr); ?></textarea>
     </div>
 
     <button type="submit" class="btn-admin-primary">

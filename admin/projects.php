@@ -28,12 +28,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $error = 'Güvenlik hatası.';
     } else {
         $id = isset($_POST['id']) ? (int)$_POST['id'] : 0;
-        $title = sanitize($_POST['title'] ?? '');
-        $client = sanitize($_POST['client'] ?? '');
-        $category = sanitize($_POST['category'] ?? 'Yapay Zeka');
-        $tech_stack = sanitize($_POST['tech_stack'] ?? '');
-        $description = sanitize($_POST['description'] ?? '');
-        $live_url = sanitize($_POST['live_url'] ?? '#');
+        $title = trim($_POST['title'] ?? '');
+        $client = trim($_POST['client'] ?? '');
+        $category = trim($_POST['category'] ?? 'Yapay Zeka');
+        $tech_stack = trim($_POST['tech_stack'] ?? '');
+        $description = trim($_POST['description'] ?? '');
+        $live_url = trim($_POST['live_url'] ?? '#');
         $sort_order = (int)($_POST['sort_order'] ?? 0);
 
         if (empty($title) || empty($client) || empty($description)) {

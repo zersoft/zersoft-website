@@ -28,10 +28,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $error = 'Güvenlik doğrulaması hatası.';
     } else {
         $id = isset($_POST['id']) ? (int)$_POST['id'] : 0;
-        $title = sanitize($_POST['title'] ?? '');
-        $short_desc = sanitize($_POST['short_description'] ?? '');
-        $content = sanitize($_POST['content'] ?? '');
-        $icon = sanitize($_POST['icon'] ?? 'fa-code');
+        $title = trim($_POST['title'] ?? '');
+        $short_desc = trim($_POST['short_description'] ?? '');
+        $content = trim($_POST['content'] ?? '');
+        $icon = trim($_POST['icon'] ?? 'fa-code');
         $sort_order = (int)($_POST['sort_order'] ?? 0);
         $slug = strtolower(trim(preg_replace('/[^A-Za-z0-9-]+/', '-', $title)));
 
