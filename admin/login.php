@@ -26,8 +26,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } else {
             try {
                 global $db;
-                $stmt = $db->prepare("SELECT * FROM users WHERE username = :user OR email = :user LIMIT 1");
-                $stmt->execute([':user' => $username]);
+                $stmt = $db->prepare("SELECT * FROM users WHERE username = :username OR email = :email LIMIT 1");
+                $stmt->execute([':username' => $username, ':email' => $username]);
                 $user = $stmt->fetch();
 
                 if ($user && password_verify($password, $user['password'])) {
