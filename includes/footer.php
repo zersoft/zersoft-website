@@ -38,6 +38,7 @@ $settings = getSiteSettings();
             <li><a href="index.php">Ana Sayfa</a></li>
             <li><a href="about.php">Hakkımızda & Vizyon</a></li>
             <li><a href="services.php">Kurumsal Hizmetler</a></li>
+            <li><a href="products.php">Yazılım Ürünlerimiz</a></li>
             <li><a href="ai-solutions.php">Yapay Zeka Çözümleri</a></li>
             <li><a href="portfolio.php">Projelerimiz</a></li>
             <li><a href="contact.php">İletişim & Teklif</a></li>

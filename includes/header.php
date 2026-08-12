@@ -35,6 +35,7 @@ $currentPage = basename($_SERVER['PHP_SELF'], '.php');
       <ul class="nav-links">
         <li><a href="index.php" class="nav-link <?php echo $currentPage === 'index' ? 'active' : ''; ?>">Ana Sayfa</a></li>
         <li><a href="services.php" class="nav-link <?php echo $currentPage === 'services' ? 'active' : ''; ?>">Hizmetlerimiz</a></li>
+        <li><a href="products.php" class="nav-link <?php echo $currentPage === 'products' ? 'active' : ''; ?>"><i class="fa-solid fa-box-open" style="font-size:0.85em;"></i> Ürünlerimiz</a></li>
         <li><a href="ai-solutions.php" class="nav-link <?php echo $currentPage === 'ai-solutions' ? 'active' : ''; ?>"><i class="fa-solid fa-wand-magic-sparkles text-gradient-ai"></i> Yapay Zeka</a></li>
         <li><a href="portfolio.php" class="nav-link <?php echo $currentPage === 'portfolio' ? 'active' : ''; ?>">Projelerimiz</a></li>
         <li><a href="about.php" class="nav-link <?php echo $currentPage === 'about' ? 'active' : ''; ?>">Hakkımızda</a></li>
