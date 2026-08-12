@@ -76,29 +76,7 @@ $projects = getProjects(4);
   </div>
 </section>
 
-<!-- Stats Counter Section -->
-<section class="stats-section">
-  <div class="container">
-    <div class="stats-grid">
-      <div>
-        <div class="stat-number" data-target="150">0</div>
-        <div class="stat-label">Tamamlanan Kurumsal Proje</div>
-      </div>
-      <div>
-        <div class="stat-number" data-target="35">0</div>
-        <div class="stat-label">Canlı Yapay Zeka Modeli</div>
-      </div>
-      <div>
-        <div class="stat-number" data-target="99">0</div>
-        <div class="stat-label">% Müşteri Memnuniyeti</div>
-      </div>
-      <div>
-        <div class="stat-number" data-target="12">0</div>
-        <div class="stat-label">Ülkeye Yazılım İhracatı</div>
-      </div>
-    </div>
-  </div>
-</section>
+
 
 <!-- Services Section -->
 <section style="padding: 100px 0;">
