@@ -1,8 +1,8 @@
 <?php
 /**
- * Zersoft Technology - Ana Sayfa (i18n & Slider & Lightbox Uyumlu)
+ * Zersoft Technology - Ana Sayfa (Tam i18n & Slider & Lightbox Uyumlu)
  */
-$pageTitle = "Geleceğin Yapay Zeka & Saha Kantar Otomasyon Çözümleri";
+$pageTitle = __("slide1_title");
 require_once __DIR__ . '/includes/header.php';
 
 $services = getServices(6);
@@ -26,8 +26,8 @@ $projects = getProjects(4);
           </div>
         </div>
         <div class="slide-visual">
-          <a href="assets/images/kantar-preview.svg" class="lightbox-trigger" data-caption="Hafriyat &amp; Saha Kantar Otomasyonu v4.2">
-            <img src="assets/images/kantar-preview.svg" alt="Zersoft Kantar Otomasyonu Ekran Görüntüsü">
+          <a href="assets/images/kantar-preview.svg" class="lightbox-trigger" data-caption="<?php echo __('prod_kantar_title'); ?>">
+            <img src="assets/images/kantar-preview.svg" alt="<?php echo __('prod_kantar_title'); ?>">
           </a>
         </div>
       </div>
@@ -39,13 +39,13 @@ $projects = getProjects(4);
           <h1 class="slide-title"><?php echo __('slide2_title'); ?></h1>
           <p class="slide-desc"><?php echo __('slide2_desc'); ?></p>
           <div class="slide-actions">
-            <a href="products.php" class="btn btn-primary"><i class="fa-solid fa-box-open"></i> <?php echo __('slide2_btn1'); ?></a>
-            <a href="contact.php" class="btn btn-outline"><i class="fa-solid fa-paper-plane"></i> <?php echo __('slide2_btn2'); ?></a>
+            <a href="iys.php" class="btn btn-primary"><i class="fa-solid fa-box-open"></i> <?php echo __('slide2_btn1'); ?></a>
+            <a href="https://iys.zersoft.net" target="_blank" class="btn btn-outline"><i class="fa-solid fa-paper-plane"></i> <?php echo __('slide2_btn2'); ?></a>
           </div>
         </div>
         <div class="slide-visual">
-          <a href="assets/images/iys-preview.svg" class="lightbox-trigger" data-caption="IYS İş &amp; Süreç Yönetim Platformu (iys.zersoft.net)">
-            <img src="assets/images/iys-preview.svg" alt="IYS İş Süreç Yönetimi Ekran Görüntüsü">
+          <a href="assets/images/iys-preview.svg" class="lightbox-trigger" data-caption="<?php echo __('prod_iys_title'); ?>">
+            <img src="assets/images/iys-preview.svg" alt="<?php echo __('prod_iys_title'); ?>">
           </a>
         </div>
       </div>
@@ -62,8 +62,8 @@ $projects = getProjects(4);
           </div>
         </div>
         <div class="slide-visual">
-          <a href="assets/images/ai-rag-preview.svg" class="lightbox-trigger" data-caption="Enterprise RAG &amp; Doküman Zekası Asistanı">
-            <img src="assets/images/ai-rag-preview.svg" alt="Kurumsal RAG Doküman Zekası Ekran Görüntüsü">
+          <a href="assets/images/ai-rag-preview.svg" class="lightbox-trigger" data-caption="<?php echo __('slide3_title'); ?>">
+            <img src="assets/images/ai-rag-preview.svg" alt="<?php echo __('slide3_title'); ?>">
           </a>
         </div>
       </div>
@@ -102,19 +102,19 @@ $projects = getProjects(4);
 <section style="padding: 60px 0 100px 0; background: rgba(13, 19, 34, 0.4);">
   <div class="container">
     <div class="section-header">
-      <span class="badge badge-ai"><i class="fa-solid fa-desktop"></i> <?php echo __('section_products_title'); ?></span>
-      <h2>Saha ve Ofis Yazılımlarımızın <span class="text-gradient">Ekran Görüntüleri</span></h2>
+      <span class="badge badge-ai"><i class="fa-solid fa-desktop"></i> <?php echo __('section_products_badge'); ?></span>
+      <h2><?php echo __('section_products_title'); ?></h2>
       <p><?php echo __('section_products_sub'); ?></p>
     </div>
 
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
       <!-- Product 1: Kantar -->
       <div class="glass-card" style="padding: 24px; display: flex; flex-direction: column;">
-        <a href="assets/images/kantar-preview.svg" class="lightbox-trigger" data-caption="Hafriyat &amp; Saha Kantar Otomasyonu — Canlı Kantar Tartım ve ALPR Plaka Tanıma">
-          <img src="assets/images/kantar-preview.svg" alt="Hafriyat ve Saha Kantar Otomasyonu Yazılımı Ekran Görüntüsü" style="border-radius: 12px; margin-bottom: 20px; border: 1px solid var(--border-glow);">
+        <a href="assets/images/kantar-preview.svg" class="lightbox-trigger" data-caption="<?php echo __('prod_kantar_title'); ?>">
+          <img src="assets/images/kantar-preview.svg" alt="<?php echo __('prod_kantar_title'); ?>" style="border-radius: 12px; margin-bottom: 20px; border: 1px solid var(--border-glow);">
         </a>
-        <h3 style="font-size: 1.3rem; margin-bottom: 10px; color: #fff;">Hafriyat &amp; Saha Kantar Otomasyonu</h3>
-        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px; flex-grow: 1;">Kameralı plaka okuma, otomatik bariyer tetikleme, canlı tartım ve irsaliye basım modülleri.</p>
+        <h3 style="font-size: 1.3rem; margin-bottom: 10px; color: #fff;"><?php echo __('prod_kantar_title'); ?></h3>
+        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px; flex-grow: 1;"><?php echo __('prod_kantar_desc'); ?></p>
         <div style="display:flex; justify-content:space-between; align-items:center; gap:12px; margin-top:auto; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.05);">
           <a href="products.php" class="btn btn-outline btn-sm" style="white-space:nowrap; flex-shrink:0;"><?php echo __('btn_details'); ?></a>
           <a href="assets/images/kantar-preview.svg" class="lightbox-trigger text-gradient" style="font-weight:700; font-size:0.85rem; white-space:nowrap;"><i class="fa-solid fa-expand"></i> <?php echo __('btn_preview'); ?> 🔍</a>
@@ -123,11 +123,11 @@ $projects = getProjects(4);
 
       <!-- Product 2: IYS -->
       <div class="glass-card" style="padding: 24px; display: flex; flex-direction: column;">
-        <a href="assets/images/iys-preview.svg" class="lightbox-trigger" data-caption="IYS — İmalat &amp; Süreç Yönetim Platformu (iys.zersoft.net)">
-          <img src="assets/images/iys-preview.svg" alt="IYS İmalat ve Süreç Yönetim Programı Ekran Görüntüsü" style="border-radius: 12px; margin-bottom: 20px; border: 1px solid rgba(225,0,255,0.3);">
+        <a href="assets/images/iys-preview.svg" class="lightbox-trigger" data-caption="<?php echo __('prod_iys_title'); ?>">
+          <img src="assets/images/iys-preview.svg" alt="<?php echo __('prod_iys_title'); ?>" style="border-radius: 12px; margin-bottom: 20px; border: 1px solid rgba(225,0,255,0.3);">
         </a>
-        <h3 style="font-size: 1.3rem; margin-bottom: 10px; color: #fff;">IYS — İmalat &amp; Süreç Yönetimi</h3>
-        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px; flex-grow: 1;">İmalat sektörüne özel Sipariş &rarr; Planlama &rarr; Tasarım &rarr; Üretim &rarr; Teslimat aşamalarını yöneten kurumsal ERP altyapısı.</p>
+        <h3 style="font-size: 1.3rem; margin-bottom: 10px; color: #fff;"><?php echo __('prod_iys_title'); ?></h3>
+        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px; flex-grow: 1;"><?php echo __('prod_iys_desc'); ?></p>
         <div style="display:flex; justify-content:space-between; align-items:center; gap:12px; margin-top:auto; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.05);">
           <a href="iys.php" class="btn btn-outline btn-sm" style="white-space:nowrap; flex-shrink:0;"><?php echo __('btn_details'); ?></a>
           <a href="assets/images/iys-preview.svg" class="lightbox-trigger text-gradient-accent" style="font-weight:700; font-size:0.85rem; white-space:nowrap;"><i class="fa-solid fa-expand"></i> <?php echo __('btn_preview'); ?> 🔍</a>
@@ -136,11 +136,11 @@ $projects = getProjects(4);
 
       <!-- Product 3: RAG AI -->
       <div class="glass-card" style="padding: 24px; display: flex; flex-direction: column;">
-        <a href="assets/images/ai-rag-preview.svg" class="lightbox-trigger" data-caption="Kurumsal RAG Doküman &amp; Kantar Veri Asistanı">
-          <img src="assets/images/ai-rag-preview.svg" alt="Kurumsal RAG Doküman Zekası Ekran Görüntüsü" style="border-radius: 12px; margin-bottom: 20px; border: 1px solid var(--border-glow);">
+        <a href="assets/images/ai-rag-preview.svg" class="lightbox-trigger" data-caption="<?php echo __('slide3_title'); ?>">
+          <img src="assets/images/ai-rag-preview.svg" alt="<?php echo __('slide3_title'); ?>" style="border-radius: 12px; margin-bottom: 20px; border: 1px solid var(--border-glow);">
         </a>
-        <h3 style="font-size: 1.3rem; margin-bottom: 10px; color: #fff;">Kurumsal RAG &amp; Doküman Zekası</h3>
-        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px; flex-grow: 1;">On-premise yerel sunucuda çalışan KVKK garantili vektör veritabanı ve akıllı doğal dil arama asistanı.</p>
+        <h3 style="font-size: 1.3rem; margin-bottom: 10px; color: #fff;"><?php echo __('slide3_title'); ?></h3>
+        <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px; flex-grow: 1;"><?php echo __('slide3_desc'); ?></p>
         <div style="display:flex; justify-content:space-between; align-items:center; gap:12px; margin-top:auto; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.05);">
           <a href="ai-solutions.php" class="btn btn-outline btn-sm" style="white-space:nowrap; flex-shrink:0;"><?php echo __('btn_details'); ?></a>
           <a href="assets/images/ai-rag-preview.svg" class="lightbox-trigger text-gradient-ai" style="font-weight:700; font-size:0.85rem; white-space:nowrap;"><i class="fa-solid fa-expand"></i> <?php echo __('btn_preview'); ?> 🔍</a>
@@ -154,8 +154,8 @@ $projects = getProjects(4);
 <section class="ai-solutions-section">
   <div class="container">
     <div class="section-header">
-      <span class="badge badge-ai"><i class="fa-solid fa-brain"></i> <?php echo __('section_ai_title'); ?></span>
-      <h2>İş Süreçleriniz İçin <span class="text-gradient-ai">Özel AI Mimarileri</span></h2>
+      <span class="badge badge-ai"><i class="fa-solid fa-brain"></i> <?php echo __('section_ai_badge'); ?></span>
+      <h2><?php echo __('section_ai_title'); ?></h2>
       <p><?php echo __('section_ai_sub'); ?></p>
     </div>
 
@@ -187,8 +187,8 @@ $projects = getProjects(4);
 <section style="padding: 100px 0;">
   <div class="container">
     <div class="section-header">
-      <span class="badge"><i class="fa-solid fa-layer-group"></i> <?php echo __('section_services_title'); ?></span>
-      <h2>Uçtan Uca <span class="text-gradient">Dijital Mühendislik</span></h2>
+      <span class="badge"><i class="fa-solid fa-layer-group"></i> <?php echo __('section_services_badge'); ?></span>
+      <h2><?php echo __('section_services_title'); ?></h2>
       <p><?php echo __('section_services_sub'); ?></p>
     </div>
 
@@ -211,8 +211,8 @@ $projects = getProjects(4);
 <section style="padding: 80px 0; background: linear-gradient(180deg, rgba(7, 9, 14, 0) 0%, rgba(15, 22, 36, 0.9) 100%);">
   <div class="container text-center">
     <span class="badge badge-ai" style="margin-bottom: 20px;"><i class="fa-solid fa-bolt"></i> <?php echo __('nav_get_quote'); ?></span>
-    <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Saha ve Yazılım Projenizi <span class="text-gradient">Birlikte Başlatalım</span></h2>
-    <p style="max-width: 600px; margin: 0 auto 30px auto; color: var(--text-muted);">Hafriyat kantarlarınız, maden ocaklarınız veya kurumunuza özel yazılım ihtiyaçlarınız için anında fiyat teklifi ve demo isteyin.</p>
+    <h2 style="font-size: 2.5rem; margin-bottom: 20px;"><?php echo __('cta_title'); ?></h2>
+    <p style="max-width: 600px; margin: 0 auto 30px auto; color: var(--text-muted);"><?php echo __('cta_desc'); ?></p>
     <a href="contact.php" class="btn btn-primary btn-lg"><i class="fa-solid fa-paper-plane"></i> <?php echo __('nav_get_quote'); ?></a>
   </div>
 </section>

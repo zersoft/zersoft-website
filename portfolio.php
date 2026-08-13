@@ -1,9 +1,9 @@
 <?php
 /**
- * Zersoft Technology - Projelerimiz & Portföy Sayfası
+ * Zersoft Technology - Projelerimiz & Portföy Sayfası (i18n Uyumlu)
  */
-$pageTitle = "Başarı Hikayeleri & Portföy";
-$pageDescription = "Zersoft tarafından geliştirilen yapay zeka, SaaS, mobil uygulama ve kurumsal web projelerini inceleyin.";
+$pageTitle = __("portfolio_hero_title");
+$pageDescription = __("portfolio_hero_desc");
 require_once __DIR__ . '/includes/header.php';
 
 $projects = getProjects();
@@ -11,9 +11,9 @@ $projects = getProjects();
 
 <section class="hero-section" style="min-height: 40vh; padding: 140px 0 60px 0;">
   <div class="container text-center" style="max-width: 800px; margin: 0 auto;">
-    <span class="badge"><i class="fa-solid fa-trophy"></i> BAŞARI HİKAYELERİ</span>
-    <h1 style="font-size: 3rem; margin: 20px 0;">Tamamlanan <span class="text-gradient">Projelerimiz</span></h1>
-    <p style="color: var(--text-muted); font-size: 1.15rem;">Farklı sektörlerdeki kurumsal müşterilerimiz için hayata geçirdiğimiz teknoloji projeleri.</p>
+    <span class="badge"><i class="fa-solid fa-trophy"></i> <?php echo __('portfolio_hero_badge'); ?></span>
+    <h1 style="font-size: 3rem; margin: 20px 0;"><?php echo __('portfolio_hero_title'); ?></h1>
+    <p style="color: var(--text-muted); font-size: 1.15rem;"><?php echo __('portfolio_hero_desc'); ?></p>
   </div>
 </section>
 

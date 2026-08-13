@@ -1,9 +1,9 @@
 <?php
 /**
- * Zersoft Technology - İletişim Sayfası (Honeypot + Math CAPTCHA + i18n)
+ * Zersoft Technology - İletişim Sayfası (Honeypot + Math CAPTCHA + Tam i18n)
  */
-$pageTitle = "İletişim & Proje Teklifi Alın";
-$pageDescription = "Zersoft ekibiyle iletişime geçin, yapay zeka ve kantar otomasyon projeleriniz için teklif alın.";
+$pageTitle = __("contact_title");
+$pageDescription = __("contact_sub");
 require_once __DIR__ . '/includes/header.php';
 
 // Math CAPTCHA Oluştur
@@ -14,8 +14,8 @@ $_SESSION['captcha_answer'] = $num1 + $num2;
 
 <section class="hero-section" style="min-height: 35vh; padding: 140px 0 40px 0;">
   <div class="container text-center" style="max-width: 800px; margin: 0 auto;">
-    <span class="badge badge-ai"><i class="fa-solid fa-headset"></i> <?php echo __('contact_title'); ?></span>
-    <h1 style="font-size: 3rem; margin: 20px 0;">Bizimle <span class="text-gradient-ai">İletişime Geçin</span></h1>
+    <span class="badge badge-ai"><i class="fa-solid fa-headset"></i> <?php echo __('nav_contact'); ?></span>
+    <h1 style="font-size: 3rem; margin: 20px 0;"><?php echo __('contact_title'); ?></h1>
     <p style="color: var(--text-muted); font-size: 1.15rem;"><?php echo __('contact_sub'); ?></p>
   </div>
 </section>
@@ -24,14 +24,14 @@ $_SESSION['captcha_answer'] = $num1 + $num2;
   <div class="container">
     <div class="contact-grid">
       <div>
-        <h2 style="font-size: 2rem; margin-bottom: 20px;">Zersoft Merkez Ofis</h2>
-        <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.7;">Ekibimiz haftanın 5 günü sorularınızı yanıtlamaya ve projenizi değerlendirmeye hazırdır.</p>
+        <h2 style="font-size: 2rem; margin-bottom: 20px;"><?php echo __('office_title'); ?></h2>
+        <p style="color: var(--text-muted); font-size: 1.05rem; line-height: 1.7;"><?php echo __('office_sub'); ?></p>
 
         <div class="contact-info-list" style="margin-top: 30px;">
           <div class="contact-item">
             <div class="contact-icon"><i class="fa-solid fa-location-dot"></i></div>
             <div>
-              <div style="font-size: 0.85rem; color: var(--text-muted);">Adres</div>
+              <div style="font-size: 0.85rem; color: var(--text-muted);"><?php echo __('label_address'); ?></div>
               <strong><?php echo sanitize($settings['address']); ?></strong>
             </div>
           </div>
@@ -39,7 +39,7 @@ $_SESSION['captcha_answer'] = $num1 + $num2;
           <div class="contact-item">
             <div class="contact-icon"><i class="fa-solid fa-phone"></i></div>
             <div>
-              <div style="font-size: 0.85rem; color: var(--text-muted);">Telefon</div>
+              <div style="font-size: 0.85rem; color: var(--text-muted);"><?php echo __('label_phone'); ?></div>
               <strong><?php echo sanitize($settings['phone']); ?></strong>
             </div>
           </div>
@@ -47,7 +47,7 @@ $_SESSION['captcha_answer'] = $num1 + $num2;
           <div class="contact-item">
             <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
             <div>
-              <div style="font-size: 0.85rem; color: var(--text-muted);">E-Posta</div>
+              <div style="font-size: 0.85rem; color: var(--text-muted);"><?php echo __('label_email'); ?></div>
               <strong><?php echo sanitize($settings['email']); ?></strong>
             </div>
           </div>
@@ -55,7 +55,7 @@ $_SESSION['captcha_answer'] = $num1 + $num2;
           <div class="contact-item">
             <div class="contact-icon"><i class="fa-solid fa-clock"></i></div>
             <div>
-              <div style="font-size: 0.85rem; color: var(--text-muted);">Çalışma Saatleri</div>
+              <div style="font-size: 0.85rem; color: var(--text-muted);"><?php echo __('label_hours'); ?></div>
               <strong><?php echo sanitize($settings['working_hours']); ?></strong>
             </div>
           </div>
@@ -102,9 +102,9 @@ $_SESSION['captcha_answer'] = $num1 + $num2;
           <!-- Math CAPTCHA Field -->
           <div class="form-group" style="background: rgba(0, 242, 254, 0.05); padding: 14px; border-radius: 8px; border: 1px solid var(--border-glow);">
             <label class="form-label" style="color: #00f2fe; font-weight: 700;">
-              🛡️ SPAM Koruması: <?php echo $num1; ?> + <?php echo $num2; ?> Kaç Eder? *
+              🛡️ SPAM Verification: <?php echo $num1; ?> + <?php echo $num2; ?> = ? *
             </label>
-            <input type="number" name="captcha_answer" class="form-control" placeholder="Sonucu buraya yazınız..." required style="margin-top: 6px;">
+            <input type="number" name="captcha_answer" class="form-control" placeholder="..." required style="margin-top: 6px;">
           </div>
 
           <button type="submit" class="btn btn-primary" style="width: 100%;"><i class="fa-solid fa-paper-plane"></i> <?php echo __('btn_send'); ?></button>
@@ -126,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function() {
       
       const btn = form.querySelector('button[type="submit"]');
       const originalText = btn.innerHTML;
-      btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Gönderiliyor...';
+      btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Loading...';
       btn.disabled = true;
 
       const formData = new FormData(form);
@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', function() {
         btn.disabled = false;
         alertBox.style.display = 'block';
         alertBox.className = 'alert-box alert-error';
-        alertBox.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i> Bağlantı hatası oluştu.';
+        alertBox.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i> Connection error.';
       });
     });
   }
