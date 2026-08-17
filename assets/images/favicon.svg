@@ -1,45 +1,32 @@
-<!--
-  ZERSOFT — Favicon (Mark only, no wordmark)
-  Optimized for 16×16, 32×32, 64×64 rendering.
-  Viewbox padded so the mark sits visually centered.
-  Uses hardcoded colors (no CSS classes) — favicons don't load external CSS.
--->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Zersoft">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Zersoft">
   <defs>
-    <linearGradient id="fG1" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%"   stop-color="#22d3ee" stop-opacity="0.55"/>
-      <stop offset="72%"  stop-color="#22d3ee" stop-opacity="1"/>
-      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    <linearGradient id="favG1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#00f2fe"/>
+      <stop offset="100%" stop-color="#0284c7"/>
     </linearGradient>
-    <linearGradient id="fG2" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%"   stop-color="#0ea5e9" stop-opacity="0.6"/>
-      <stop offset="72%"  stop-color="#0ea5e9" stop-opacity="1"/>
-      <stop offset="100%" stop-color="#0ea5e9" stop-opacity="0"/>
+    <linearGradient id="favG2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#0284c7"/>
+      <stop offset="100%" stop-color="#0ea5e9"/>
     </linearGradient>
-    <linearGradient id="fG3" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%"   stop-color="#6366f1" stop-opacity="0.45"/>
-      <stop offset="72%"  stop-color="#6366f1" stop-opacity="1"/>
-      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+    <linearGradient id="favG3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#0284c7"/>
     </linearGradient>
   </defs>
 
-  <!--
-    Mark centered in 64×64 canvas.
-    Focal point at (54, 32).
-    Streams fan from left (x=6) to focal point.
-    
-    Stream 1 (top):    (6,8)  → (54,32)  — band ~6px wide at origin
-    Stream 2 (middle): (6,32) → (54,32)  — thickest band
-    Stream 3 (bottom): (6,56) → (54,32)
-  -->
-  <!-- Stream 1 -->
-  <polygon points="6,5   10,13  54,34 54,30" fill="url(#fG1)"/>
-  <!-- Stream 2 -->
-  <polygon points="6,28  6,36   54,34 54,30" fill="url(#fG2)"/>
-  <!-- Stream 3 -->
-  <polygon points="6,59  10,51  54,34 54,30" fill="url(#fG3)"/>
+  <!-- Centered Convergence Mark filling the entire favicon square -->
+  <g>
+    <!-- Stream 1 (top): cyan -->
+    <polygon points="40,45  90,100  430,268  430,244" fill="url(#favG1)"/>
 
-  <!-- Focal point dot -->
-  <circle cx="54" cy="32" r="5.5" fill="#0ea5e9"/>
-  <circle cx="54" cy="32" r="2.2" fill="#ffffff"/>
+    <!-- Stream 2 (middle): azure blue -->
+    <polygon points="40,220 40,292  430,268  430,244" fill="url(#favG2)"/>
+
+    <!-- Stream 3 (bottom): indigo purple -->
+    <polygon points="40,467 90,412  430,268  430,244" fill="url(#favG3)"/>
+
+    <!-- Focal point dot -->
+    <circle cx="430" cy="256" r="75" fill="#0284c7"/>
+    <circle cx="430" cy="256" r="32" fill="#ffffff"/>
+  </g>
 </svg>
