@@ -1,13 +1,14 @@
 <?php
 /**
  * Zersoft — Sunucu Ortam Tanılama Dosyası
- * Kullanımdan sonra SİLİN!
+ * Sadece giriş yapmış yetkili adminler erişebilir.
  */
+require_once __DIR__ . '/includes/functions.php';
+requireLogin();
 
 // Hataları göster
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+ini_set('display_errors', 0);
+error_reporting(0);
 
 echo "<style>body{font-family:monospace;background:#0d0d0d;color:#00ff88;padding:20px;}
 h2{color:#00f2fe;} .ok{color:#00ff88;} .err{color:#ff4444;} .warn{color:#ffaa00;}

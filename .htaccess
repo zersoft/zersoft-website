@@ -1,0 +1,52 @@
+# ============================================================
+# ZERSOFT Technology — Apache & cPanel Güvenlik Yapılandırması
+# ============================================================
+
+# 1. Dizin Listelemeyi Kapat (Directory Browsing Prevention)
+Options -Indexes
+
+# 2. Hassas Dosyalara Doğrudan Web Erişimini Engelle
+<FilesMatch "^(\.env|\.git|\.gitignore|database\.sql|.*\.sqlite|.*\.log|README\.md|composer\..*)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# 3. /config ve /includes Dizinlerine Doğrudan Erişimi Engelle
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # .env veya gizli dosyalara erişim engeli (403)
+    RewriteRule ^\.env - [F,L]
+    RewriteRule ^\.git - [F,L]
+    RewriteRule \.(sql|sqlite|log|md)$ - [F,L]
+
+    # HTTPS Yönlendirmesi (Üretim ortamında aktifleşir)
+    # RewriteCond %{HTTPS} off
+    # RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# 4. HTTP Güvenlik Başlıkları (Security Headers)
+<IfModule mod_headers.c>
+    # Clickjacking saldırılarına karşı koruma
+    Header always set X-Frame-Options "SAMEORIGIN"
+
+    # MIME-type sniffing engelleme
+    Header always set X-Content-Type-Options "nosniff"
+
+    # Tarayıcı XSS filtresini zorlama
+    Header always set X-XSS-Protection "1; mode=block"
+
+    # Referrer bilgisini koruma
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+    # X-Powered-By PHP bilgisini gizleme
+    Header unset X-Powered-By
+</IfModule>
+
+# 5. PHP Hata Gösterimini Üretimde Gizleme (cPanel)
+<IfModule mod_php.c>
+    php_flag display_errors Off
+    php_flag display_startup_errors Off
+    php_flag log_errors On
+</IfModule>

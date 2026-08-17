@@ -24,26 +24,45 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (empty($username) || empty($password)) {
             $error = 'Lütfen kullanıcı adı ve şifrenizi giriniz.';
         } else {
-            try {
-                global $db;
-                $stmt = $db->prepare("SELECT * FROM users WHERE username = :username OR email = :email LIMIT 1");
-                $stmt->execute([':username' => $username, ':email' => $username]);
-                $user = $stmt->fetch();
-
-                if ($user && password_verify($password, $user['password'])) {
-                    // Oturum Güvenliği
-                    session_regenerate_id(true);
-                    $_SESSION['admin_user_id'] = $user['id'];
-                    $_SESSION['admin_user_name'] = $user['full_name'];
-                    $_SESSION['admin_username'] = $user['username'];
-
-                    header("Location: index.php");
-                    exit();
-                } else {
-                    $error = 'Hatalı kullanıcı adı veya şifre!';
+            // Brute-force koruması (5 başarısız denemeden sonra 60 saniye bekleme)
+            $attempts = $_SESSION['login_attempts'] ?? 0;
+            $lastAttemptTime = $_SESSION['last_login_attempt'] ?? 0;
+            
+            if ($attempts >= 5 && (time() - $lastAttemptTime) < 60) {
+                $remaining = 60 - (time() - $lastAttemptTime);
+                $error = "Çok fazla başarısız giriş denemesi. Lütfen {$remaining} saniye bekleyip tekrar deneyin.";
+            } else {
+                if ((time() - $lastAttemptTime) >= 60) {
+                    $_SESSION['login_attempts'] = 0;
                 }
-            } catch (Exception $e) {
-                $error = 'Sistem hatası: ' . $e->getMessage();
+
+                try {
+                    global $db;
+                    $stmt = $db->prepare("SELECT * FROM users WHERE username = :username OR email = :email LIMIT 1");
+                    $stmt->execute([':username' => $username, ':email' => $username]);
+                    $user = $stmt->fetch();
+
+                    if ($user && password_verify($password, $user['password'])) {
+                        // Başarılı giriş: deneme sayacını sıfırla
+                        unset($_SESSION['login_attempts']);
+                        unset($_SESSION['last_login_attempt']);
+
+                        // Oturum Güvenliği
+                        session_regenerate_id(true);
+                        $_SESSION['admin_user_id'] = $user['id'];
+                        $_SESSION['admin_user_name'] = $user['full_name'];
+                        $_SESSION['admin_username'] = $user['username'];
+
+                        header("Location: index.php");
+                        exit();
+                    } else {
+                        $_SESSION['login_attempts'] = ($_SESSION['login_attempts'] ?? 0) + 1;
+                        $_SESSION['last_login_attempt'] = time();
+                        $error = 'Hatalı kullanıcı adı veya şifre!';
+                    }
+                } catch (Exception $e) {
+                    $error = 'Giriş işlemi sırasında bir hata oluştu. Lütfen tekrar deneyiniz.';
+                }
             }
         }
     }
@@ -80,22 +99,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <div style="margin-bottom: 20px;">
           <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 8px; color: var(--admin-text-muted);">Kullanıcı Adı veya E-Posta</label>
-          <input type="text" name="username" class="btn-admin-primary" style="width: 100%; background: #090d16; border: 1px solid var(--admin-border); color: #fff; padding: 12px 16px; border-radius: 8px;" placeholder="admin" required>
+          <input type="text" name="username" class="btn-admin-primary" style="width: 100%; background: #090d16; border: 1px solid var(--admin-border); color: #fff; padding: 12px 16px; border-radius: 8px;" placeholder="Kullanıcı adınız veya e-postanız" autocomplete="username" required>
         </div>
 
         <div style="margin-bottom: 24px;">
           <label style="display: block; font-size: 0.85rem; font-weight: 600; margin-bottom: 8px; color: var(--admin-text-muted);">Şifre</label>
-          <input type="password" name="password" class="btn-admin-primary" style="width: 100%; background: #090d16; border: 1px solid var(--admin-border); color: #fff; padding: 12px 16px; border-radius: 8px;" placeholder="••••••••" required>
+          <input type="password" name="password" class="btn-admin-primary" style="width: 100%; background: #090d16; border: 1px solid var(--admin-border); color: #fff; padding: 12px 16px; border-radius: 8px;" placeholder="••••••••" autocomplete="current-password" required>
         </div>
 
         <button type="submit" class="btn-admin-primary" style="width: 100%; justify-content: center; padding: 12px; font-size: 1rem;">
           <i class="fa-solid fa-right-to-bracket"></i> Giriş Yap
         </button>
       </form>
-      
-      <div style="margin-top: 20px; text-align: center; font-size: 0.8rem; color: var(--admin-text-muted);">
-        Varsayılan Giriş: <strong>admin</strong> / <strong>admin123</strong>
-      </div>
     </div>
   </div>
 </body>

@@ -5,5 +5,8 @@ Disallow: /admin/
 Disallow: /config/
 Disallow: /includes/
 Disallow: /api/
+Disallow: /diagnose.php
+Disallow: /*.sql
+Disallow: /*.sqlite
 
 Sitemap: https://zersoft.net/sitemap.xml

@@ -77,5 +77,6 @@ try {
 
     jsonResponse(true, 'Teşekkürler! Mesajınız Zersoft ekibine başarıyla iletildi. En kısa sürede sizinle iletişime geçeceğiz.');
 } catch (Exception $e) {
-    jsonResponse(false, 'Mesajınız kaydedilirken teknik bir hata oluştu: ' . $e->getMessage());
+    error_log("Contact form error: " . $e->getMessage());
+    jsonResponse(false, 'Mesajınız kaydedilirken teknik bir hata oluştu. Lütfen daha sonra tekrar deneyiniz.');
 }

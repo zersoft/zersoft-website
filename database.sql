@@ -20,7 +20,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `created_at` DATETIME DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Varsayılan Kullanıcı: admin / admin123
+-- Admin Kullanıcı Hesabı
 REPLACE INTO `users` (`id`, `username`, `email`, `password`, `full_name`, `role`) VALUES
 (1, 'admin', 'admin@zersoft.net', '$2y$10$GRVGgiRboxVrGNo6YJfZB.e3xM6zXahRh2FznSpPUMiIz.DPn1EHC', 'Zersoft Yönetici', 'admin');
 

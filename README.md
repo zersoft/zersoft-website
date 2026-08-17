@@ -39,10 +39,7 @@ define('DB_PASS', 'sifreniz');
 
 ### 4. Admin Paneli
 - URL: `yourdomain.com/admin/login.php`
-- Kullanıcı adı: `admin`
-- Varsayılan şifre: `admin123`
-
-> **ÖNEMLİ:** Giriş yaptıktan sonra Admin → Site Ayarları menüsünden şifrenizi değiştirin!
+- Giriş yaptıktan sonra Admin → Site Ayarları menüsünden şifrenizi belirleyiniz.
 
 ## Proje Yapısı
 
