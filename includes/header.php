@@ -94,8 +94,9 @@ $canonicalUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https
   <!-- Navigation Bar -->
   <header class="navbar">
     <div class="container nav-container">
-      <a href="index.php" class="brand-logo">
-        <img src="assets/images/logo.svg" alt="Zersoft Teknoloji Logo" width="180" height="45" style="height:45px; width:auto;" class="animated-logo" id="site-logo">
+      <a href="index.php" class="brand-logo" aria-label="Zersoft Ana Sayfa">
+        <img src="assets/images/logo.svg" alt="Zersoft Teknoloji" width="150" height="36" style="height:36px; width:auto;" class="logo-img logo-dark animated-logo" id="site-logo-dark">
+        <img src="assets/images/logo-light.svg" alt="Zersoft Teknoloji" width="150" height="36" style="height:36px; width:auto;" class="logo-img logo-light animated-logo" id="site-logo-light">
       </a>
 
       <ul class="nav-links">
@@ -120,7 +121,7 @@ $canonicalUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https
           <i class="fa-solid fa-sun"></i>
         </button>
 
-        <a href="contact.php" class="btn btn-primary" style="padding: 8px 16px; font-size: 0.85rem; white-space: nowrap;"><i class="fa-solid fa-paper-plane"></i> <?php echo __('nav_get_quote'); ?></a>
+        <a href="contact.php" class="btn btn-primary btn-quote"><i class="fa-solid fa-paper-plane"></i> <?php echo __('nav_get_quote'); ?></a>
 
         <button class="mobile-toggle" aria-label="Menüyü Aç/Kapat">
           <i class="fa-solid fa-bars"></i>

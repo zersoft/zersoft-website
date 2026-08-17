@@ -9,8 +9,9 @@ $settings = getSiteSettings();
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="index.php" class="brand-logo">
-            <img src="assets/images/logo.svg" alt="Zersoft Teknoloji" width="160" height="40" style="height:40px; width:auto;" class="animated-logo">
+          <a href="index.php" class="brand-logo" aria-label="Zersoft Ana Sayfa">
+            <img src="assets/images/logo.svg" alt="Zersoft Teknoloji" width="150" height="36" style="height:36px; width:auto;" class="logo-img logo-dark animated-logo">
+            <img src="assets/images/logo-light.svg" alt="Zersoft Teknoloji" width="150" height="36" style="height:36px; width:auto;" class="logo-img logo-light animated-logo">
           </a>
           <p><?php echo __('site_tagline'); ?></p>
           <div class="social-links">
