@@ -21,6 +21,14 @@ $canonicalUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https
 <!DOCTYPE html>
 <html lang="<?php echo $lang; ?>" data-theme="dark">
 <head>
+  <script>
+    (function() {
+      try {
+        const saved = localStorage.getItem('zersoft_theme') || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+        document.documentElement.setAttribute('data-theme', saved);
+      } catch(e) {}
+    })();
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?php echo $fullTitle; ?></title>

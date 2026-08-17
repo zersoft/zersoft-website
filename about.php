@@ -118,7 +118,7 @@ require_once __DIR__ . '/includes/header.php';
       </div>
 
       <!-- Hidden meaning note -->
-      <div style="border-top: 1px solid rgba(255,255,255,0.08); padding-top: 24px; display:flex; align-items:flex-start; gap: 16px;">
+      <div style="border-top: 1px solid var(--border-glow); padding-top: 24px; display:flex; align-items:flex-start; gap: 16px;">
         <div style="width:36px; height:36px; border-radius:9px; background:rgba(14,165,233,0.12); border:1px solid rgba(14,165,233,0.25); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
           <i class="fa-solid fa-eye" style="color: #0ea5e9; font-size:0.85rem;"></i>
         </div>

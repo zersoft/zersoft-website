@@ -34,6 +34,16 @@ function setTheme(theme) {
   document.documentElement.setAttribute('data-theme', theme);
   localStorage.setItem('zersoft_theme', theme);
 
+  // Update logo images for current theme
+  const logos = document.querySelectorAll('img[src*="logo.svg"], img[src*="logo-light.svg"], .animated-logo');
+  logos.forEach(logo => {
+    if (theme === 'light') {
+      logo.src = 'assets/images/logo-light.svg';
+    } else {
+      logo.src = 'assets/images/logo.svg';
+    }
+  });
+
   const themeIcons = document.querySelectorAll('.theme-toggle-btn i');
   themeIcons.forEach(icon => {
     if (theme === 'light') {
