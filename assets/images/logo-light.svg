@@ -1,18 +1,18 @@
 <!--
-  ZERSOFT — Abstract Mark V: "Convergence" (Light Mode - Black/Dark Typography)
+  ZERSOFT — Abstract Mark V: "Convergence" (Light Mode - Koyu Gri / Charcoal Typography)
   
   Light Background Colors:
-  - ZER: Solid deep black (#090d16)
-  - SOFT: Vibrant high-contrast cyan (#0284c7)
-  - Tagline: Dark slate (#334155)
+  - ZER: Koyu Antrasit Gri (#1e293b) - Yumuşak, modern ve göz yormayan derinlik
+  - SOFT: Canlı Okyanus Mavisi (#0284c7)
+  - Tagline: Slate Gri (#64748b)
   - Streams: Saturated cyan, royal blue, and indigo
 -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 64" width="300" height="64" role="img" aria-label="Zersoft — Yeni Nesil Teknoloji">
   <defs>
     <style>
-      .cvl-zer  { fill: #090d16; }
+      .cvl-zer  { fill: #1e293b; }
       .cvl-soft { fill: #0284c7; }
-      .cvl-tag  { fill: #334155; }
+      .cvl-tag  { fill: #64748b; }
     </style>
 
     <linearGradient id="cvlG1" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -62,7 +62,7 @@
     <text
       x="0" y="58"
       font-family="'Plus Jakarta Sans','Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
-      font-size="9.5" font-weight="700"
+      font-size="9.5" font-weight="600"
       letter-spacing="0.8"
       textLength="176"
       lengthAdjust="spacing"

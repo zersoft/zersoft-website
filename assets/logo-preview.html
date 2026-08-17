@@ -171,41 +171,116 @@
   </div>
 
   <!-- Light mode row -->
-  <div class="compare-row">
+  <div class="page-header" style="margin-top: 50px; margin-bottom: 24px;">
+    <span class="eyebrow">Açık Mod Renk Seçenekleri</span>
+    <h2 style="font-size: 1.6rem; font-weight: 800;">Açık Mod için Koyu Gri Tonları</h2>
+    <p>Siyahın sertliğini kırıp daha zarif ve premium bir kurumsal duruş sağlayan koyu gri alternatifleri:</p>
+  </div>
+
+  <div class="compare-row" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
+    
+    <!-- Option 1: Antrasit Gri -->
+    <div class="card pick">
+      <div class="card-head">
+        <div class="card-title">1. Antrasit Gri (#1e293b)<small>Önerilen · Modern &amp; Yumuşak</small></div>
+        <span class="pill p-new">Aktif</span>
+      </div>
+      <div class="stage lt">
+        <img src="images/logo-light.svg" alt="Antrasit Gri Logo">
+      </div>
+      <div class="annotation">
+        <strong>ZER:</strong> #1e293b (Slate-800) | <strong>SOFT:</strong> #0284c7<br>
+        Gözü yormaz, modern SaaS estetiği (Linear / Stripe tarzı).
+      </div>
+    </div>
+
+    <!-- Option 2: Grafit Koyu Gri -->
     <div class="card">
       <div class="card-head">
-        <div class="card-title">Açık Mod — Önce (Hatalı/Beyaz)<small>Açık zemin üzerinde beyaz metin</small></div>
-        <span class="pill p-old">Hatalı</span>
+        <div class="card-title">2. Grafit Gri (#27272a)<small>Zinc Nötr Koyu Gri</small></div>
+        <span class="pill p-old">Alternatif</span>
       </div>
       <div class="stage lt">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 64" width="100%" style="max-width:300px">
           <g transform="translate(3,0)">
-            <polygon points="0,5 3,11 44,33 44,31" fill="#22d3ee" opacity=".7"/>
-            <polygon points="0,29 0,35 44,33 44,31" fill="#0ea5e9" opacity=".9"/>
-            <polygon points="0,53 3,59 44,33 44,31" fill="#6366f1" opacity=".7"/>
-            <circle cx="44" cy="32" r="3.2" fill="#0ea5e9"/>
+            <polygon points="0,5 3,11 44,33 44,31" fill="#0891b2"/>
+            <polygon points="0,29 0,35 44,33 44,31" fill="#0284c7"/>
+            <polygon points="0,53 3,59 44,33 44,31" fill="#4f46e5"/>
+            <circle cx="44" cy="32" r="3.5" fill="#0284c7"/>
             <circle cx="44" cy="32" r="1.3" fill="#fff"/>
           </g>
           <g transform="translate(64,0)">
             <text x="0" y="41" font-family="'Plus Jakarta Sans',sans-serif" font-size="32" font-weight="800" letter-spacing="2" textLength="176" lengthAdjust="spacing">
-              <tspan fill="#ffffff" stroke="rgba(0,0,0,0.06)">ZER</tspan><tspan fill="#38bdf8">SOFT</tspan>
+              <tspan fill="#27272a">ZER</tspan><tspan fill="#0284c7">SOFT</tspan>
             </text>
-            <text x="0" y="58" font-family="'Plus Jakarta Sans',sans-serif" font-size="9.5" font-weight="600" letter-spacing="0.8" textLength="176" lengthAdjust="spacing" fill="#94a3b8">YENİ NESİL TEKNOLOJİ</text>
+            <text x="0" y="58" font-family="'Plus Jakarta Sans',sans-serif" font-size="9.5" font-weight="600" letter-spacing="0.8" textLength="176" lengthAdjust="spacing" fill="#71717a">YENİ NESİL TEKNOLOJİ</text>
           </g>
         </svg>
       </div>
-      <div class="annotation" style="font-size:11px; color:var(--muted)">Açık zemin üzerinde 'ZER' beyaz kalarak kayboluyordu.</div>
+      <div class="annotation">
+        <strong>ZER:</strong> #27272a (Zinc-800) | <strong>SOFT:</strong> #0284c7<br>
+        Nötr, hafif sıcak koyu grafit tonu.
+      </div>
     </div>
-    <div class="card pick">
+
+    <!-- Option 3: Monokrom Koyu Gri -->
+    <div class="card">
       <div class="card-head">
-        <div class="card-title">Açık Mod — Güncel (Siyah / Yüksek Kontrast)<small>Açık zemin için siyah &amp; okyanus mavisi</small></div>
-        <span class="pill p-new">Düzeltildi</span>
+        <div class="card-title">3. Monokrom Koyu Gri<small>Tek Renk Tipografi</small></div>
+        <span class="pill p-old">Sade</span>
       </div>
       <div class="stage lt">
-        <img src="images/logo-light.svg" alt="Convergence light siyah">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 64" width="100%" style="max-width:300px">
+          <g transform="translate(3,0)">
+            <polygon points="0,5 3,11 44,33 44,31" fill="#0891b2"/>
+            <polygon points="0,29 0,35 44,33 44,31" fill="#0284c7"/>
+            <polygon points="0,53 3,59 44,33 44,31" fill="#4f46e5"/>
+            <circle cx="44" cy="32" r="3.5" fill="#0284c7"/>
+            <circle cx="44" cy="32" r="1.3" fill="#fff"/>
+          </g>
+          <g transform="translate(64,0)">
+            <text x="0" y="41" font-family="'Plus Jakarta Sans',sans-serif" font-size="32" font-weight="800" letter-spacing="2" textLength="176" lengthAdjust="spacing">
+              <tspan fill="#1e293b">ZERSOFT</tspan>
+            </text>
+            <text x="0" y="58" font-family="'Plus Jakarta Sans',sans-serif" font-size="9.5" font-weight="600" letter-spacing="0.8" textLength="176" lengthAdjust="spacing" fill="#64748b">YENİ NESİL TEKNOLOJİ</text>
+          </g>
+        </svg>
       </div>
-      <div class="annotation" style="font-size:11px; color:var(--muted)">'ZER' derin siyah (#090d16), 'SOFT' canlı mavi (#0284c7), slogan net ve okunaklı.</div>
+      <div class="annotation">
+        <strong>ZERSOFT:</strong> Tek parça #1e293b (Koyu Antrasit)<br>
+        Tamamen monokrom ve minimal tipografi.
+      </div>
     </div>
+
+    <!-- Option 4: Derin Siyah -->
+    <div class="card">
+      <div class="card-head">
+        <div class="card-title">4. Derin Siyah (#090d16)<small>Maksimum Kontrast</small></div>
+        <span class="pill p-old">Siyah</span>
+      </div>
+      <div class="stage lt">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 64" width="100%" style="max-width:300px">
+          <g transform="translate(3,0)">
+            <polygon points="0,5 3,11 44,33 44,31" fill="#0891b2"/>
+            <polygon points="0,29 0,35 44,33 44,31" fill="#0284c7"/>
+            <polygon points="0,53 3,59 44,33 44,31" fill="#4f46e5"/>
+            <circle cx="44" cy="32" r="3.5" fill="#0284c7"/>
+            <circle cx="44" cy="32" r="1.3" fill="#fff"/>
+          </g>
+          <g transform="translate(64,0)">
+            <text x="0" y="41" font-family="'Plus Jakarta Sans',sans-serif" font-size="32" font-weight="800" letter-spacing="2" textLength="176" lengthAdjust="spacing">
+              <tspan fill="#090d16">ZER</tspan><tspan fill="#0284c7">SOFT</tspan>
+            </text>
+            <text x="0" y="58" font-family="'Plus Jakarta Sans',sans-serif" font-size="9.5" font-weight="600" letter-spacing="0.8" textLength="176" lengthAdjust="spacing" fill="#334155">YENİ NESİL TEKNOLOJİ</text>
+          </g>
+        </svg>
+      </div>
+      <div class="annotation">
+        <strong>ZER:</strong> #090d16 (Obsidian Siyah)<br>
+        En keskin ve net kontrast.
+      </div>
+    </div>
+
   </div>
 
   <!-- Big showcase -->
@@ -213,7 +288,7 @@
     <div class="showcase">
       <img src="images/logo-light.svg" alt="Zersoft Convergence final" id="showcase-img" style="background:#fff; padding:20px 30px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.06);">
     </div>
-    <p class="showcase-label">Açık Zemin — Siyah ZERSOFT Tipografisi &amp; Convergence Markı</p>
+    <p class="showcase-label">Açık Zemin — Koyu Antrasit Gri (#1e293b) ZERSOFT Tipografisi</p>
   </div>
 
 </div>
