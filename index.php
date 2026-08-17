@@ -2,6 +2,7 @@
 /**
  * Zersoft Technology - Ana Sayfa (Tam i18n & Slider & Lightbox Uyumlu)
  */
+require_once __DIR__ . '/includes/init.php';
 $pageTitle = __("slide1_title");
 require_once __DIR__ . '/includes/header.php';
 

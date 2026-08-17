@@ -2,6 +2,7 @@
 /**
  * Zersoft Technology - IYS (İmalat & Süreç Yönetim Programı) Ürün Detay Sayfası
  */
+require_once __DIR__ . '/includes/init.php';
 $pageTitle = __("iys_hero_title");
 $pageDescription = __("iys_hero_desc");
 require_once __DIR__ . '/includes/header.php';

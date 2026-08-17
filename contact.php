@@ -2,6 +2,7 @@
 /**
  * Zersoft Technology - İletişim Sayfası (Honeypot + Math CAPTCHA + Tam i18n)
  */
+require_once __DIR__ . '/includes/init.php';
 $pageTitle = __("contact_title");
 $pageDescription = __("contact_sub");
 require_once __DIR__ . '/includes/header.php';

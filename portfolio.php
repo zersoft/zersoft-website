@@ -2,6 +2,7 @@
 /**
  * Zersoft Technology - Projelerimiz & Portföy Sayfası (i18n Uyumlu)
  */
+require_once __DIR__ . '/includes/init.php';
 $pageTitle = __("portfolio_hero_title");
 $pageDescription = __("portfolio_hero_desc");
 require_once __DIR__ . '/includes/header.php';

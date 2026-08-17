@@ -2,6 +2,7 @@
 /**
  * Zersoft Technology - Yapay Zeka Çözümlerimiz Sayfası (i18n Uyumlu)
  */
+require_once __DIR__ . '/includes/init.php';
 $pageTitle = __("ai_hero_title");
 $pageDescription = __("ai_hero_desc");
 require_once __DIR__ . '/includes/header.php';

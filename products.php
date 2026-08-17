@@ -2,6 +2,7 @@
 /**
  * Zersoft Technology - Ürünlerimiz Sayfası (Tam i18n Uyumlu)
  */
+require_once __DIR__ . '/includes/init.php';
 $pageTitle = __("products_hero_title");
 $pageDescription = __("products_hero_desc");
 require_once __DIR__ . '/includes/header.php';

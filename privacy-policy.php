@@ -2,6 +2,7 @@
 /**
  * Zersoft Technology - Gizlilik, KVKK ve Çerez Politikası Sayfası
  */
+require_once __DIR__ . '/includes/init.php';
 $pageTitle = "Gizlilik ve Çerez Politikası";
 $pageDescription = "Zersoft Teknoloji KVKK Aydınlatma Metni, Veri Güvenliği ve Çerez Politikası bilgilendirme sayfası.";
 require_once __DIR__ . '/includes/header.php';
