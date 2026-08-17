@@ -57,7 +57,7 @@ $translations = [
         'slide3_btn2' => 'Teknik Detaylar',
 
         // Quick Stats
-        'stat_uptime' => 'Sistem Çalışma Süresi & Kararlılık',
+        'stat_backup' => 'Anlık Bulut Yedekleme',
         'stat_support' => 'Kesintisiz Saha Desteği',
         'stat_time' => 'Tartım Süreçlerinde Zaman Tasarrufu',
         'stat_security' => 'KVKK & Yerel Sunucu Güvenliği',
@@ -241,7 +241,7 @@ $translations = [
         'slide3_btn2' => 'Technical Specs',
 
         // Quick Stats
-        'stat_uptime' => 'System Uptime & Stability',
+        'stat_backup' => 'Real-Time Cloud Backup',
         'stat_support' => 'Uninterrupted Field Support',
         'stat_time' => 'Time Saved in Weighing',
         'stat_security' => 'GDPR & Secure On-Premise Data',
