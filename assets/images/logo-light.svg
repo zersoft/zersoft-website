@@ -1,36 +1,32 @@
 <!--
-  ZERSOFT — Abstract Mark V: "Convergence" (Light Mode Optimized)
+  ZERSOFT — Abstract Mark V: "Convergence" (Light Mode - Black/Dark Typography)
   
   Light Background Colors:
-  - ZER: Rich deep navy (#0c1b30 / #0f172a)
-  - SOFT: Vibrant deep cyan (#0284c7)
-  - Tagline: Elegant slate (#64748b)
-  - Streams: High-contrast cyan, royal blue, and indigo-violet
+  - ZER: Solid deep black (#090d16)
+  - SOFT: Vibrant high-contrast cyan (#0284c7)
+  - Tagline: Dark slate (#334155)
+  - Streams: Saturated cyan, royal blue, and indigo
 -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 64" width="300" height="64" role="img" aria-label="Zersoft — Yeni Nesil Teknoloji">
   <defs>
     <style>
-      .cvl-zer  { fill: #0f172a; }
+      .cvl-zer  { fill: #090d16; }
       .cvl-soft { fill: #0284c7; }
-      .cvl-tag  { fill: #64748b; }
+      .cvl-tag  { fill: #334155; }
     </style>
 
-    <!--
-      Light Theme Stream Gradients:
-      Rich, saturated, high-contrast against light backgrounds (#f8fafc / #ffffff)
-    -->
     <linearGradient id="cvlG1" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%"   stop-color="#06b6d4" stop-opacity="0.75"/>
+      <stop offset="0%"   stop-color="#06b6d4" stop-opacity="0.8"/>
       <stop offset="75%"  stop-color="#0891b2" stop-opacity="1"/>
       <stop offset="100%" stop-color="#0891b2" stop-opacity="0"/>
     </linearGradient>
     <linearGradient id="cvlG2" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%"   stop-color="#0284c7" stop-opacity="0.8"/>
+      <stop offset="0%"   stop-color="#0284c7" stop-opacity="0.85"/>
       <stop offset="75%"  stop-color="#0369a1" stop-opacity="1"/>
       <stop offset="100%" stop-color="#0369a1" stop-opacity="0"/>
     </linearGradient>
     <linearGradient id="cvlG3" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%"   stop-color="#6366f1" stop-opacity="0.75"/>
+      <stop offset="0%"   stop-color="#6366f1" stop-opacity="0.8"/>
       <stop offset="75%"  stop-color="#4f46e5" stop-opacity="1"/>
       <stop offset="100%" stop-color="#4f46e5" stop-opacity="0"/>
     </linearGradient>
@@ -66,7 +62,7 @@
     <text
       x="0" y="58"
       font-family="'Plus Jakarta Sans','Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif"
-      font-size="9.5" font-weight="600"
+      font-size="9.5" font-weight="700"
       letter-spacing="0.8"
       textLength="176"
       lengthAdjust="spacing"

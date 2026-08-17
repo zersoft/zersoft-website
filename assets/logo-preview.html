@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZERSOFT — Tipografi Hizalama</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #070c15; --sf: #0d1626; --border: rgba(255,255,255,0.07);
+      --text: #e2e8f0; --muted: #475569; --accent: #0ea5e9; --r: 18px;
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+      background: var(--bg); color: var(--text);
+      min-height: 100vh; padding: 60px 28px 96px;
+    }
+    body.light {
+      --bg: #f0f4f8; --sf: #fff; --border: rgba(0,0,0,.08);
+      --text: #0c1b30; --muted: #64748b;
+    }
+    .wrap { max-width: 860px; margin: 0 auto; }
+    .page-header { text-align: center; margin-bottom: 48px; }
+    .eyebrow {
+      display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 3px;
+      text-transform: uppercase; color: var(--accent);
+      border: 1px solid rgba(14,165,233,.28); border-radius: 100px;
+      padding: 4px 16px; margin-bottom: 16px;
+    }
+    .page-header h1 { font-size: clamp(1.5rem,3.5vw,2rem); font-weight: 800; letter-spacing: -0.5px; margin-bottom: 10px; }
+    .page-header p  { font-size: .9rem; color: var(--muted); line-height: 1.7; }
+    .ctrls { display: flex; justify-content: center; gap: 10px; margin-bottom: 48px; }
+    .ctrl {
+      font: 600 13px 'Plus Jakarta Sans', sans-serif;
+      padding: 9px 20px; border-radius: 9px; cursor: pointer;
+      border: 1px solid var(--border); background: var(--sf); color: var(--text);
+      transition: all .2s;
+    }
+    .ctrl:hover, .ctrl.on { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+    .compare-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-bottom: 16px;
+    }
+
+    .card {
+      background: var(--sf); border: 1px solid var(--border); border-radius: var(--r);
+      padding: 28px; display: flex; flex-direction: column; gap: 14px;
+      cursor: pointer; transition: transform .22s, border-color .22s, box-shadow .22s;
+    }
+    .card:hover { transform: translateY(-4px); border-color: rgba(14,165,233,.5); box-shadow: 0 20px 50px rgba(0,0,0,.3); }
+    .card.pick  { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(14,165,233,.2); }
+
+    .card-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
+    .card-title { font-size: 13px; font-weight: 700; line-height: 1.4; }
+    .card-title small { display: block; font-size: 11px; font-weight: 500; color: var(--muted); margin-top: 2px; }
+    .pill {
+      font-size: 10px; font-weight: 700; letter-spacing: .8px; text-transform: uppercase;
+      border-radius: 100px; padding: 3px 10px; white-space: nowrap; flex-shrink: 0;
+    }
+    .p-old { color: #94a3b8; background: rgba(148,163,184,.1); border: 1px solid rgba(148,163,184,.2); }
+    .p-new { color: #22d3ee; background: rgba(34,211,238,.1);  border: 1px solid rgba(34,211,238,.25); }
+
+    /* Logo display at 2x size to really see the typography */
+    .stage {
+      border-radius: 12px; display: flex; align-items: center; justify-content: center;
+      padding: 32px 20px; position: relative; overflow: hidden;
+    }
+    .dk { background: #060b14; }
+    .lt { background: #f8fafc; }
+    .stage img { width: 100%; max-width: 300px; height: auto; }
+
+    .annotation {
+      font-size: 11.5px; font-weight: 600; color: var(--muted);
+      line-height: 1.6; border-left: 2px solid var(--border); padding-left: 10px;
+    }
+    .annotation strong { color: var(--text); }
+
+    /* Magnified single-logo showcase at bottom */
+    .showcase {
+      background: var(--sf); border: 1px solid rgba(14,165,233,.3);
+      border-radius: var(--r); padding: 52px 40px;
+      display: flex; align-items: center; justify-content: center;
+      margin-top: 32px;
+    }
+    .showcase img { width: 100%; max-width: 460px; height: auto; }
+    .showcase-label {
+      text-align: center; margin-top: 18px;
+      font-size: 11px; font-weight: 700; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--muted);
+    }
+  </style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="page-header">
+    <span class="eyebrow">Tipografi Hizalama</span>
+    <h1>ZERSOFT + YENİ NESİL TEKNOLOJİ</h1>
+    <p>Marka adı yayıldı, slogan daraltıldı — her ikisi aynı görsel genişliğe zorlandı (<code>textLength</code>).</p>
+  </div>
+
+  <div class="ctrls">
+    <button class="ctrl on" onclick="setTheme('dark',this)">🌙 Dark</button>
+    <button class="ctrl"    onclick="setTheme('light',this)">☀️ Light</button>
+  </div>
+
+  <!-- Before / After Row -->
+  <div class="compare-row">
+
+    <!-- Before -->
+    <div class="card">
+      <div class="card-head">
+        <div class="card-title">Önceki<small>Sıkı wordmark · Geniş tagline</small></div>
+        <span class="pill p-old">Önce</span>
+      </div>
+      <div class="stage dk">
+        <!-- Inline SVG: old version (tight ZERSOFT, wide tagline) -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 64" width="100%" style="max-width:300px">
+          <defs>
+            <linearGradient id="bGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#0ea5e9"/>
+              <stop offset="100%" stop-color="#6366f1"/>
+            </linearGradient>
+          </defs>
+          <!-- Mark placeholder (Convergence) -->
+          <g transform="translate(3,0)">
+            <polygon points="0,5 3,11 44,33 44,31" fill="#22d3ee" opacity=".7"/>
+            <polygon points="0,29 0,35 44,33 44,31" fill="#0ea5e9" opacity=".9"/>
+            <polygon points="0,53 3,59 44,33 44,31" fill="#6366f1" opacity=".7"/>
+            <circle cx="44" cy="32" r="3.2" fill="#0ea5e9"/>
+            <circle cx="44" cy="32" r="1.3" fill="#fff"/>
+          </g>
+          <!-- Old typography: tight wordmark, wide tagline -->
+          <g transform="translate(64,0)">
+            <text x="0" y="41"
+              font-family="'Plus Jakarta Sans',sans-serif" font-size="32" font-weight="800"
+              letter-spacing="-0.5">
+              <tspan fill="#f0f9ff">ZER</tspan><tspan fill="#38bdf8">SOFT</tspan>
+            </text>
+            <!-- Tagline wider than wordmark → misaligned -->
+            <text x="2" y="58"
+              font-family="'Plus Jakarta Sans',sans-serif" font-size="9.5" font-weight="500"
+              letter-spacing="3.5" fill="#475569">YENİ NESİL TEKNOLOJİ</text>
+          </g>
+        </svg>
+      </div>
+      <div class="annotation">
+        <strong>Sorun:</strong> Tagline, wordmark'tan geniş. Sol kenarlar hizalı ama sağ kenarlar kaçıyor → düzensiz optik ağırlık.
+      </div>
+    </div>
+
+    <!-- After -->
+    <div class="card pick" onclick="this.classList.toggle('pick')">
+      <div class="card-head">
+        <div class="card-title">Güncel<small>Yayılmış wordmark · Daraltılmış tagline</small></div>
+        <span class="pill p-new">Sonra</span>
+      </div>
+      <div class="stage dk">
+        <img src="images/logo-abs-convergence.svg" alt="Convergence hizalanmış">
+      </div>
+      <div class="annotation">
+        <strong>Sonuç:</strong> Her iki satır SVG <code>textLength="176"</code> ile aynı genişliğe zorlandı. ZERSOFT yayıldı ↔ tagline daraldı. Tam hizalı tipografik blok.
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Light mode row -->
+  <div class="compare-row">
+    <div class="card">
+      <div class="card-head">
+        <div class="card-title">Açık Mod — Önce (Hatalı/Beyaz)<small>Açık zemin üzerinde beyaz metin</small></div>
+        <span class="pill p-old">Hatalı</span>
+      </div>
+      <div class="stage lt">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 64" width="100%" style="max-width:300px">
+          <g transform="translate(3,0)">
+            <polygon points="0,5 3,11 44,33 44,31" fill="#22d3ee" opacity=".7"/>
+            <polygon points="0,29 0,35 44,33 44,31" fill="#0ea5e9" opacity=".9"/>
+            <polygon points="0,53 3,59 44,33 44,31" fill="#6366f1" opacity=".7"/>
+            <circle cx="44" cy="32" r="3.2" fill="#0ea5e9"/>
+            <circle cx="44" cy="32" r="1.3" fill="#fff"/>
+          </g>
+          <g transform="translate(64,0)">
+            <text x="0" y="41" font-family="'Plus Jakarta Sans',sans-serif" font-size="32" font-weight="800" letter-spacing="2" textLength="176" lengthAdjust="spacing">
+              <tspan fill="#ffffff" stroke="rgba(0,0,0,0.06)">ZER</tspan><tspan fill="#38bdf8">SOFT</tspan>
+            </text>
+            <text x="0" y="58" font-family="'Plus Jakarta Sans',sans-serif" font-size="9.5" font-weight="600" letter-spacing="0.8" textLength="176" lengthAdjust="spacing" fill="#94a3b8">YENİ NESİL TEKNOLOJİ</text>
+          </g>
+        </svg>
+      </div>
+      <div class="annotation" style="font-size:11px; color:var(--muted)">Açık zemin üzerinde 'ZER' beyaz kalarak kayboluyordu.</div>
+    </div>
+    <div class="card pick">
+      <div class="card-head">
+        <div class="card-title">Açık Mod — Güncel (Siyah / Yüksek Kontrast)<small>Açık zemin için siyah &amp; okyanus mavisi</small></div>
+        <span class="pill p-new">Düzeltildi</span>
+      </div>
+      <div class="stage lt">
+        <img src="images/logo-light.svg" alt="Convergence light siyah">
+      </div>
+      <div class="annotation" style="font-size:11px; color:var(--muted)">'ZER' derin siyah (#090d16), 'SOFT' canlı mavi (#0284c7), slogan net ve okunaklı.</div>
+    </div>
+  </div>
+
+  <!-- Big showcase -->
+  <div>
+    <div class="showcase">
+      <img src="images/logo-light.svg" alt="Zersoft Convergence final" id="showcase-img" style="background:#fff; padding:20px 30px; border-radius:12px; box-shadow:0 10px 30px rgba(0,0,0,0.06);">
+    </div>
+    <p class="showcase-label">Açık Zemin — Siyah ZERSOFT Tipografisi &amp; Convergence Markı</p>
+  </div>
+
+</div>
+
+<script>
+  function setTheme(t, btn) {
+    document.body.classList.toggle('light', t==='light');
+    document.querySelectorAll('.ctrl').forEach(b=>b.classList.remove('on'));
+    btn.classList.add('on');
+  }
+</script>
+</body>
+</html>
