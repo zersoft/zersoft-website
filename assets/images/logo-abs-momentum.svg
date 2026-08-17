@@ -1,0 +1,78 @@
+<!--
+  ZERSOFT — Abstract Mark II: "Momentum"
+  Konsept: Yön, ivme ve kırılım anı.
+  Üç paralel çizgi sola ince başlar, sağa kalınlaşır ve bir uca doğru
+  açılarak "hızlanma + dönüşüm" hissini verir. Hiçbir harf yok.
+  
+  Mesaj: "Sizi şimdiden sonrasına taşıyoruz."
+  Hissiyat: SpaceX, Atlassian, Shopify — güç ve yön.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 64" width="300" height="64" role="img" aria-label="Zersoft — Yeni Nesil Teknoloji">
+  <defs>
+    <style>
+      .mom-zer  { fill: #0c1b30; }
+      .mom-soft { fill: #0ea5e9; }
+      .mom-tag  { fill: #94a3b8; }
+      @media (prefers-color-scheme: dark) {
+        .mom-zer  { fill: #f0f9ff; }
+        .mom-soft { fill: #38bdf8; }
+        .mom-tag  { fill: #475569; }
+      }
+    </style>
+
+    <!-- Each stripe has its own gradient: left edge transparent → right edge solid -->
+    <linearGradient id="momG1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#0ea5e9" stop-opacity="0.08"/>
+      <stop offset="60%"  stop-color="#0ea5e9" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="momG2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#0284c7" stop-opacity="0.08"/>
+      <stop offset="60%"  stop-color="#0284c7" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#0ea5e9" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="momG3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#0369a1" stop-opacity="0.05"/>
+      <stop offset="60%"  stop-color="#0369a1" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ── Mark: Three accelerating stripes (trapezoids) ── -->
+  <!--
+    Three trapezoid stripes angled and fan-spreading right.
+    Each stripe: left side thin, right side tall, overall tilted ~12°.
+    Using polygon for precise control.
+    
+    Visual rhythm:
+      Stripe 1 (top): lightest color, widest angle spread
+      Stripe 2 (mid): core brand color  
+      Stripe 3 (bot): deepest color, most subtle
+      
+    All stripes slant slightly upward → forward momentum feel.
+  -->
+  <g transform="translate(4, 8)">
+    <!-- Stripe 1 (top-most, lightest) -->
+    <polygon points="0,8  44,0  44,5  0,12"  fill="url(#momG1)"/>
+
+    <!-- Stripe 2 (core) — main brand stripe, thickest -->
+    <polygon points="0,17 44,11 44,20 0,25"  fill="url(#momG2)"/>
+
+    <!-- Stripe 3 (bottom) -->
+    <polygon points="0,29 44,22 44,27 0,35"  fill="url(#momG3)"/>
+  </g>
+
+  <!-- ── Wordmark ─────────────────────────────────────── -->
+  <g transform="translate(64, 0)">
+    <text x="0" y="41"
+      font-family="'Plus Jakarta Sans','Inter',-apple-system,BlinkMacSystemFont,sans-serif"
+      font-size="32" font-weight="800" letter-spacing="-0.5">
+      <tspan class="mom-zer">ZER</tspan><tspan class="mom-soft">SOFT</tspan>
+    </text>
+    <text x="2" y="58"
+      font-family="'Plus Jakarta Sans','Inter',-apple-system,BlinkMacSystemFont,sans-serif"
+      font-size="9.5" font-weight="500" letter-spacing="3.5" class="mom-tag">
+      YENİ NESİL TEKNOLOJİ
+    </text>
+  </g>
+</svg>

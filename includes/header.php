@@ -2,8 +2,7 @@
 /**
  * Zersoft Technology - Header Template (SEO & i18n & Dark/Light Theme Uyumlu)
  */
-require_once __DIR__ . '/functions.php';
-require_once __DIR__ . '/lang.php';
+require_once __DIR__ . '/init.php';
 
 $settings = getSiteSettings();
 $currentPage = basename($_SERVER['PHP_SELF'], '.php');
@@ -36,7 +35,9 @@ $canonicalUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https
   <meta property="og:url" content="<?php echo $canonicalUrl; ?>">
   <meta property="og:title" content="<?php echo $fullTitle; ?>">
   <meta property="og:description" content="<?php echo $fullDesc; ?>">
-  <meta property="og:image" content="<?php echo (isset($_SERVER['HTTPS']) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST']; ?>/assets/images/kantar-preview.svg">
+  <meta property="og:image" content="<?php echo (isset($_SERVER['HTTPS']) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST']; ?>/assets/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:site_name" content="Zersoft Teknoloji">
   <meta property="og:locale" content="<?php echo $lang === 'tr' ? 'tr_TR' : 'en_US'; ?>">
 
@@ -44,7 +45,7 @@ $canonicalUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="<?php echo $fullTitle; ?>">
   <meta name="twitter:description" content="<?php echo $fullDesc; ?>">
-  <meta name="twitter:image" content="<?php echo (isset($_SERVER['HTTPS']) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST']; ?>/assets/images/kantar-preview.svg">
+  <meta name="twitter:image" content="<?php echo (isset($_SERVER['HTTPS']) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST']; ?>/assets/images/og-image.jpg">
 
   <!-- Schema.org JSON-LD Structured Data for Google/Bing -->
   <script type="application/ld+json">
@@ -68,7 +69,8 @@ $canonicalUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https
   </script>
 
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="assets/images/logo.svg">
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="shortcut icon" href="assets/images/favicon.svg">
   
   <!-- FontAwesome 6 Icons CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -85,7 +87,7 @@ $canonicalUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https
   <header class="navbar">
     <div class="container nav-container">
       <a href="index.php" class="brand-logo">
-        <img src="assets/images/logo.svg" alt="Zersoft Teknoloji Logo" width="180" height="45" style="height:45px; width:auto;">
+        <img src="assets/images/logo.svg" alt="Zersoft Teknoloji Logo" width="180" height="45" style="height:45px; width:auto;" class="animated-logo" id="site-logo">
       </a>
 
       <ul class="nav-links">
@@ -110,7 +112,7 @@ $canonicalUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https
           <i class="fa-solid fa-sun"></i>
         </button>
 
-        <a href="contact.php" class="btn btn-primary" style="padding: 8px 16px; font-size: 0.85rem;"><i class="fa-solid fa-paper-plane"></i> <?php echo __('nav_get_quote'); ?></a>
+        <a href="contact.php" class="btn btn-primary" style="padding: 8px 16px; font-size: 0.85rem; white-space: nowrap;"><i class="fa-solid fa-paper-plane"></i> <?php echo __('nav_get_quote'); ?></a>
 
         <button class="mobile-toggle" aria-label="Menüyü Aç/Kapat">
           <i class="fa-solid fa-bars"></i>

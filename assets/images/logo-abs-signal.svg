@@ -1,0 +1,88 @@
+<!--
+  ZERSOFT — Abstract Mark III: "Signal"
+  Konsept: Tek bir sürekli hat — düz gider, ani bir zirve yapar, 
+  aşağı iner ve tekrar düzelir. EKG/nabız dalgası değil; 
+  daha geometrik, daha kontrollü: "Bir kırılım anı" silüeti.
+  
+  Anlam: Kantar/ölçüm sinyali, AI veri akışı, dijital dönüşüm kırılım noktası.
+  Hepsini tek bir zarif çizgide anlatır.
+  Hissiyat: Bloomberg, Palantir — veri + güç + sessiz güven.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 64" width="300" height="64" role="img" aria-label="Zersoft — Yeni Nesil Teknoloji">
+  <defs>
+    <style>
+      .sig-zer  { fill: #0c1b30; }
+      .sig-soft { fill: #0ea5e9; }
+      .sig-tag  { fill: #94a3b8; }
+      @media (prefers-color-scheme: dark) {
+        .sig-zer  { fill: #f0f9ff; }
+        .sig-soft { fill: #38bdf8; }
+        .sig-tag  { fill: #475569; }
+      }
+    </style>
+
+    <!-- Signal path gradient: muted left → vivid at peak → muted right -->
+    <linearGradient id="sigGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#0ea5e9" stop-opacity="0.25"/>
+      <stop offset="40%"  stop-color="#0ea5e9" stop-opacity="1"/>
+      <stop offset="60%"  stop-color="#22d3ee" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#0ea5e9" stop-opacity="0.25"/>
+    </linearGradient>
+
+    <!-- Thin accent fill under the peak — like a glow area -->
+    <linearGradient id="sigFillGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"  stop-color="#0ea5e9" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#0ea5e9" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ── Mark: Signal waveform ───────────────────────── -->
+  <!--
+    Canvas for mark: 0–52 wide, 0–64 tall
+    Baseline: y=38
+    Signal path:
+      Start: (2, 38) — flat entry
+      Flat:  (2,38) → (14,38)
+      Rise:  (14,38) → (22,14) — sharp upward spike
+      Down:  (22,14) → (36,44) — through baseline, slight overshoot
+      Recover: (36,44) → (42,38) — snap back
+      Flat exit: (42,38) → (52,38)
+      
+    The "peak" at (22,14) is the focal point of the mark.
+    The slight overshoot at (36,44) adds organic vitality.
+  -->
+  <g transform="translate(2, 8)">
+    <!-- Glow fill area under the spike (subtle polygon) -->
+    <polygon
+      points="14,30 22,6 36,36 42,30 52,30 52,34 42,34 36,40 22,10 14,34"
+      fill="url(#sigFillGrad)"
+    />
+
+    <!-- The signal line itself -->
+    <polyline
+      points="0,30 14,30 22,6 36,36 42,30 52,30"
+      fill="none"
+      stroke="url(#sigGrad)"
+      stroke-width="2.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+
+    <!-- Focal accent dot at the peak -->
+    <circle cx="22" cy="6" r="3" fill="#22d3ee"/>
+  </g>
+
+  <!-- ── Wordmark ─────────────────────────────────────── -->
+  <g transform="translate(66, 0)">
+    <text x="0" y="41"
+      font-family="'Plus Jakarta Sans','Inter',-apple-system,BlinkMacSystemFont,sans-serif"
+      font-size="32" font-weight="800" letter-spacing="-0.5">
+      <tspan class="sig-zer">ZER</tspan><tspan class="sig-soft">SOFT</tspan>
+    </text>
+    <text x="2" y="58"
+      font-family="'Plus Jakarta Sans','Inter',-apple-system,BlinkMacSystemFont,sans-serif"
+      font-size="9.5" font-weight="500" letter-spacing="3.5" class="sig-tag">
+      YENİ NESİL TEKNOLOJİ
+    </text>
+  </g>
+</svg>

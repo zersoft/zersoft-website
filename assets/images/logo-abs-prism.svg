@@ -1,0 +1,101 @@
+<!--
+  ZERSOFT — Abstract Mark IV: "Prism Split"
+  Konsept: Bir ışık huzmesi üçgene çarpar ve üç renkli banda ayrılır.
+  Zersoft = ham veriyi/süreci alır → işler → çıktıya dönüştürür.
+  Aynı zamanda renk spektrumu = "bütünü görme" = AI + analitik zeka.
+
+  Hiçbir harf. Tamamen soyut. Evrensel enerji ve dönüşüm sembolü.
+  Hissiyat: Apple (prism/Pink Floyd album) ama teknoloji için özgün.
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 64" width="300" height="64" role="img" aria-label="Zersoft — Yeni Nesil Teknoloji">
+  <defs>
+    <style>
+      .prism-zer  { fill: #0c1b30; }
+      .prism-soft { fill: #0ea5e9; }
+      .prism-tag  { fill: #94a3b8; }
+      @media (prefers-color-scheme: dark) {
+        .prism-zer  { fill: #f0f9ff; }
+        .prism-soft { fill: #38bdf8; }
+        .prism-tag  { fill: #475569; }
+      }
+    </style>
+
+    <!-- Input beam (left side, monochrome) -->
+    <linearGradient id="pBeamIn" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#94a3b8" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#94a3b8" stop-opacity="0.9"/>
+    </linearGradient>
+
+    <!-- Output band 1 — top (cyan / primary) -->
+    <linearGradient id="pBand1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#22d3ee" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0.2"/>
+    </linearGradient>
+
+    <!-- Output band 2 — mid (sky blue / secondary) -->
+    <linearGradient id="pBand2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#0ea5e9" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0ea5e9" stop-opacity="0.2"/>
+    </linearGradient>
+
+    <!-- Output band 3 — bottom (indigo / depth) -->
+    <linearGradient id="pBand3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%"   stop-color="#6366f1" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0.15"/>
+    </linearGradient>
+  </defs>
+
+  <!-- ── Mark ─────────────────────────────────────────── -->
+  <!--
+    Prism triangle: equilateral, pointing right
+      Left edge (entry): x=6
+      Apex (right): x=38
+      Vertical center: y=32
+    Triangle vertices: (6,12), (6,52), (38,32)
+    
+    Input beam: single horizontal line from x=0 to x=6 at y=32
+    
+    Output fans: three bands radiating from apex (38,32)
+      Band 1 (top):    (38,32) → far top-right
+      Band 2 (middle): (38,32) → far mid-right  
+      Band 3 (bottom): (38,32) → far bottom-right
+      
+    The bands fan out. They are drawn as thin filled triangles/polygons
+    to simulate diverging light rays.
+  -->
+  <g transform="translate(2, 0)">
+    <!-- Input beam (horizontal line entering left face of prism) -->
+    <line x1="0" y1="32" x2="6" y2="32"
+          stroke="url(#pBeamIn)" stroke-width="1.8" stroke-linecap="round"/>
+
+    <!-- Prism triangle (outline only, very thin) -->
+    <polygon points="6,12 6,52 38,32"
+             fill="rgba(148,163,184,0.04)"
+             stroke="rgba(148,163,184,0.3)"
+             stroke-width="1"
+             stroke-linejoin="round"/>
+
+    <!-- Output band 1 — top diverging ray -->
+    <polygon points="38,32 54,16 56,19 39,33" fill="url(#pBand1)"/>
+
+    <!-- Output band 2 — middle ray (horizontal) -->
+    <polygon points="38,32 56,28 56,32 38,33" fill="url(#pBand2)"/>
+
+    <!-- Output band 3 — bottom diverging ray -->
+    <polygon points="38,32 56,42 54,46 39,33" fill="url(#pBand3)"/>
+  </g>
+
+  <!-- ── Wordmark ─────────────────────────────────────── -->
+  <g transform="translate(70, 0)">
+    <text x="0" y="41"
+      font-family="'Plus Jakarta Sans','Inter',-apple-system,BlinkMacSystemFont,sans-serif"
+      font-size="32" font-weight="800" letter-spacing="-0.5">
+      <tspan class="prism-zer">ZER</tspan><tspan class="prism-soft">SOFT</tspan>
+    </text>
+    <text x="2" y="58"
+      font-family="'Plus Jakarta Sans','Inter',-apple-system,BlinkMacSystemFont,sans-serif"
+      font-size="9.5" font-weight="500" letter-spacing="3.5" class="prism-tag">
+      YENİ NESİL TEKNOLOJİ
+    </text>
+  </g>
+</svg>

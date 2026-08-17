@@ -10,7 +10,7 @@ $settings = getSiteSettings();
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.php" class="brand-logo">
-            <img src="assets/images/logo.svg" alt="Zersoft Teknoloji" width="160" height="40" style="height:40px; width:auto;">
+            <img src="assets/images/logo.svg" alt="Zersoft Teknoloji" width="160" height="40" style="height:40px; width:auto;" class="animated-logo">
           </a>
           <p><?php echo __('site_tagline'); ?></p>
           <div class="social-links">
