@@ -80,8 +80,8 @@ $projects = getProjects(4);
   <div class="container">
     <div class="stats-grid">
       <div class="glass-card stat-card">
-        <div class="stat-number">%99.8</div>
-        <div class="stat-label"><?php echo __('stat_accuracy'); ?></div>
+        <div class="stat-number">%99.9</div>
+        <div class="stat-label"><?php echo __('stat_uptime'); ?></div>
       </div>
       <div class="glass-card stat-card">
         <div class="stat-number">7/24</div>

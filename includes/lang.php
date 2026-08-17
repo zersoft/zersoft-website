@@ -40,7 +40,7 @@ $translations = [
         // Hero Slider (index.php)
         'slide1_badge' => 'Otonom Saha Sistemleri',
         'slide1_title' => 'Yapay Zeka & Akıllı Kantar Otomasyonu',
-        'slide1_desc' => 'Plaka okuma kameraları, otomatik bariyer tetikleme ve canlı ön muhasebe entegrasyonu ile sahalarınızı 7/24 kesintisiz yönetin.',
+        'slide1_desc' => 'Otomatik indikatör haberleşmesi, bariyer kontrolü ve anlık ön muhasebe entegrasyonu ile sahalarınızı 7/24 kesintisiz yönetin.',
         'slide1_btn1' => 'Çözümlerimizi İnceleyin',
         'slide1_btn2' => 'Canlı Demo İste',
 
@@ -57,7 +57,7 @@ $translations = [
         'slide3_btn2' => 'Teknik Detaylar',
 
         // Quick Stats
-        'stat_accuracy' => 'Kantar Plaka Okuma Doğruluğu',
+        'stat_uptime' => 'Sistem Çalışma Süresi & Kararlılık',
         'stat_support' => 'Kesintisiz Saha Desteği',
         'stat_time' => 'Tartım Süreçlerinde Zaman Tasarrufu',
         'stat_security' => 'KVKK & Yerel Sunucu Güvenliği',
@@ -80,7 +80,7 @@ $translations = [
 
         'prod_kantar_badge' => 'SAHA KANTAR OTOMASYONU',
         'prod_kantar_title' => 'Hafriyat & Saha Kantar Otomasyonu v4.2',
-        'prod_kantar_desc' => 'Plaka tanıma kameraları, otomatik bariyer sistemleri, canlı kantar indikatör okuma ve irsaliye basımı ile hafriyat sahalarınızı %100 otonom yönetin.',
+        'prod_kantar_desc' => 'Otomatik indikatör tartımı, bariyer sistemleri, anlık kantar okuma, tartım fişi ve e-İrsaliye basımı ile hafriyat sahalarınızı %100 otonom yönetin.',
 
         'prod_iys_badge' => 'İMALAT SEKTÖRÜ ERP',
         'prod_iys_title' => 'IYS — İmalat & Süreç Yönetim Programı',
@@ -147,7 +147,7 @@ $translations = [
         'brand_story_title'   => 'Kargaşadan Kesmişiz Bir Karar',
         'brand_story_sub'     => 'ZERSOFT logosu, yaptığımız işin özünü tek bir geometride anlatır.',
         'brand_story_stream1' => 'Saha Verisi',
-        'brand_story_stream1_desc' => 'Kantar sinyalleri, plaka okuma ve saha operasyon verileri.',
+        'brand_story_stream1_desc' => 'Kantar indikatör sinyalleri, tartım ölçümleri ve saha operasyon verileri.',
         'brand_story_stream2' => 'Süreç Zekası',
         'brand_story_stream2_desc' => 'ERP, sipariş ve imalat süreçlerinin anlık durumu.',
         'brand_story_stream3' => 'Yapay Zeka',
@@ -224,7 +224,7 @@ $translations = [
         // Hero Slider (index.php)
         'slide1_badge' => 'Autonomous Field Systems',
         'slide1_title' => 'AI & Smart Weighbridge Automation',
-        'slide1_desc' => 'Manage your operational sites 24/7 seamlessly with ALPR license plate cameras, automatic barriers, and live accounting integration.',
+        'slide1_desc' => 'Manage your operational sites 24/7 seamlessly with automatic indicator reading, barrier triggers, and live accounting integration.',
         'slide1_btn1' => 'Explore Our Solutions',
         'slide1_btn2' => 'Request Live Demo',
 
@@ -241,7 +241,7 @@ $translations = [
         'slide3_btn2' => 'Technical Specs',
 
         // Quick Stats
-        'stat_accuracy' => 'Weighbridge ALPR Accuracy',
+        'stat_uptime' => 'System Uptime & Stability',
         'stat_support' => 'Uninterrupted Field Support',
         'stat_time' => 'Time Saved in Weighing',
         'stat_security' => 'GDPR & Secure On-Premise Data',
@@ -264,7 +264,7 @@ $translations = [
 
         'prod_kantar_badge' => 'FIELD WEIGHBRIDGE AUTOMATION',
         'prod_kantar_title' => 'Excavation & Field Weighbridge Automation v4.2',
-        'prod_kantar_desc' => '100% autonomous site management with ALPR cameras, automatic barrier triggers, live indicator reading, and waybill printing.',
+        'prod_kantar_desc' => '100% autonomous site management with indicator integration, automatic barriers, live weighing, and e-Waybill printing.',
 
         'prod_iys_badge' => 'MANUFACTURING ERP',
         'prod_iys_title' => 'IYS — Manufacturing & Process Management Platform',
@@ -331,7 +331,7 @@ $translations = [
         'brand_story_title'   => 'From Complexity — One Clear Decision',
         'brand_story_sub'     => 'The ZERSOFT logo tells the story of what we do in a single geometric form.',
         'brand_story_stream1' => 'Field Data',
-        'brand_story_stream1_desc' => 'Weighbridge signals, license plate recognition, and field operation data.',
+        'brand_story_stream1_desc' => 'Weighbridge indicator signals, weight measurements, and field operation data.',
         'brand_story_stream2' => 'Process Intelligence',
         'brand_story_stream2_desc' => 'Real-time status of ERP, order management, and manufacturing workflows.',
         'brand_story_stream3' => 'Artificial Intelligence',
