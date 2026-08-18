@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 180" width="240" height="180" role="img" aria-label="Zersoft Stacked Logo">
+  <defs>
+    <linearGradient id="stkG1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.5"/>
+      <stop offset="75%" stop-color="#22d3ee" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="stkG2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.55"/>
+      <stop offset="75%" stop-color="#0ea5e9" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#0ea5e9" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="stkG3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.4"/>
+      <stop offset="75%" stop-color="#6366f1" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Centered Convergence Mark -->
+  <g transform="translate(98, 16) scale(1.1)">
+    <polygon points="0,5  3,11  44,33  44,31" fill="url(#stkG1)"/>
+    <polygon points="0,29  0,35  44,33  44,31" fill="url(#stkG2)"/>
+    <polygon points="0,53  3,59  44,33  44,31" fill="url(#stkG3)"/>
+    <circle cx="44" cy="32" r="3.6" fill="#0ea5e9"/>
+    <circle cx="44" cy="32" r="1.5" fill="#ffffff"/>
+  </g>
+
+  <!-- Wordmark Centered -->
+  <text
+    x="120" y="126"
+    text-anchor="middle"
+    font-family="'Plus Jakarta Sans','Inter',sans-serif"
+    font-size="28" font-weight="800"
+    letter-spacing="2"
+  ><tspan fill="#f0f9ff">ZER</tspan><tspan fill="#38bdf8">SOFT</tspan></text>
+
+  <!-- Tagline Centered -->
+  <text
+    x="120" y="148"
+    text-anchor="middle"
+    font-family="'Plus Jakarta Sans','Inter',sans-serif"
+    font-size="10" font-weight="600"
+    letter-spacing="2"
+    fill="#94a3b8"
+  >YENİ NESİL TEKNOLOJİ</text>
+</svg>

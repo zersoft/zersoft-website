@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1500 500" width="1500" height="500" role="img" aria-label="Zersoft Sosyal Medya Kapak Bannerı">
+  <defs>
+    <!-- Background Gradient -->
+    <radialGradient id="covBg" cx="70%" cy="30%" r="90%">
+      <stop offset="0%" stop-color="#0f2240"/>
+      <stop offset="40%" stop-color="#070c15"/>
+      <stop offset="100%" stop-color="#020408"/>
+    </radialGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="covGrid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M 50 0 L 0 0 0 50" fill="none" stroke="rgba(255,255,255,0.025)" stroke-width="1"/>
+      <circle cx="0" cy="0" r="1.5" fill="rgba(34,211,238,0.15)"/>
+    </pattern>
+
+    <linearGradient id="covG1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.4"/>
+      <stop offset="80%" stop-color="#22d3ee" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="covG2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.5"/>
+      <stop offset="80%" stop-color="#0ea5e9" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#0ea5e9" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="covG3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.35"/>
+      <stop offset="80%" stop-color="#6366f1" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+    </linearGradient>
+
+    <filter id="covGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1500" height="500" fill="url(#covBg)"/>
+  <rect width="1500" height="500" fill="url(#covGrid)"/>
+
+  <!-- Ambient Light Orbs -->
+  <circle cx="1200" cy="200" r="280" fill="#0ea5e9" opacity="0.16" filter="blur(80px)"/>
+  <circle cx="400" cy="400" r="300" fill="#6366f1" opacity="0.1" filter="blur(90px)"/>
+
+  <!-- Left Content Block -->
+  <g transform="translate(100, 120)">
+    <!-- Pill -->
+    <g transform="translate(0, 0)">
+      <rect width="210" height="34" rx="17" fill="rgba(14,165,233,0.12)" stroke="rgba(14,165,233,0.3)" stroke-width="1"/>
+      <circle cx="16" cy="17" r="4" fill="#22d3ee"/>
+      <text x="32" y="22" font-family="'Plus Jakarta Sans','Inter',sans-serif" font-size="12" font-weight="700" fill="#38bdf8" letter-spacing="2">YENİ NESİL TEKNOLOJİ</text>
+    </g>
+
+    <!-- Main Title -->
+    <text y="90" font-family="'Plus Jakarta Sans','Inter',sans-serif" font-size="52" font-weight="800" fill="#ffffff" letter-spacing="-0.5">
+      Akıllı Yazılım &amp; Yapay Zeka
+    </text>
+    <text y="150" font-family="'Plus Jakarta Sans','Inter',sans-serif" font-size="52" font-weight="800" fill="#38bdf8" letter-spacing="-0.5">
+      Mimari Çözümleri
+    </text>
+
+    <!-- Subtitle -->
+    <text y="210" font-family="'Plus Jakarta Sans','Inter',sans-serif" font-size="18" font-weight="400" fill="#94a3b8">
+      Yapay Zeka (AI) &#8226; Cloud &amp; DevOps &#8226; Kurumsal Dijital Dönüşüm &#8226; İYS &amp; Entegrasyonlar
+    </text>
+
+    <!-- Website Badge -->
+    <g transform="translate(0, 255)">
+      <rect width="180" height="42" rx="10" fill="#0e172a" stroke="rgba(34,211,238,0.4)" stroke-width="1.2"/>
+      <text x="90" y="27" text-anchor="middle" font-family="'Plus Jakarta Sans','Inter',sans-serif" font-size="15" font-weight="700" fill="#22d3ee" letter-spacing="1">zersoft.net</text>
+    </g>
+  </g>
+
+  <!-- Right Side Large Hero Logo -->
+  <g transform="translate(1000, 140)">
+    <!-- Big Convergence Mark -->
+    <g transform="translate(0, 0) scale(4.8)" filter="url(#covGlow)">
+      <polygon points="0,5  3,11  44,33  44,31" fill="url(#covG1)"/>
+      <polygon points="0,29  0,35  44,33  44,31" fill="url(#covG2)"/>
+      <polygon points="0,53  3,59  44,33  44,31" fill="url(#covG3)"/>
+      <circle cx="44" cy="32" r="3.6" fill="#0ea5e9"/>
+      <circle cx="44" cy="32" r="1.5" fill="#ffffff"/>
+    </g>
+
+    <!-- Typography -->
+    <g transform="translate(0, 240)">
+      <text font-family="'Plus Jakarta Sans','Inter',sans-serif" font-size="34" font-weight="800" letter-spacing="3">
+        <tspan fill="#f0f9ff">ZER</tspan><tspan fill="#38bdf8">SOFT</tspan>
+      </text>
+    </g>
+  </g>
+</svg>

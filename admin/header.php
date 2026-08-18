@@ -29,11 +29,10 @@ $adminPage = basename($_SERVER['PHP_SELF'], '.php');
 
   <!-- Admin Sidebar Navigation -->
   <aside class="admin-sidebar">
-    <div class="sidebar-header">
-      <div class="sidebar-logo-icon">
-        <i class="fa-solid fa-code-branch"></i>
-      </div>
-      <div class="sidebar-title">ZER<span style="color: var(--admin-accent);">SOFT</span></div>
+    <div class="sidebar-header" style="padding: 18px 20px;">
+      <a href="index.php" style="display: flex; align-items: center;">
+        <img src="../assets/images/logo.svg" alt="ZERSOFT" style="height: 32px; width: auto; max-width: 190px;">
+      </a>
     </div>
 
     <nav class="sidebar-nav">
@@ -65,6 +64,13 @@ $adminPage = basename($_SERVER['PHP_SELF'], '.php');
       <a href="projects.php" class="admin-nav-item <?php echo $adminPage === 'projects' ? 'active' : ''; ?>">
         <i class="fa-solid fa-laptop-code"></i>
         <span>Portföy / Projeler</span>
+      </a>
+
+      <div class="nav-section-title" style="margin-top: 15px;">Marka & Varlıklar</div>
+      <a href="brand-identity.php" class="admin-nav-item <?php echo $adminPage === 'brand-identity' ? 'active' : ''; ?>">
+        <i class="fa-solid fa-palette"></i>
+        <span>Kurumsal Kimlik</span>
+        <span style="background: linear-gradient(135deg, #0ea5e9, #6366f1); color: #fff; font-size: 0.65rem; font-weight: 800; padding: 2px 7px; border-radius: 10px; margin-left: auto; letter-spacing: 0.5px;">YENİ</span>
       </a>
 
       <div class="nav-section-title" style="margin-top: 15px;">Sistem</div>

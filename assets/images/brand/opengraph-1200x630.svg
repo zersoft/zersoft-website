@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630" role="img" aria-label="Zersoft OpenGraph Share Banner">
+  <defs>
+    <radialGradient id="ogBg" cx="40%" cy="30%" r="90%">
+      <stop offset="0%" stop-color="#0f2240"/>
+      <stop offset="50%" stop-color="#070c15"/>
+      <stop offset="100%" stop-color="#020408"/>
+    </radialGradient>
+
+    <pattern id="ogGrid" width="50" height="50" patternUnits="userSpaceOnUse">
+      <path d="M 50 0 L 0 0 0 50" fill="none" stroke="rgba(255,255,255,0.025)" stroke-width="1.2"/>
+      <circle cx="0" cy="0" r="1.5" fill="rgba(34,211,238,0.2)"/>
+    </pattern>
+
+    <linearGradient id="ogG1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.4"/>
+      <stop offset="80%" stop-color="#22d3ee" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="ogG2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.5"/>
+      <stop offset="80%" stop-color="#0ea5e9" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#0ea5e9" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="ogG3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.35"/>
+      <stop offset="80%" stop-color="#6366f1" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+    </linearGradient>
+
+    <filter id="ogGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#ogBg)"/>
+  <rect width="1200" height="630" fill="url(#ogGrid)"/>
+
+  <!-- Orbs -->
+  <circle cx="950" cy="200" r="300" fill="#0ea5e9" opacity="0.14" filter="blur(80px)"/>
+  <circle cx="200" cy="500" r="280" fill="#6366f1" opacity="0.1" filter="blur(80px)"/>
+
+  <!-- Border Frame -->
+  <rect x="30" y="30" width="1140" height="570" rx="20" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1.5"/>
+
+  <!-- Logo Top Left -->
+  <g transform="translate(80, 80)">
+    <g transform="scale(1.3)">
+      <polygon points="0,5  3,11  44,33  44,31" fill="url(#ogG1)"/>
+      <polygon points="0,29  0,35  44,33  44,31" fill="url(#ogG2)"/>
+      <polygon points="0,53  3,59  44,33  44,31" fill="url(#ogG3)"/>
+      <circle cx="44" cy="32" r="3.2" fill="#0ea5e9"/>
+      <circle cx="44" cy="32" r="1.3" fill="#ffffff"/>
+    </g>
+    <g transform="translate(75, 0)">
+      <text x="0" y="34" font-family="'Plus Jakarta Sans','Inter',sans-serif" font-size="30" font-weight="800" letter-spacing="2">
+        <tspan fill="#ffffff">ZER</tspan><tspan fill="#38bdf8">SOFT</tspan>
+      </text>
+      <text x="0" y="52" font-family="'Plus Jakarta Sans','Inter',sans-serif" font-size="10" font-weight="600" letter-spacing="1.5" fill="#94a3b8">
+        YENİ NESİL TEKNOLOJİ
+      </text>
+    </g>
+  </g>
+
+  <!-- Big Hero Typography in Center -->
+  <g transform="translate(80, 260)">
+    <text font-family="'Plus Jakarta Sans','Inter',sans-serif" font-size="58" font-weight="800" fill="#ffffff" letter-spacing="-1">
+      Yapay Zeka &amp; Yeni Nesil
+    </text>
+    <text y="70" font-family="'Plus Jakarta Sans','Inter',sans-serif" font-size="58" font-weight="800" fill="#38bdf8" letter-spacing="-1">
+      Yazılım Çözümleri
+    </text>
+
+    <text y="145" font-family="'Plus Jakarta Sans','Inter',sans-serif" font-size="22" font-weight="400" fill="#94a3b8">
+      Ölçeklenebilir bulut mimarileri, kurumsal yapay zeka ajanları ve özel yazılım sistemleri.
+    </text>
+  </g>
+
+  <!-- Giant Ambient Emblem on Right -->
+  <g transform="translate(820, 200) scale(6)" opacity="0.3" filter="url(#ogGlow)">
+    <polygon points="0,5  3,11  44,33  44,31" fill="url(#ogG1)"/>
+    <polygon points="0,29  0,35  44,33  44,31" fill="url(#ogG2)"/>
+    <polygon points="0,53  3,59  44,33  44,31" fill="url(#ogG3)"/>
+    <circle cx="44" cy="32" r="3.4" fill="#0ea5e9"/>
+  </g>
+
+  <!-- Footer Link -->
+  <g transform="translate(80, 540)">
+    <rect width="180" height="40" rx="20" fill="rgba(14,165,233,0.15)" stroke="rgba(14,165,233,0.3)" stroke-width="1"/>
+    <text x="90" y="25" text-anchor="middle" font-family="'Plus Jakarta Sans','Inter',sans-serif" font-size="15" font-weight="700" fill="#22d3ee" letter-spacing="1">zersoft.net</text>
+  </g>
+</svg>
