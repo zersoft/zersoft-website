@@ -1,10 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 210 297" width="210mm" height="297mm" role="img" aria-label="Zersoft Kartvizit A4 Koyu Lüks Mat ARKA YÜZ Baskı Dizilimi">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 2480 3508" width="2480" height="3508" role="img" aria-label="Zersoft Kartvizit A4 Koyu Lüks Mat ARKA YÜZ Baskı Dizilimi">
   <defs>
-    <!-- Paper Sheet Shadow -->
-    <filter id="sheetShadow" x="-5%" y="-5%" width="110%" height="110%">
-      <feDropShadow dx="0" dy="1" stdDeviation="0.5" flood-opacity="0.2"/>
-    </filter>
-
     <!-- Source Card Defs -->
     <radialGradient id="bcBackBg" cx="80%" cy="20%" r="90%">
       <stop offset="0%" stop-color="#0e172a"/>
@@ -23,10 +18,9 @@
       <stop offset="100%" stop-color="#0ea5e9" stop-opacity="0.2"/>
     </linearGradient>
 
-    <!-- Single Business Card Symbol (85 × 55 mm scaled from 1050 × 600 px) -->
+    <!-- Single Business Card Symbol (1050 × 600 px) -->
     <g id="card_dark_back">
-      <g transform="scale(0.08095238, 0.09166667)">
-        <!-- Background -->
+      <!-- Background -->
   <rect width="1050" height="600" fill="url(#bcBackBg)"/>
 
   <!-- Subtle glow -->
@@ -106,63 +100,62 @@
     <!-- Scan text -->
     <text x="100" y="305" text-anchor="middle" font-family="'Plus Jakarta Sans','Inter',sans-serif" font-size="12" font-weight="600" fill="#94a3b8" letter-spacing="1">DİJİTAL KART &amp; VCARD</text>
   </g>
-      </g>
     </g>
   </defs>
 
   <!-- Sheet Background -->
-  <rect width="210" height="297" fill="#060a12"/>
+  <rect width="2480" height="3508" fill="#060a12"/>
 
   <!-- Top Sheet Metadata Header -->
-  <g transform="translate(105.00, 7.00)" text-anchor="middle">
-    <text font-family="'Plus Jakarta Sans','Inter',sans-serif" font-size="3.2" font-weight="800" fill="#38bdf8" letter-spacing="0.3">
-      ZERSOFT TEKNOLOJİ &bull; KARTVİZİT BASKI DİZİLİMİ (A4 / 300 DPI) &bull; KOYU LÜKS MAT &bull; ARKA YÜZ
+  <g transform="translate(1240.0, 147.0)" text-anchor="middle">
+    <text font-family="'Plus Jakarta Sans','Inter',sans-serif" font-size="42" font-weight="800" fill="#38bdf8" letter-spacing="3">
+      ZERSOFT TEKNOLOJİ &#8226; KARTVİZİT BASKI DİZİLİMİ (A4 / 300 DPI) &#8226; KOYU LÜKS MAT &#8226; ARKA YÜZ
     </text>
-    <text y="3.8" font-family="'Plus Jakarta Sans','Inter',sans-serif" font-size="2.1" font-weight="600" fill="#94a3b8" letter-spacing="0.1">
-      Ebat: 85 × 55 mm &bull; Adet: 10 Kart / Sayfa &bull; Çift Yönlü Baskıda 1:1 Simetrik Çakışma Garantili
+    <text y="48" font-family="'Plus Jakarta Sans','Inter',sans-serif" font-size="26" font-weight="600" fill="#94a3b8" letter-spacing="1">
+      Ebat: 85 × 55 mm &#8226; Adet: 10 Kart / Sayfa &#8226; Çift Yönlü Baskıda 1:1 Simetrik Çakışma Garantili
     </text>
   </g>
 
   <!-- Crop Marks (Kesim Kılavuzları) -->
   <g id="cropMarks">
-    <line x1="20.00" y1="6.00" x2="20.00" y2="10.00" stroke="#0ea5e9" stroke-width="0.2"/>
-    <line x1="20.00" y1="287.00" x2="20.00" y2="291.00" stroke="#0ea5e9" stroke-width="0.2"/>
-    <line x1="105.00" y1="6.00" x2="105.00" y2="10.00" stroke="#0ea5e9" stroke-width="0.2"/>
-    <line x1="105.00" y1="287.00" x2="105.00" y2="291.00" stroke="#0ea5e9" stroke-width="0.2"/>
-    <line x1="190.00" y1="6.00" x2="190.00" y2="10.00" stroke="#0ea5e9" stroke-width="0.2"/>
-    <line x1="190.00" y1="287.00" x2="190.00" y2="291.00" stroke="#0ea5e9" stroke-width="0.2"/>
-    <line x1="15.00" y1="11.00" x2="19.00" y2="11.00" stroke="#0ea5e9" stroke-width="0.2"/>
-    <line x1="191.00" y1="11.00" x2="195.00" stroke="#0ea5e9" stroke-width="0.2"/>
-    <line x1="15.00" y1="66.00" x2="19.00" y2="66.00" stroke="#0ea5e9" stroke-width="0.2"/>
-    <line x1="191.00" y1="66.00" x2="195.00" stroke="#0ea5e9" stroke-width="0.2"/>
-    <line x1="15.00" y1="121.00" x2="19.00" y2="121.00" stroke="#0ea5e9" stroke-width="0.2"/>
-    <line x1="191.00" y1="121.00" x2="195.00" stroke="#0ea5e9" stroke-width="0.2"/>
-    <line x1="15.00" y1="176.00" x2="19.00" y2="176.00" stroke="#0ea5e9" stroke-width="0.2"/>
-    <line x1="191.00" y1="176.00" x2="195.00" stroke="#0ea5e9" stroke-width="0.2"/>
-    <line x1="15.00" y1="231.00" x2="19.00" y2="231.00" stroke="#0ea5e9" stroke-width="0.2"/>
-    <line x1="191.00" y1="231.00" x2="195.00" stroke="#0ea5e9" stroke-width="0.2"/>
-    <line x1="15.00" y1="286.00" x2="19.00" y2="286.00" stroke="#0ea5e9" stroke-width="0.2"/>
-    <line x1="191.00" y1="286.00" x2="195.00" stroke="#0ea5e9" stroke-width="0.2"/>
+    <line x1="190" y1="194" x2="190" y2="244" stroke="#0ea5e9" stroke-width="2.5"/>
+    <line x1="190" y1="3264" x2="190" y2="3314" stroke="#0ea5e9" stroke-width="2.5"/>
+    <line x1="1240" y1="194" x2="1240" y2="244" stroke="#0ea5e9" stroke-width="2.5"/>
+    <line x1="1240" y1="3264" x2="1240" y2="3314" stroke="#0ea5e9" stroke-width="2.5"/>
+    <line x1="2290" y1="194" x2="2290" y2="244" stroke="#0ea5e9" stroke-width="2.5"/>
+    <line x1="2290" y1="3264" x2="2290" y2="3314" stroke="#0ea5e9" stroke-width="2.5"/>
+    <line x1="130" y1="254" x2="180" y2="254" stroke="#0ea5e9" stroke-width="2.5"/>
+    <line x1="2300" y1="254" x2="2350" stroke="#0ea5e9" stroke-width="2.5"/>
+    <line x1="130" y1="854" x2="180" y2="854" stroke="#0ea5e9" stroke-width="2.5"/>
+    <line x1="2300" y1="854" x2="2350" stroke="#0ea5e9" stroke-width="2.5"/>
+    <line x1="130" y1="1454" x2="180" y2="1454" stroke="#0ea5e9" stroke-width="2.5"/>
+    <line x1="2300" y1="1454" x2="2350" stroke="#0ea5e9" stroke-width="2.5"/>
+    <line x1="130" y1="2054" x2="180" y2="2054" stroke="#0ea5e9" stroke-width="2.5"/>
+    <line x1="2300" y1="2054" x2="2350" stroke="#0ea5e9" stroke-width="2.5"/>
+    <line x1="130" y1="2654" x2="180" y2="2654" stroke="#0ea5e9" stroke-width="2.5"/>
+    <line x1="2300" y1="2654" x2="2350" stroke="#0ea5e9" stroke-width="2.5"/>
+    <line x1="130" y1="3254" x2="180" y2="3254" stroke="#0ea5e9" stroke-width="2.5"/>
+    <line x1="2300" y1="3254" x2="2350" stroke="#0ea5e9" stroke-width="2.5"/>
   </g>
 
   <!-- Cards Grid Layer -->
   <g id="cardsGrid">
-    <use href="#card_dark_back" x="20.00" y="11.00" />
-    <use href="#card_dark_back" x="105.00" y="11.00" />
-    <use href="#card_dark_back" x="20.00" y="66.00" />
-    <use href="#card_dark_back" x="105.00" y="66.00" />
-    <use href="#card_dark_back" x="20.00" y="121.00" />
-    <use href="#card_dark_back" x="105.00" y="121.00" />
-    <use href="#card_dark_back" x="20.00" y="176.00" />
-    <use href="#card_dark_back" x="105.00" y="176.00" />
-    <use href="#card_dark_back" x="20.00" y="231.00" />
-    <use href="#card_dark_back" x="105.00" y="231.00" />
+    <use xlink:href="#card_dark_back" href="#card_dark_back" x="190" y="254" />
+    <use xlink:href="#card_dark_back" href="#card_dark_back" x="1240" y="254" />
+    <use xlink:href="#card_dark_back" href="#card_dark_back" x="190" y="854" />
+    <use xlink:href="#card_dark_back" href="#card_dark_back" x="1240" y="854" />
+    <use xlink:href="#card_dark_back" href="#card_dark_back" x="190" y="1454" />
+    <use xlink:href="#card_dark_back" href="#card_dark_back" x="1240" y="1454" />
+    <use xlink:href="#card_dark_back" href="#card_dark_back" x="190" y="2054" />
+    <use xlink:href="#card_dark_back" href="#card_dark_back" x="1240" y="2054" />
+    <use xlink:href="#card_dark_back" href="#card_dark_back" x="190" y="2654" />
+    <use xlink:href="#card_dark_back" href="#card_dark_back" x="1240" y="2654" />
   </g>
 
   <!-- Bottom Registration & Info Bar -->
-  <g transform="translate(105.00, 292.50)" text-anchor="middle">
-    <text font-family="'Plus Jakarta Sans','Inter',sans-serif" font-size="2.1" font-weight="600" fill="#94a3b8" letter-spacing="0.2">
-      &copy; Zersoft Teknoloji &bull; Ramazan Tuncer (+90 555 587 93 70) &bull; Bursa, Türkiye &bull; www.zersoft.net
+  <g transform="translate(1240.0, 3401.0)" text-anchor="middle">
+    <text font-family="'Plus Jakarta Sans','Inter',sans-serif" font-size="26" font-weight="600" fill="#94a3b8" letter-spacing="2">
+      &#169; Zersoft Teknoloji &#8226; Ramazan Tuncer (+90 555 587 93 70) &#8226; Bursa, Türkiye &#8226; www.zersoft.net
     </text>
   </g>
 </svg>

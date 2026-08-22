@@ -1,10 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 297 420" width="297mm" height="420mm" role="img" aria-label="Zersoft Kartvizit A3 Açık Minimalist ARKA YÜZ Baskı Dizilimi">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 3508 4960" width="3508" height="4960" role="img" aria-label="Zersoft Kartvizit A3 Açık Minimalist ARKA YÜZ Baskı Dizilimi">
   <defs>
-    <!-- Paper Sheet Shadow -->
-    <filter id="sheetShadow" x="-5%" y="-5%" width="110%" height="110%">
-      <feDropShadow dx="0" dy="1" stdDeviation="0.5" flood-opacity="0.2"/>
-    </filter>
-
     <!-- Source Card Defs -->
     <linearGradient id="cyanLineW2" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#0ea5e9"/>
@@ -12,10 +7,9 @@
       <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
     </linearGradient>
 
-    <!-- Single Business Card Symbol (85 × 55 mm scaled from 1050 × 600 px) -->
+    <!-- Single Business Card Symbol (1050 × 600 px) -->
     <g id="card_white_back">
-      <g transform="scale(0.08095238, 0.09166667)">
-        <!-- Clean White Background -->
+      <!-- Clean White Background -->
   <rect width="1050" height="600" fill="#ffffff"/>
 
   <!-- Border Frame -->
@@ -92,80 +86,79 @@
     <!-- Scan text -->
     <text x="100" y="305" text-anchor="middle" font-family="'Plus Jakarta Sans','Inter',sans-serif" font-size="12" font-weight="700" fill="#64748b" letter-spacing="1">DİJİTAL KART &amp; VCARD</text>
   </g>
-      </g>
     </g>
   </defs>
 
   <!-- Sheet Background -->
-  <rect width="297" height="420" fill="#f8fafc"/>
+  <rect width="3508" height="4960" fill="#ffffff"/>
 
   <!-- Top Sheet Metadata Header -->
-  <g transform="translate(148.50, 10.25)" text-anchor="middle">
-    <text font-family="'Plus Jakarta Sans','Inter',sans-serif" font-size="3.2" font-weight="800" fill="#0284c7" letter-spacing="0.3">
-      ZERSOFT TEKNOLOJİ &bull; KARTVİZİT BASKI DİZİLİMİ (A3 / 300 DPI) &bull; AÇIK MINIMALIST &bull; ARKA YÜZ
+  <g transform="translate(1754.0, 210.0)" text-anchor="middle">
+    <text font-family="'Plus Jakarta Sans','Inter',sans-serif" font-size="42" font-weight="800" fill="#0284c7" letter-spacing="3">
+      ZERSOFT TEKNOLOJİ &#8226; KARTVİZİT BASKI DİZİLİMİ (A3 / 300 DPI) &#8226; AÇIK MINIMALIST &#8226; ARKA YÜZ
     </text>
-    <text y="3.8" font-family="'Plus Jakarta Sans','Inter',sans-serif" font-size="2.1" font-weight="600" fill="#64748b" letter-spacing="0.1">
-      Ebat: 85 × 55 mm &bull; Adet: 21 Kart / Sayfa &bull; Çift Yönlü Baskıda 1:1 Simetrik Çakışma Garantili
+    <text y="48" font-family="'Plus Jakarta Sans','Inter',sans-serif" font-size="26" font-weight="600" fill="#64748b" letter-spacing="1">
+      Ebat: 85 × 55 mm &#8226; Adet: 21 Kart / Sayfa &#8226; Çift Yönlü Baskıda 1:1 Simetrik Çakışma Garantili
     </text>
   </g>
 
   <!-- Crop Marks (Kesim Kılavuzları) -->
   <g id="cropMarks">
-    <line x1="21.00" y1="12.50" x2="21.00" y2="16.50" stroke="#0f172a" stroke-width="0.2"/>
-    <line x1="21.00" y1="403.50" x2="21.00" y2="407.50" stroke="#0f172a" stroke-width="0.2"/>
-    <line x1="106.00" y1="12.50" x2="106.00" y2="16.50" stroke="#0f172a" stroke-width="0.2"/>
-    <line x1="106.00" y1="403.50" x2="106.00" y2="407.50" stroke="#0f172a" stroke-width="0.2"/>
-    <line x1="191.00" y1="12.50" x2="191.00" y2="16.50" stroke="#0f172a" stroke-width="0.2"/>
-    <line x1="191.00" y1="403.50" x2="191.00" y2="407.50" stroke="#0f172a" stroke-width="0.2"/>
-    <line x1="276.00" y1="12.50" x2="276.00" y2="16.50" stroke="#0f172a" stroke-width="0.2"/>
-    <line x1="276.00" y1="403.50" x2="276.00" y2="407.50" stroke="#0f172a" stroke-width="0.2"/>
-    <line x1="16.00" y1="17.50" x2="20.00" y2="17.50" stroke="#0f172a" stroke-width="0.2"/>
-    <line x1="277.00" y1="17.50" x2="281.00" stroke="#0f172a" stroke-width="0.2"/>
-    <line x1="16.00" y1="72.50" x2="20.00" y2="72.50" stroke="#0f172a" stroke-width="0.2"/>
-    <line x1="277.00" y1="72.50" x2="281.00" stroke="#0f172a" stroke-width="0.2"/>
-    <line x1="16.00" y1="127.50" x2="20.00" y2="127.50" stroke="#0f172a" stroke-width="0.2"/>
-    <line x1="277.00" y1="127.50" x2="281.00" stroke="#0f172a" stroke-width="0.2"/>
-    <line x1="16.00" y1="182.50" x2="20.00" y2="182.50" stroke="#0f172a" stroke-width="0.2"/>
-    <line x1="277.00" y1="182.50" x2="281.00" stroke="#0f172a" stroke-width="0.2"/>
-    <line x1="16.00" y1="237.50" x2="20.00" y2="237.50" stroke="#0f172a" stroke-width="0.2"/>
-    <line x1="277.00" y1="237.50" x2="281.00" stroke="#0f172a" stroke-width="0.2"/>
-    <line x1="16.00" y1="292.50" x2="20.00" y2="292.50" stroke="#0f172a" stroke-width="0.2"/>
-    <line x1="277.00" y1="292.50" x2="281.00" stroke="#0f172a" stroke-width="0.2"/>
-    <line x1="16.00" y1="347.50" x2="20.00" y2="347.50" stroke="#0f172a" stroke-width="0.2"/>
-    <line x1="277.00" y1="347.50" x2="281.00" stroke="#0f172a" stroke-width="0.2"/>
-    <line x1="16.00" y1="402.50" x2="20.00" y2="402.50" stroke="#0f172a" stroke-width="0.2"/>
-    <line x1="277.00" y1="402.50" x2="281.00" stroke="#0f172a" stroke-width="0.2"/>
+    <line x1="179" y1="320" x2="179" y2="370" stroke="#0f172a" stroke-width="2.5"/>
+    <line x1="179" y1="4590" x2="179" y2="4640" stroke="#0f172a" stroke-width="2.5"/>
+    <line x1="1229" y1="320" x2="1229" y2="370" stroke="#0f172a" stroke-width="2.5"/>
+    <line x1="1229" y1="4590" x2="1229" y2="4640" stroke="#0f172a" stroke-width="2.5"/>
+    <line x1="2279" y1="320" x2="2279" y2="370" stroke="#0f172a" stroke-width="2.5"/>
+    <line x1="2279" y1="4590" x2="2279" y2="4640" stroke="#0f172a" stroke-width="2.5"/>
+    <line x1="3329" y1="320" x2="3329" y2="370" stroke="#0f172a" stroke-width="2.5"/>
+    <line x1="3329" y1="4590" x2="3329" y2="4640" stroke="#0f172a" stroke-width="2.5"/>
+    <line x1="119" y1="380" x2="169" y2="380" stroke="#0f172a" stroke-width="2.5"/>
+    <line x1="3339" y1="380" x2="3389" stroke="#0f172a" stroke-width="2.5"/>
+    <line x1="119" y1="980" x2="169" y2="980" stroke="#0f172a" stroke-width="2.5"/>
+    <line x1="3339" y1="980" x2="3389" stroke="#0f172a" stroke-width="2.5"/>
+    <line x1="119" y1="1580" x2="169" y2="1580" stroke="#0f172a" stroke-width="2.5"/>
+    <line x1="3339" y1="1580" x2="3389" stroke="#0f172a" stroke-width="2.5"/>
+    <line x1="119" y1="2180" x2="169" y2="2180" stroke="#0f172a" stroke-width="2.5"/>
+    <line x1="3339" y1="2180" x2="3389" stroke="#0f172a" stroke-width="2.5"/>
+    <line x1="119" y1="2780" x2="169" y2="2780" stroke="#0f172a" stroke-width="2.5"/>
+    <line x1="3339" y1="2780" x2="3389" stroke="#0f172a" stroke-width="2.5"/>
+    <line x1="119" y1="3380" x2="169" y2="3380" stroke="#0f172a" stroke-width="2.5"/>
+    <line x1="3339" y1="3380" x2="3389" stroke="#0f172a" stroke-width="2.5"/>
+    <line x1="119" y1="3980" x2="169" y2="3980" stroke="#0f172a" stroke-width="2.5"/>
+    <line x1="3339" y1="3980" x2="3389" stroke="#0f172a" stroke-width="2.5"/>
+    <line x1="119" y1="4580" x2="169" y2="4580" stroke="#0f172a" stroke-width="2.5"/>
+    <line x1="3339" y1="4580" x2="3389" stroke="#0f172a" stroke-width="2.5"/>
   </g>
 
   <!-- Cards Grid Layer -->
   <g id="cardsGrid">
-    <use href="#card_white_back" x="21.00" y="17.50" />
-    <use href="#card_white_back" x="106.00" y="17.50" />
-    <use href="#card_white_back" x="191.00" y="17.50" />
-    <use href="#card_white_back" x="21.00" y="72.50" />
-    <use href="#card_white_back" x="106.00" y="72.50" />
-    <use href="#card_white_back" x="191.00" y="72.50" />
-    <use href="#card_white_back" x="21.00" y="127.50" />
-    <use href="#card_white_back" x="106.00" y="127.50" />
-    <use href="#card_white_back" x="191.00" y="127.50" />
-    <use href="#card_white_back" x="21.00" y="182.50" />
-    <use href="#card_white_back" x="106.00" y="182.50" />
-    <use href="#card_white_back" x="191.00" y="182.50" />
-    <use href="#card_white_back" x="21.00" y="237.50" />
-    <use href="#card_white_back" x="106.00" y="237.50" />
-    <use href="#card_white_back" x="191.00" y="237.50" />
-    <use href="#card_white_back" x="21.00" y="292.50" />
-    <use href="#card_white_back" x="106.00" y="292.50" />
-    <use href="#card_white_back" x="191.00" y="292.50" />
-    <use href="#card_white_back" x="21.00" y="347.50" />
-    <use href="#card_white_back" x="106.00" y="347.50" />
-    <use href="#card_white_back" x="191.00" y="347.50" />
+    <use xlink:href="#card_white_back" href="#card_white_back" x="179" y="380" />
+    <use xlink:href="#card_white_back" href="#card_white_back" x="1229" y="380" />
+    <use xlink:href="#card_white_back" href="#card_white_back" x="2279" y="380" />
+    <use xlink:href="#card_white_back" href="#card_white_back" x="179" y="980" />
+    <use xlink:href="#card_white_back" href="#card_white_back" x="1229" y="980" />
+    <use xlink:href="#card_white_back" href="#card_white_back" x="2279" y="980" />
+    <use xlink:href="#card_white_back" href="#card_white_back" x="179" y="1580" />
+    <use xlink:href="#card_white_back" href="#card_white_back" x="1229" y="1580" />
+    <use xlink:href="#card_white_back" href="#card_white_back" x="2279" y="1580" />
+    <use xlink:href="#card_white_back" href="#card_white_back" x="179" y="2180" />
+    <use xlink:href="#card_white_back" href="#card_white_back" x="1229" y="2180" />
+    <use xlink:href="#card_white_back" href="#card_white_back" x="2279" y="2180" />
+    <use xlink:href="#card_white_back" href="#card_white_back" x="179" y="2780" />
+    <use xlink:href="#card_white_back" href="#card_white_back" x="1229" y="2780" />
+    <use xlink:href="#card_white_back" href="#card_white_back" x="2279" y="2780" />
+    <use xlink:href="#card_white_back" href="#card_white_back" x="179" y="3380" />
+    <use xlink:href="#card_white_back" href="#card_white_back" x="1229" y="3380" />
+    <use xlink:href="#card_white_back" href="#card_white_back" x="2279" y="3380" />
+    <use xlink:href="#card_white_back" href="#card_white_back" x="179" y="3980" />
+    <use xlink:href="#card_white_back" href="#card_white_back" x="1229" y="3980" />
+    <use xlink:href="#card_white_back" href="#card_white_back" x="2279" y="3980" />
   </g>
 
   <!-- Bottom Registration & Info Bar -->
-  <g transform="translate(148.50, 412.25)" text-anchor="middle">
-    <text font-family="'Plus Jakarta Sans','Inter',sans-serif" font-size="2.1" font-weight="600" fill="#64748b" letter-spacing="0.2">
-      &copy; Zersoft Teknoloji &bull; Ramazan Tuncer (+90 555 587 93 70) &bull; Bursa, Türkiye &bull; www.zersoft.net
+  <g transform="translate(1754.0, 4790.0)" text-anchor="middle">
+    <text font-family="'Plus Jakarta Sans','Inter',sans-serif" font-size="26" font-weight="600" fill="#64748b" letter-spacing="2">
+      &#169; Zersoft Teknoloji &#8226; Ramazan Tuncer (+90 555 587 93 70) &#8226; Bursa, Türkiye &#8226; www.zersoft.net
     </text>
   </g>
 </svg>
