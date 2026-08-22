@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 600" width="1050" height="600" role="img" aria-label="Zersoft Kartvizit Ön Yüz (Beyaz Minimalist)">
+  <defs>
+    <linearGradient id="stream1W" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.4"/>
+      <stop offset="80%" stop-color="#22d3ee" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="stream2W" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.5"/>
+      <stop offset="80%" stop-color="#0ea5e9" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#0ea5e9" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="stream3W" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.35"/>
+      <stop offset="80%" stop-color="#6366f1" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="cyanLineW" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0ea5e9"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Clean Premium White Background -->
+  <rect width="1050" height="600" fill="#ffffff"/>
+  
+  <!-- Subtle gradient glow at bottom right -->
+  <circle cx="950" cy="500" r="300" fill="#0ea5e9" opacity="0.04"/>
+
+  <!-- Border Frame -->
+  <rect x="24" y="24" width="1002" height="552" rx="16" fill="none" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <!-- NFC Contactless Icon -->
+  <g transform="translate(940, 50)" opacity="0.3" stroke="#0ea5e9" stroke-width="2" fill="none">
+    <path d="M 0,28 A 20,20 0 0,1 20,8"/>
+    <path d="M 0,20 A 13,13 0 0,1 13,7"/>
+    <path d="M 0,12 A 6,6 0 0,1 6,6"/>
+  </g>
+
+  <!-- Main Centered Brand Block -->
+  <g transform="translate(235, 205)">
+    <!-- Convergence Mark Large -->
+    <g transform="translate(0, 5) scale(2.6)">
+      <polygon points="0,5  3,11  44,33  44,31" fill="url(#stream1W)"/>
+      <polygon points="0,29  0,35  44,33  44,31" fill="url(#stream2W)"/>
+      <polygon points="0,53  3,59  44,33  44,31" fill="url(#stream3W)"/>
+      <circle cx="44" cy="32" r="3.6" fill="#0ea5e9"/>
+      <circle cx="44" cy="32" r="1.5" fill="#ffffff"/>
+    </g>
+
+    <!-- Wordmark -->
+    <g transform="translate(150, 20)">
+      <text
+        x="0" y="80"
+        font-family="'Plus Jakarta Sans','Inter',system-ui,sans-serif"
+        font-size="70" font-weight="800"
+        letter-spacing="4"
+        textLength="420"
+        lengthAdjust="spacing"
+      ><tspan fill="#0f172a">ZER</tspan><tspan fill="#0ea5e9">SOFT</tspan></text>
+
+      <text
+        x="0" y="122"
+        font-family="'Plus Jakarta Sans','Inter',system-ui,sans-serif"
+        font-size="20.5" font-weight="600"
+        letter-spacing="2.2"
+        textLength="420"
+        lengthAdjust="spacing"
+        fill="#64748b"
+      >YENİ NESİL TEKNOLOJİ</text>
+    </g>
+  </g>
+
+  <!-- Bottom Accent Ribbon / Web URL -->
+  <g transform="translate(525, 520)" text-anchor="middle">
+    <text font-family="'Plus Jakarta Sans','Inter',sans-serif" font-size="14" font-weight="700" letter-spacing="4" fill="#0ea5e9">WWW.ZERSOFT.NET</text>
+  </g>
+</svg>

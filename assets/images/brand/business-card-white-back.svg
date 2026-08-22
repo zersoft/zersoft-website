@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1050 600" width="1050" height="600" role="img" aria-label="Zersoft Kartvizit Arka Yüz (Beyaz Minimalist)">
+  <defs>
+    <linearGradient id="cyanLineW2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0ea5e9"/>
+      <stop offset="60%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Clean White Background -->
+  <rect width="1050" height="600" fill="#ffffff"/>
+
+  <!-- Border Frame -->
+  <rect x="24" y="24" width="1002" height="552" rx="16" fill="none" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <!-- LEFT SIDE: Executive Profile & Contact -->
+  <g transform="translate(80, 100)">
+    <!-- Name -->
+    <text font-family="'Plus Jakarta Sans','Inter',sans-serif" font-size="38" font-weight="800" fill="#0f172a" letter-spacing="0.5">Ramazan Tuncer</text>
+    <!-- Title -->
+    <text y="42" font-family="'Plus Jakarta Sans','Inter',sans-serif" font-size="16" font-weight="700" fill="#0284c7" letter-spacing="1">Kurucu &amp; Kıdemli Çözüm Mimarı</text>
+    <text y="68" font-family="'Plus Jakarta Sans','Inter',sans-serif" font-size="13" font-weight="500" fill="#64748b" letter-spacing="0.5">Founder &amp; Chief Technology Architect</text>
+
+    <!-- Accent Divider -->
+    <line x1="0" y1="100" x2="380" y2="100" stroke="url(#cyanLineW2)" stroke-width="2.5"/>
+
+    <!-- Contact Info Items -->
+    <!-- Phone -->
+    <g transform="translate(0, 140)">
+      <circle cx="16" cy="16" r="16" fill="#f0f9ff" stroke="#bae6fd" stroke-width="1"/>
+      <path d="M 12,10 L 15,10 C 15.5,10 16,10.5 16,11 L 17,14 C 17.2,14.5 17,15 16.6,15.3 L 15.2,16.4 C 16.1,18.3 17.7,19.9 19.6,20.8 L 20.7,19.4 C 21,19 21.5,18.8 22,19 L 25,20 C 25.5,20 26,20.5 26,21 L 26,24 C 26,24.5 25.5,25 25,25 C 16.7,25 10,18.3 10,10 C 10,9.5 10.5,9 11,9 Z" fill="#0284c7" transform="scale(0.8) translate(3,3)"/>
+      <text x="46" y="22" font-family="'Plus Jakarta Sans','Inter',sans-serif" font-size="16" font-weight="600" fill="#1e293b">+90 (555) 587 93 70</text>
+    </g>
+
+    <!-- Email -->
+    <g transform="translate(0, 195)">
+      <circle cx="16" cy="16" r="16" fill="#f0f9ff" stroke="#bae6fd" stroke-width="1"/>
+      <path d="M 10,12 L 22,12 C 23.1,12 24,12.9 24,14 L 24,22 C 24,23.1 23.1,24 22,24 L 10,24 C 8.9,24 8,23.1 8,22 L 8,14 C 8,12.9 8.9,12 10,12 Z M 10,14 L 16,18.5 L 22,14" fill="none" stroke="#0284c7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="46" y="22" font-family="'Plus Jakarta Sans','Inter',sans-serif" font-size="16" font-weight="600" fill="#1e293b">ramazan@zersoft.net</text>
+    </g>
+
+    <!-- Web -->
+    <g transform="translate(0, 250)">
+      <circle cx="16" cy="16" r="16" fill="#f0f9ff" stroke="#bae6fd" stroke-width="1"/>
+      <circle cx="16" cy="16" r="8" fill="none" stroke="#0284c7" stroke-width="1.6"/>
+      <ellipse cx="16" cy="16" rx="4" ry="8" fill="none" stroke="#0284c7" stroke-width="1.3"/>
+      <line x1="8" y1="16" x2="24" y2="16" stroke="#0284c7" stroke-width="1.3"/>
+      <text x="46" y="22" font-family="'Plus Jakarta Sans','Inter',sans-serif" font-size="16" font-weight="600" fill="#1e293b">www.zersoft.net</text>
+    </g>
+
+    <!-- Address / City -->
+    <g transform="translate(0, 305)">
+      <circle cx="16" cy="16" r="16" fill="#f0f9ff" stroke="#bae6fd" stroke-width="1"/>
+      <path d="M 16,9 C 12.7,9 10,11.7 10,15 C 10,19.5 16,25 16,25 C 16,25 22,19.5 22,15 C 22,11.7 19.3,9 16,9 Z M 16,17 C 14.9,17 14,16.1 14,15 C 14,13.9 14.9,13 16,13 C 17.1,13 18,13.9 18,15 C 18,16.1 17.1,17 16,17 Z" fill="#0284c7"/>
+      <text x="46" y="22" font-family="'Plus Jakarta Sans','Inter',sans-serif" font-size="16" font-weight="600" fill="#1e293b">Bursa, Türkiye</text>
+    </g>
+  </g>
+
+  <!-- RIGHT SIDE: Logo Mark & Dynamic QR Code Box -->
+  <g transform="translate(720, 100)">
+    <!-- Small Mini Header Logo -->
+    <g transform="translate(0, 0)">
+      <g transform="scale(0.85)">
+        <polygon points="0,5  3,11  44,33  44,31" fill="#0ea5e9"/>
+        <polygon points="0,29  0,35  44,33  44,31" fill="#0284c7"/>
+        <polygon points="0,53  3,59  44,33  44,31" fill="#6366f1"/>
+        <circle cx="44" cy="32" r="3.2" fill="#0284c7"/>
+        <circle cx="44" cy="32" r="1.3" fill="#ffffff"/>
+      </g>
+      <text x="48" y="32" font-family="'Plus Jakarta Sans','Inter',sans-serif" font-size="22" font-weight="800" letter-spacing="1">
+        <tspan fill="#0f172a">ZER</tspan><tspan fill="#0284c7">SOFT</tspan>
+      </text>
+    </g>
+
+    <!-- QR Code Container Card -->
+    <g transform="translate(0, 75)">
+      <rect width="200" height="200" rx="16" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1.5"/>
+      
+      <!-- Inner QR Code Matrix Graphic -->
+      <g transform="translate(20, 20)">
+        <!-- Finder pattern top-left -->
+        <rect x="0" y="0" width="46" height="46" rx="6" fill="#0f172a"/>
+        <rect x="8" y="8" width="30" height="30" rx="3" fill="#ffffff"/>
+        <rect x="15" y="15" width="16" height="16" rx="2" fill="#0284c7"/>
+
+        <!-- Finder pattern top-right -->
+        <rect x="114" y="0" width="46" height="46" rx="6" fill="#0f172a"/>
+        <rect x="122" y="8" width="30" height="30" rx="3" fill="#ffffff"/>
+        <rect x="129" y="15" width="16" height="16" rx="2" fill="#0284c7"/>
+
+        <!-- Finder pattern bottom-left -->
+        <rect x="0" y="114" width="46" height="46" rx="6" fill="#0f172a"/>
+        <rect x="8" y="122" width="30" height="30" rx="3" fill="#ffffff"/>
+        <rect x="15" y="129" width="16" height="16" rx="2" fill="#0284c7"/>
+
+        <!-- QR Data Blocks -->
+        <rect x="56" y="6" width="10" height="24" rx="2" fill="#0f172a"/>
+        <rect x="74" y="0" width="28" height="12" rx="2" fill="#0ea5e9"/>
+        <rect x="74" y="20" width="12" height="24" rx="2" fill="#0f172a"/>
+        <rect x="94" y="22" width="12" height="12" rx="2" fill="#0284c7"/>
+
+        <rect x="6" y="56" width="22" height="10" rx="2" fill="#0f172a"/>
+        <rect x="36" y="56" width="10" height="20" rx="2" fill="#0284c7"/>
+        <rect x="56" y="56" width="48" height="48" rx="8" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+        
+        <!-- Mini Center Logo inside QR -->
+        <circle cx="80" cy="80" r="14" fill="#ffffff"/>
+        <circle cx="80" cy="80" r="5" fill="#0284c7"/>
+        <circle cx="80" cy="80" r="2" fill="#0ea5e9"/>
+
+        <rect x="114" y="56" width="20" height="10" rx="2" fill="#0ea5e9"/>
+        <rect x="142" y="56" width="18" height="20" rx="2" fill="#0f172a"/>
+        <rect x="114" y="74" width="12" height="30" rx="2" fill="#0f172a"/>
+
+        <rect x="56" y="114" width="14" height="22" rx="2" fill="#0284c7"/>
+        <rect x="78" y="114" width="28" height="12" rx="2" fill="#0f172a"/>
+        <rect x="114" y="114" width="46" height="14" rx="2" fill="#0f172a"/>
+        <rect x="114" y="136" width="20" height="24" rx="2" fill="#0ea5e9"/>
+        <rect x="140" y="136" width="20" height="14" rx="2" fill="#0f172a"/>
+      </g>
+    </g>
+
+    <!-- Scan text -->
+    <text x="100" y="305" text-anchor="middle" font-family="'Plus Jakarta Sans','Inter',sans-serif" font-size="12" font-weight="700" fill="#64748b" letter-spacing="1">DİJİTAL KART &amp; VCARD</text>
+  </g>
+</svg>

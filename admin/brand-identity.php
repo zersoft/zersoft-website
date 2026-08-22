@@ -717,38 +717,70 @@ require_once __DIR__ . '/header.php';
     <div style="display: inline-block; font-size: 0.75rem; font-weight: 700; color: #38bdf8; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 8px;">
       İNTERAKTİF 3D ÖNİZLEME (FLIP CARD)
     </div>
-    <h2 style="font-size: 1.5rem; font-weight: 800; color: #fff; margin-bottom: 6px;">
-      Zersoft Executive Kartvizit (300 DPI / 1050 × 600 px)
-    </h2>
-    <p style="color: var(--admin-text-muted); font-size: 0.9rem; margin-bottom: 24px;">
-      Kartvizite tıklayarak veya aşağıdaki butonla ön ve arka yüz arasında 3D olarak geçiş yapabilirsiniz.
-    </p>
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-bottom: 20px;">
+      <div>
+        <h2 style="font-size: 1.5rem; font-weight: 800; color: #fff; margin-bottom: 4px;">
+          Zersoft Executive Kartvizit (300 DPI / 1050 × 600 px)
+        </h2>
+        <p style="color: var(--admin-text-muted); font-size: 0.9rem;">
+          Kartvizite tıklayarak veya aşağıdaki butonla ön ve arka yüz arasında 3D olarak geçiş yapabilirsiniz.
+        </p>
+      </div>
+
+      <!-- Theme Switcher for Cards -->
+      <div style="display: flex; gap: 8px; background: rgba(0,0,0,0.3); padding: 4px; border-radius: 8px; border: 1px solid var(--admin-border);">
+        <button id="cardThemeDarkBtn" onclick="setCardTheme('dark')" class="btn-asset btn-asset-primary" style="padding: 6px 14px; font-size: 0.8rem;">
+          <i class="fa-solid fa-moon"></i> Koyu Lüks Mat
+        </button>
+        <button id="cardThemeWhiteBtn" onclick="setCardTheme('white')" class="btn-asset btn-asset-secondary" style="padding: 6px 14px; font-size: 0.8rem;">
+          <i class="fa-solid fa-sun"></i> Açık Minimalist
+        </button>
+      </div>
+    </div>
 
     <!-- 3D Card Stage -->
     <div class="flip-scene" onclick="toggleCard3D()">
       <div class="card-3d-wrapper" id="businessCard3D">
         <!-- Front Side -->
         <div class="card-3d-face">
-          <img src="../assets/images/brand/business-card-front.svg" alt="Kartvizit Ön Yüz">
+          <img id="cardFrontImg" src="../assets/images/brand/business-card-front.svg" alt="Kartvizit Ön Yüz">
         </div>
         <!-- Back Side -->
         <div class="card-3d-face card-3d-back">
-          <img src="../assets/images/brand/business-card-back.svg" alt="Kartvizit Arka Yüz">
+          <img id="cardBackImg" src="../assets/images/brand/business-card-back.svg" alt="Kartvizit Arka Yüz">
         </div>
       </div>
     </div>
 
-    <!-- Flip Action Button -->
-    <div style="display: flex; justify-content: center; gap: 12px;">
+    <!-- Flip Action Button & Downloads -->
+    <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; margin-bottom: 24px;">
       <button onclick="toggleCard3D()" class="btn-admin-primary" style="padding: 10px 24px; font-size: 0.9rem;">
         <i class="fa-solid fa-rotate"></i> Kartı Çevir (Ön / Arka)
       </button>
-      <button onclick="downloadSvgAsPng('../assets/images/brand/business-card-front.svg', 'zersoft-kartvizit-on-300dpi.png', 1050, 600)" class="btn-asset btn-asset-secondary" style="padding: 10px 18px;">
+      <button onclick="downloadCurrentCard('front')" class="btn-asset btn-asset-secondary" style="padding: 10px 18px;">
         <i class="fa-solid fa-download"></i> Ön Yüz PNG (300 DPI)
       </button>
-      <button onclick="downloadSvgAsPng('../assets/images/brand/business-card-back.svg', 'zersoft-kartvizit-arka-300dpi.png', 1050, 600)" class="btn-asset btn-asset-secondary" style="padding: 10px 18px;">
+      <button onclick="downloadCurrentCard('back')" class="btn-asset btn-asset-secondary" style="padding: 10px 18px;">
         <i class="fa-solid fa-download"></i> Arka Yüz PNG (300 DPI)
       </button>
+      <button onclick="downloadCurrentCardSvg('front')" class="btn-asset btn-asset-secondary" style="padding: 10px 18px;">
+        <i class="fa-solid fa-vector-square"></i> Ön SVG
+      </button>
+      <button onclick="downloadCurrentCardSvg('back')" class="btn-asset btn-asset-secondary" style="padding: 10px 18px;">
+        <i class="fa-solid fa-vector-square"></i> Arka SVG
+      </button>
+    </div>
+
+    <!-- Matbaa Baskı Kılavuzu & Önerileri -->
+    <div style="background: rgba(14, 165, 233, 0.08); border: 1px solid rgba(14, 165, 233, 0.25); border-radius: 10px; padding: 18px 22px; margin-top: 10px;">
+      <div style="font-weight: 700; font-size: 0.95rem; color: #38bdf8; margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
+        <i class="fa-solid fa-print"></i> Matbaa &amp; Acil Baskı Tavsiyeleri
+      </div>
+      <div style="font-size: 0.85rem; color: var(--admin-text-muted); line-height: 1.7;">
+        &bull; <strong>Ebat:</strong> 85 × 55 mm (veya 89 × 51 mm Amerikan Boy) &bull; <strong>Çözünürlük:</strong> 300 DPI Vektörel SVG / CMYK uyumlu PNG<br>
+        &bull; <strong>Kağıt Tercihi:</strong> 350 gr veya 400 gr Kuşe (Çift Yön Mat Selefon Kaplama)<br>
+        &bull; <strong>Özel Efekt Önerisi (Koyu Tema):</strong> Ön yüzdeki Convergence logosuna ve ZERSOFT yazısına <em>Bölgesel Parlak Lak (Spot UV)</em> veya <em>Gümüş/Mavi Varak Yaldız</em> kabartma uygulandığında ultra lüks kurumsal görünüm sağlar.
+      </div>
     </div>
   </div>
 
@@ -793,7 +825,7 @@ require_once __DIR__ . '/header.php';
               <div style="font-size: 12px; color: #334155; line-height: 1.6;">
                 <strong>W:</strong> <a href="https://zersoft.net" target="_blank" style="color: #0284c7; text-decoration: none; font-weight: 600;">zersoft.net</a> &bull; 
                 <strong>E:</strong> <a href="mailto:ramazan@zersoft.net" style="color: #0284c7; text-decoration: none;">ramazan@zersoft.net</a><br>
-                <strong>T:</strong> +90 (532) 123 45 67 &bull; İstanbul / Türkiye
+                <strong>T:</strong> +90 (555) 587 93 70 &bull; Bursa / Türkiye
               </div>
             </td>
           </tr>
@@ -1006,6 +1038,55 @@ function toggleCard3D() {
   if (card) {
     card.classList.toggle('is-flipped');
   }
+}
+
+// Current Card Theme State ('dark' | 'white')
+let currentCardTheme = 'dark';
+
+function setCardTheme(theme) {
+  currentCardTheme = theme;
+  const frontImg = document.getElementById('cardFrontImg');
+  const backImg = document.getElementById('cardBackImg');
+  const darkBtn = document.getElementById('cardThemeDarkBtn');
+  const whiteBtn = document.getElementById('cardThemeWhiteBtn');
+
+  if (theme === 'white') {
+    if (frontImg) frontImg.src = '../assets/images/brand/business-card-white-front.svg';
+    if (backImg) backImg.src = '../assets/images/brand/business-card-white-back.svg';
+    if (whiteBtn) { whiteBtn.className = 'btn-asset btn-asset-primary'; }
+    if (darkBtn) { darkBtn.className = 'btn-asset btn-asset-secondary'; }
+  } else {
+    if (frontImg) frontImg.src = '../assets/images/brand/business-card-front.svg';
+    if (backImg) backImg.src = '../assets/images/brand/business-card-back.svg';
+    if (darkBtn) { darkBtn.className = 'btn-asset btn-asset-primary'; }
+    if (whiteBtn) { whiteBtn.className = 'btn-asset btn-asset-secondary'; }
+  }
+  showToast(theme === 'white' ? 'Açık Minimalist Kartvizit Seçildi' : 'Koyu Lüks Mat Kartvizit Seçildi');
+}
+
+function downloadCurrentCard(face) {
+  const isWhite = (currentCardTheme === 'white');
+  const svgUrl = isWhite
+    ? `../assets/images/brand/business-card-white-${face}.svg`
+    : `../assets/images/brand/business-card-${face}.svg`;
+  const filename = `zersoft-kartvizit-${currentCardTheme}-${face}-300dpi.png`;
+  downloadSvgAsPng(svgUrl, filename, 1050, 600);
+}
+
+function downloadCurrentCardSvg(face) {
+  const isWhite = (currentCardTheme === 'white');
+  const svgUrl = isWhite
+    ? `../assets/images/brand/business-card-white-${face}.svg`
+    : `../assets/images/brand/business-card-${face}.svg`;
+  const filename = `zersoft-kartvizit-${currentCardTheme}-${face}.svg`;
+  
+  const a = document.createElement('a');
+  a.href = svgUrl;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  showToast(`${face === 'front' ? 'Ön' : 'Arka'} SVG İndirildi!`);
 }
 
 // Toast notification helper
