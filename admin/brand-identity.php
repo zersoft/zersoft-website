@@ -387,8 +387,8 @@ require_once __DIR__ . '/header.php';
       <div class="asset-info">
         <div>
           <span class="asset-meta">3D FOTOREALİSTİK MOCKUP</span>
-          <h3 class="asset-title">Lüks Mat Siyah Kartvizit Konsepti</h3>
-          <p class="asset-desc">Granit zemin üzerinde kabartmalı elektrik mavisi Convergence logosu, NFC çip uyumu ve vCard karekodlu kurumsal kartvizit görünümü.</p>
+          <h3 class="asset-title">Lüks Yönetici Kartvizit Konsepti</h3>
+          <p class="asset-desc">Granit ve arduvaz zemin üzerinde kabartmalı elektrik mavisi Convergence logosu, Ramazan Tuncer adına taranabilir vCard QR kodlu kurumsal kartvizit görünümü.</p>
         </div>
         <div class="asset-actions">
           <a href="../assets/images/brand/business-card-mockup.jpg" download="zersoft-business-card-mockup.jpg" class="btn-asset btn-asset-primary">
@@ -409,8 +409,8 @@ require_once __DIR__ . '/header.php';
       <div class="asset-info">
         <div>
           <span class="asset-meta">3D FOTOREALİSTİK MOCKUP</span>
-          <h3 class="asset-title">Sosyal Medya &amp; Ofis Kimlik Seti</h3>
-          <p class="asset-desc">Mobil Instagram gönderileri, iPad marka kılavuzu, kurumsal not defteri ve masaüstü kimlik unsurlarının bir arada sunumu.</p>
+          <h3 class="asset-title">Kurumsal Kimlik &amp; Masaüstü Seti</h3>
+          <p class="asset-desc">iPad Pro marka rehberi, kabartma logolu siyah not defteri, resmi A4 antetli kağıt ve hem açık hem koyu kartvizitlerin prestijli ofis sunumu.</p>
         </div>
         <div class="asset-actions">
           <a href="../assets/images/brand/brand-identity-showcase.jpg" download="zersoft-stationery-showcase.jpg" class="btn-asset btn-asset-primary">
