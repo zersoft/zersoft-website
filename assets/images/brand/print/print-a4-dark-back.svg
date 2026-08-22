@@ -118,24 +118,24 @@
 
   <!-- Crop Marks (Kesim Kılavuzları) -->
   <g id="cropMarks">
-    <line x1="190" y1="194" x2="190" y2="244" stroke="#0ea5e9" stroke-width="2.5"/>
-    <line x1="190" y1="3264" x2="190" y2="3314" stroke="#0ea5e9" stroke-width="2.5"/>
-    <line x1="1240" y1="194" x2="1240" y2="244" stroke="#0ea5e9" stroke-width="2.5"/>
-    <line x1="1240" y1="3264" x2="1240" y2="3314" stroke="#0ea5e9" stroke-width="2.5"/>
-    <line x1="2290" y1="194" x2="2290" y2="244" stroke="#0ea5e9" stroke-width="2.5"/>
-    <line x1="2290" y1="3264" x2="2290" y2="3314" stroke="#0ea5e9" stroke-width="2.5"/>
-    <line x1="130" y1="254" x2="180" y2="254" stroke="#0ea5e9" stroke-width="2.5"/>
-    <line x1="2300" y1="254" x2="2350" stroke="#0ea5e9" stroke-width="2.5"/>
-    <line x1="130" y1="854" x2="180" y2="854" stroke="#0ea5e9" stroke-width="2.5"/>
-    <line x1="2300" y1="854" x2="2350" stroke="#0ea5e9" stroke-width="2.5"/>
-    <line x1="130" y1="1454" x2="180" y2="1454" stroke="#0ea5e9" stroke-width="2.5"/>
-    <line x1="2300" y1="1454" x2="2350" stroke="#0ea5e9" stroke-width="2.5"/>
-    <line x1="130" y1="2054" x2="180" y2="2054" stroke="#0ea5e9" stroke-width="2.5"/>
-    <line x1="2300" y1="2054" x2="2350" stroke="#0ea5e9" stroke-width="2.5"/>
-    <line x1="130" y1="2654" x2="180" y2="2654" stroke="#0ea5e9" stroke-width="2.5"/>
-    <line x1="2300" y1="2654" x2="2350" stroke="#0ea5e9" stroke-width="2.5"/>
-    <line x1="130" y1="3254" x2="180" y2="3254" stroke="#0ea5e9" stroke-width="2.5"/>
-    <line x1="2300" y1="3254" x2="2350" stroke="#0ea5e9" stroke-width="2.5"/>
+    <line x1="190" y1="194" x2="190" y2="239" stroke="#0ea5e9" stroke-width="3.0" stroke-linecap="round"/>
+    <line x1="190" y1="3269" x2="190" y2="3314" stroke="#0ea5e9" stroke-width="3.0" stroke-linecap="round"/>
+    <line x1="1240" y1="194" x2="1240" y2="239" stroke="#0ea5e9" stroke-width="3.0" stroke-linecap="round"/>
+    <line x1="1240" y1="3269" x2="1240" y2="3314" stroke="#0ea5e9" stroke-width="3.0" stroke-linecap="round"/>
+    <line x1="2290" y1="194" x2="2290" y2="239" stroke="#0ea5e9" stroke-width="3.0" stroke-linecap="round"/>
+    <line x1="2290" y1="3269" x2="2290" y2="3314" stroke="#0ea5e9" stroke-width="3.0" stroke-linecap="round"/>
+    <line x1="130" y1="254" x2="175" y2="254" stroke="#0ea5e9" stroke-width="3.0" stroke-linecap="round"/>
+    <line x1="2305" y1="254" x2="2350" y2="254" stroke="#0ea5e9" stroke-width="3.0" stroke-linecap="round"/>
+    <line x1="130" y1="854" x2="175" y2="854" stroke="#0ea5e9" stroke-width="3.0" stroke-linecap="round"/>
+    <line x1="2305" y1="854" x2="2350" y2="854" stroke="#0ea5e9" stroke-width="3.0" stroke-linecap="round"/>
+    <line x1="130" y1="1454" x2="175" y2="1454" stroke="#0ea5e9" stroke-width="3.0" stroke-linecap="round"/>
+    <line x1="2305" y1="1454" x2="2350" y2="1454" stroke="#0ea5e9" stroke-width="3.0" stroke-linecap="round"/>
+    <line x1="130" y1="2054" x2="175" y2="2054" stroke="#0ea5e9" stroke-width="3.0" stroke-linecap="round"/>
+    <line x1="2305" y1="2054" x2="2350" y2="2054" stroke="#0ea5e9" stroke-width="3.0" stroke-linecap="round"/>
+    <line x1="130" y1="2654" x2="175" y2="2654" stroke="#0ea5e9" stroke-width="3.0" stroke-linecap="round"/>
+    <line x1="2305" y1="2654" x2="2350" y2="2654" stroke="#0ea5e9" stroke-width="3.0" stroke-linecap="round"/>
+    <line x1="130" y1="3254" x2="175" y2="3254" stroke="#0ea5e9" stroke-width="3.0" stroke-linecap="round"/>
+    <line x1="2305" y1="3254" x2="2350" y2="3254" stroke="#0ea5e9" stroke-width="3.0" stroke-linecap="round"/>
   </g>
 
   <!-- Cards Grid Layer -->
