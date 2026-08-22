@@ -379,45 +379,109 @@ require_once __DIR__ . '/header.php';
 <!-- ========================================================================= -->
 <div id="tab-overview" class="tab-pane active">
   <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 28px;">
-    <!-- Mockup 1: Business Cards -->
+    
+    <!-- Mockup 1: Live 3D Executive Business Card Stage -->
     <div class="asset-card">
-      <div style="overflow: hidden; aspect-ratio: 16/9; background: #000;">
-        <img src="../assets/images/brand/business-card-mockup.jpg" alt="Zersoft Lüks Kartvizit Renderı" style="width: 100%; height: 100%; object-fit: cover;">
+      <div style="background: radial-gradient(circle at 50% 30%, #1e293b 0%, #0b0f17 70%, #030712 100%); padding: 36px 20px; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; border-radius: 12px 12px 0 0;">
+        <!-- Ambient Studio Lights -->
+        <div style="position: absolute; width: 300px; height: 300px; background: radial-gradient(circle, rgba(14,165,233,0.18) 0%, transparent 70%); top: -50px; left: 10%; pointer-events: none;"></div>
+        <div style="position: absolute; width: 250px; height: 250px; background: radial-gradient(circle, rgba(99,102,241,0.15) 0%, transparent 70%); bottom: -40px; right: 15%; pointer-events: none;"></div>
+        
+        <!-- Stone Base Texture Grid -->
+        <div style="position: absolute; inset: 0; background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 24px 24px; opacity: 0.6; pointer-events: none;"></div>
+
+        <!-- 3D Perspective Stage Container -->
+        <div style="display: flex; gap: 20px; perspective: 1200px; transform-style: preserve-3d; align-items: center; justify-content: center; width: 100%; max-width: 540px;">
+          
+          <!-- Front Card 3D -->
+          <div id="mockupFrontCardWrapper" style="flex: 1; transform: rotateY(-14deg) rotateX(10deg) translateZ(10px); transition: transform 0.4s ease; box-shadow: -15px 25px 40px rgba(0,0,0,0.85), 0 0 25px rgba(14,165,233,0.25); border-radius: 8px; overflow: hidden; border: 1px solid rgba(255,255,255,0.12); background: #000;">
+            <img id="mockupFrontCardImg" src="../assets/images/brand/business-card-front.svg?v=<?= time() ?>" alt="Zersoft Ön Yüz" style="width: 100%; display: block;">
+          </div>
+
+          <!-- Back Card 3D -->
+          <div id="mockupBackCardWrapper" style="flex: 1; transform: rotateY(-6deg) rotateX(6deg) translateZ(25px); transition: transform 0.4s ease; box-shadow: -10px 20px 35px rgba(0,0,0,0.9); border-radius: 8px; overflow: hidden; border: 1px solid rgba(255,255,255,0.12); background: #000;">
+            <img id="mockupBackCardImg" src="../assets/images/brand/business-card-back.svg?v=<?= time() ?>" alt="Zersoft Arka Yüz (Ramazan Tuncer &amp; QR)" style="width: 100%; display: block;">
+          </div>
+
+        </div>
       </div>
       <div class="asset-info">
-        <div>
-          <span class="asset-meta">3D FOTOREALİSTİK MOCKUP</span>
-          <h3 class="asset-title">Lüks Yönetici Kartvizit Konsepti</h3>
-          <p class="asset-desc">Granit ve arduvaz zemin üzerinde kabartmalı elektrik mavisi Convergence logosu, Ramazan Tuncer adına taranabilir vCard QR kodlu kurumsal kartvizit görünümü.</p>
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+          <span class="asset-meta">3D CANLI VEKTÖR MOCKUP</span>
+          <!-- Theme Switcher for Mockup 1 -->
+          <div style="display: flex; gap: 4px; background: rgba(0,0,0,0.4); padding: 2px; border-radius: 6px; border: 1px solid var(--admin-border);">
+            <button id="overviewMockupDarkBtn" onclick="setOverviewMockupTheme('dark')" class="btn-asset btn-asset-primary" style="padding: 4px 10px; font-size: 0.72rem;">Koyu Mat</button>
+            <button id="overviewMockupWhiteBtn" onclick="setOverviewMockupTheme('white')" class="btn-asset btn-asset-secondary" style="padding: 4px 10px; font-size: 0.72rem;">Açık Beyaz</button>
+          </div>
         </div>
+        <h3 class="asset-title">Lüks Yönetici Kartvizit Konsepti</h3>
+        <p class="asset-desc">Gerçek 3D perspektifte kabartmalı Convergence logosu, <strong>Ramazan Tuncer</strong> adına taranabilir vCard QR kodu, <strong>+90 (555) 587 93 70</strong> ve <strong>Bursa/Türkiye</strong> bilgileri.</p>
         <div class="asset-actions">
-          <a href="../assets/images/brand/business-card-mockup.jpg" download="zersoft-business-card-mockup.jpg" class="btn-asset btn-asset-primary">
-            <i class="fa-solid fa-download"></i> Mockup JPG İndir
-          </a>
-          <button onclick="switchBrandTab('tab-businesscard', document.querySelectorAll('.brand-tab-btn')[3])" class="btn-asset btn-asset-secondary">
-            <i class="fa-solid fa-eye"></i> Kartvizit Kitine Git
+          <button onclick="switchBrandTab('tab-businesscard', document.querySelectorAll('.brand-tab-btn')[3])" class="btn-asset btn-asset-primary">
+            <i class="fa-solid fa-eye"></i> Kartvizit &amp; Baskı Kitine Git
+          </button>
+          <button onclick="downloadCurrentCard('front')" class="btn-asset btn-asset-secondary">
+            <i class="fa-solid fa-download"></i> 300 DPI İndir
           </button>
         </div>
       </div>
     </div>
 
-    <!-- Mockup 2: Brand Stationery Showcase -->
+    <!-- Mockup 2: Live Brand Stationery & Design System Showcase -->
     <div class="asset-card">
-      <div style="overflow: hidden; aspect-ratio: 16/9; background: #000;">
-        <img src="../assets/images/brand/brand-identity-showcase.jpg" alt="Zersoft Kurumsal Kimlik & Sosyal Medya Renderı" style="width: 100%; height: 100%; object-fit: cover;">
+      <div style="background: radial-gradient(circle at 40% 40%, #0f172a 0%, #090d16 60%, #03060a 100%); padding: 24px; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; border-radius: 12px 12px 0 0;">
+        <!-- Studio Ambient Glow -->
+        <div style="position: absolute; width: 350px; height: 350px; background: radial-gradient(circle, rgba(56,189,248,0.15) 0%, transparent 70%); top: -60px; right: 0; pointer-events: none;"></div>
+
+        <!-- Desk Setup Showcase -->
+        <div style="display: grid; grid-template-columns: 1.25fr 1fr; gap: 16px; width: 100%; max-width: 520px; align-items: center;">
+          
+          <!-- iPad Pro Brand Screen -->
+          <div style="background: #020617; border: 4px solid #1e293b; border-radius: 12px; box-shadow: 0 20px 45px rgba(0,0,0,0.85), 0 0 30px rgba(14,165,233,0.25); overflow: hidden; padding: 14px; transform: rotate(-2deg); position: relative;">
+            <!-- iPad Screen Header -->
+            <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 6px; margin-bottom: 10px;">
+              <span style="font-size: 0.65rem; font-weight: 700; color: #38bdf8; letter-spacing: 1px;">ZERSOFT BRAND SYSTEM</span>
+              <span style="font-size: 0.55rem; color: #64748b; font-weight: 600;">v2.0 Official</span>
+            </div>
+            <!-- Logo Display -->
+            <div style="display: flex; align-items: center; justify-content: center; padding: 8px 0;">
+              <img src="../assets/images/brand/logo-horizontal-dark.svg?v=<?= time() ?>" alt="Zersoft Logo" style="max-height: 32px; width: auto;">
+            </div>
+            <!-- Palette Chips -->
+            <div style="display: flex; gap: 6px; justify-content: center; margin-top: 10px;">
+              <div style="background: #22d3ee; width: 20px; height: 20px; border-radius: 4px; box-shadow: 0 2px 8px rgba(34,211,238,0.4);" title="Electric Cyan (#22D3EE)"></div>
+              <div style="background: #0ea5e9; width: 20px; height: 20px; border-radius: 4px; box-shadow: 0 2px 8px rgba(14,165,233,0.4);" title="Azure Blue (#0EA5E9)"></div>
+              <div style="background: #6366f1; width: 20px; height: 20px; border-radius: 4px; box-shadow: 0 2px 8px rgba(99,102,241,0.4);" title="Deep Indigo (#6366F1)"></div>
+              <div style="background: #030712; width: 20px; height: 20px; border-radius: 4px; border: 1px solid #334155;" title="Obsidian Black"></div>
+            </div>
+          </div>
+
+          <!-- Stationery Items (Letterhead & White Card) -->
+          <div style="display: flex; flex-direction: column; gap: 10px;">
+            <!-- Mini Antetli Kağıt -->
+            <div style="background: #ffffff; border-radius: 6px; padding: 4px; box-shadow: 0 12px 30px rgba(0,0,0,0.6); transform: rotate(3deg); overflow: hidden;">
+              <img src="../assets/images/brand/letterhead-a4.svg?v=<?= time() ?>" alt="Antetli Kağıt" style="width: 100%; max-height: 85px; object-fit: cover; object-position: top; display: block; border-radius: 2px;">
+            </div>
+            <!-- Mini Business Card -->
+            <div style="background: #ffffff; border-radius: 6px; overflow: hidden; box-shadow: 0 8px 20px rgba(0,0,0,0.7); transform: rotate(-2deg); border: 1px solid #e2e8f0;">
+              <img src="../assets/images/brand/business-card-white-back.svg?v=<?= time() ?>" alt="Açık Kartvizit Arka Yüz" style="width: 100%; display: block;">
+            </div>
+          </div>
+
+        </div>
       </div>
       <div class="asset-info">
         <div>
-          <span class="asset-meta">3D FOTOREALİSTİK MOCKUP</span>
-          <h3 class="asset-title">Kurumsal Kimlik &amp; Masaüstü Seti</h3>
-          <p class="asset-desc">iPad Pro marka rehberi, kabartma logolu siyah not defteri, resmi A4 antetli kağıt ve hem açık hem koyu kartvizitlerin prestijli ofis sunumu.</p>
+          <span class="asset-meta">3D KURUMSAL SET</span>
+          <h3 class="asset-title">Kurumsal Kimlik &amp; Ofis Ekosistemi</h3>
+          <p class="asset-desc">Zersoft Design System marka kılavuzu, A4 antetli resmi evrak, Ramazan Tuncer adına taranabilir vCard kartvizitleri ve marka paleti.</p>
         </div>
         <div class="asset-actions">
-          <a href="../assets/images/brand/brand-identity-showcase.jpg" download="zersoft-stationery-showcase.jpg" class="btn-asset btn-asset-primary">
-            <i class="fa-solid fa-download"></i> Mockup JPG İndir
-          </a>
+          <button onclick="switchBrandTab('tab-logos', document.querySelectorAll('.brand-tab-btn')[1])" class="btn-asset btn-asset-primary">
+            <i class="fa-solid fa-shapes"></i> Logo Paketine Git
+          </button>
           <button onclick="switchBrandTab('tab-social', document.querySelectorAll('.brand-tab-btn')[2])" class="btn-asset btn-asset-secondary">
-            <i class="fa-solid fa-share-nodes"></i> Sosyal Medya Kitine Git
+            <i class="fa-solid fa-share-nodes"></i> Sosyal Medya Kiti
           </button>
         </div>
       </div>
@@ -1143,6 +1207,27 @@ function setCardTheme(theme) {
     if (whiteBtn) { whiteBtn.className = 'btn-asset btn-asset-secondary'; }
   }
   showToast(theme === 'white' ? 'Açık Minimalist Kartvizit Seçildi' : 'Koyu Lüks Mat Kartvizit Seçildi');
+}
+
+// Overview Tab Mockup 1 Theme Toggle
+function setOverviewMockupTheme(theme) {
+  const frontImg = document.getElementById('mockupFrontCardImg');
+  const backImg = document.getElementById('mockupBackCardImg');
+  const darkBtn = document.getElementById('overviewMockupDarkBtn');
+  const whiteBtn = document.getElementById('overviewMockupWhiteBtn');
+
+  if (theme === 'white') {
+    if (frontImg) frontImg.src = '../assets/images/brand/business-card-white-front.svg?v=' + Date.now();
+    if (backImg) backImg.src = '../assets/images/brand/business-card-white-back.svg?v=' + Date.now();
+    if (whiteBtn) whiteBtn.className = 'btn-asset btn-asset-primary';
+    if (darkBtn) darkBtn.className = 'btn-asset btn-asset-secondary';
+  } else {
+    if (frontImg) frontImg.src = '../assets/images/brand/business-card-front.svg?v=' + Date.now();
+    if (backImg) backImg.src = '../assets/images/brand/business-card-back.svg?v=' + Date.now();
+    if (darkBtn) darkBtn.className = 'btn-asset btn-asset-primary';
+    if (whiteBtn) whiteBtn.className = 'btn-asset btn-asset-secondary';
+  }
+  showToast(theme === 'white' ? '3D Mockup: Beyaz Minimalist Seçildi' : '3D Mockup: Koyu Mat Seçildi');
 }
 
 function downloadCurrentCard(face) {
