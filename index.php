@@ -108,7 +108,7 @@ $projects = getProjects(4);
       <p><?php echo __('section_products_sub'); ?></p>
     </div>
 
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px;">
+    <div class="features-grid">
       <!-- Product 1: Kantar -->
       <div class="glass-card" style="padding: 24px; display: flex; flex-direction: column;">
         <a href="assets/images/kantar-preview.svg" class="lightbox-trigger" data-caption="<?php echo __('prod_kantar_title'); ?>">

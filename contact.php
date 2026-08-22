@@ -79,7 +79,7 @@ $_SESSION['captcha_answer'] = $num1 + $num2;
             <input type="text" name="full_name" class="form-control" placeholder="Ahmet Yılmaz" required>
           </div>
 
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+          <div class="contact-form-row">
             <div class="form-group">
               <label class="form-label"><?php echo __('form_email'); ?> *</label>
               <input type="email" name="email" class="form-control" placeholder="ahmet@firma.com" required>

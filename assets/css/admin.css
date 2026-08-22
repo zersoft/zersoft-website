@@ -387,3 +387,57 @@ select:focus {
   color: #64748b !important;
   opacity: 1;
 }
+
+/* ==========================================
+   Admin Mobile Responsive Rules
+   ========================================== */
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 900px) {
+  .admin-sidebar {
+    width: 70px;
+  }
+  .admin-sidebar .sidebar-brand span,
+  .admin-sidebar .nav-section-title,
+  .admin-sidebar .admin-nav-item span,
+  .admin-sidebar .sidebar-footer span {
+    display: none;
+  }
+  .admin-sidebar .admin-nav-item {
+    justify-content: center;
+    padding: 14px 0;
+  }
+  .admin-sidebar .admin-nav-item i {
+    font-size: 1.3rem;
+    margin: 0;
+  }
+  .admin-main {
+    margin-left: 70px;
+  }
+  .admin-topbar {
+    padding: 0 16px;
+  }
+  .admin-content {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+  .panel-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .login-card {
+    padding: 24px;
+    margin: 15px;
+  }
+}
+

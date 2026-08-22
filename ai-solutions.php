@@ -22,7 +22,7 @@ $aiSolutions = getAISolutions();
 <!-- AI Architecture Highlights -->
 <section style="padding: 40px 0 100px 0;">
   <div class="container">
-    <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 36px;">
+    <div class="features-grid">
       <?php foreach ($aiSolutions as $ai): ?>
         <?php $features = json_decode($ai['features_json'] ?? '[]', true); ?>
         <div class="glass-card ai-solution-card" style="padding: 36px;">
@@ -55,7 +55,7 @@ $aiSolutions = getAISolutions();
 <!-- AI Security & On-Premise Banner -->
 <section style="padding: 80px 0; background: rgba(15, 22, 36, 0.5); border-top: 1px solid var(--border-glow); border-bottom: 1px solid var(--border-glow);">
   <div class="container">
-    <div class="glass-card" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+    <div class="glass-card responsive-split">
       <div>
         <span class="badge badge-ai"><i class="fa-solid fa-shield-halved"></i> <?php echo __('ai_sec_badge'); ?></span>
         <h2 style="font-size: 2.2rem; margin: 16px 0;"><?php echo __('ai_sec_title'); ?></h2>

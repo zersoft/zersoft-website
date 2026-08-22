@@ -52,10 +52,10 @@ require_once __DIR__ . '/includes/header.php';
       </p>
 
       <!-- Three streams → focal point layout -->
-      <div style="display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 0; margin-bottom: 36px;">
+      <div class="brand-story-grid">
 
         <!-- Streams (left side) -->
-        <div style="display: flex; flex-direction: column; gap: 18px;">
+        <div style="display: flex; flex-direction: column; gap: 18px; text-align: left;">
 
           <div style="display:flex; align-items:flex-start; gap:14px;">
             <div style="width:4px; height:56px; background: linear-gradient(to bottom, #22d3ee, transparent); border-radius:4px; flex-shrink:0; margin-top:4px;"></div>
@@ -84,7 +84,7 @@ require_once __DIR__ . '/includes/header.php';
         </div>
 
         <!-- Convergence Mark (center SVG) -->
-        <div style="padding: 0 32px; flex-shrink:0;">
+        <div class="convergence-mark" style="padding: 0 20px; flex-shrink:0; display:flex; justify-content:center;">
           <svg viewBox="0 0 60 64" width="80" height="88" xmlns="http://www.w3.org/2000/svg" style="filter: drop-shadow(0 0 18px rgba(14,165,233,0.25));">
             <defs>
               <linearGradient id="bsG1" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -106,11 +106,11 @@ require_once __DIR__ . '/includes/header.php';
         </div>
 
         <!-- Focal point (right side) -->
-        <div style="padding-left: 10px;">
+        <div style="padding-left: 10px; text-align: left;">
           <div style="font-weight:800; font-size:1.05rem; margin-bottom:8px; background: linear-gradient(135deg, #0ea5e9, #38bdf8); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">
             <?php echo __('brand_story_point'); ?>
           </div>
-          <div style="font-size:0.9rem; color:var(--text-muted); line-height:1.6; max-width:240px;">
+          <div style="font-size:0.9rem; color:var(--text-muted); line-height:1.6; max-width:280px;">
             <?php echo __('brand_story_point_desc'); ?>
           </div>
         </div>
@@ -137,8 +137,7 @@ require_once __DIR__ . '/includes/header.php';
     </div>
 
     <!-- Vision & Mission Grid -->
-
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+    <div class="responsive-grid-2">
       <div class="glass-card">
         <div class="feature-icon-wrapper"><i class="fa-solid fa-eye"></i></div>
         <h3 style="font-size: 1.5rem; margin-bottom: 14px;"><?php echo __('about_vision_title'); ?></h3>

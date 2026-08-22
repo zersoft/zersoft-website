@@ -22,7 +22,7 @@ $services = getServices();
   <div class="container">
     <div style="display: flex; flex-direction: column; gap: 40px;">
       <?php foreach ($services as $index => $service): ?>
-        <div class="glass-card" style="display: grid; grid-template-columns: 80px 1fr; gap: 24px; align-items: flex-start;">
+        <div class="glass-card service-card-grid">
           <div class="feature-icon-wrapper" style="width: 70px; height: 70px; font-size: 1.8rem; margin: 0;">
             <i class="fa-solid <?php echo sanitize($service['icon']); ?>"></i>
           </div>

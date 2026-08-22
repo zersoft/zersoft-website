@@ -23,7 +23,7 @@ require_once __DIR__ . '/includes/header.php';
 <section style="padding: 0 0 80px 0;">
   <div class="container">
     <div class="glass-card" style="padding: 48px; margin-bottom: 40px;">
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+      <div class="responsive-split">
         <div>
           <span class="badge badge-ai" style="margin-bottom: 12px;"><i class="fa-solid fa-truck-ramp-box"></i> <?php echo __('prod_kantar_badge'); ?></span>
           <h2 style="font-size: 2.2rem; margin-bottom: 16px;"><?php echo __('prod_kantar_title'); ?></h2>
@@ -49,7 +49,7 @@ require_once __DIR__ . '/includes/header.php';
 <section style="padding: 0 0 80px 0;">
   <div class="container">
     <div class="glass-card" style="padding: 48px; margin-bottom: 40px; position: relative; overflow: hidden;">
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+      <div class="responsive-split reverse-mobile">
         <div>
           <a href="assets/images/iys-preview.svg" class="lightbox-trigger" data-caption="<?php echo __('prod_iys_title'); ?>">
             <img src="assets/images/iys-preview.svg" alt="<?php echo __('prod_iys_title'); ?>" style="border-radius: 16px; border: 1px solid rgba(225,0,255,0.3); box-shadow: 0 20px 40px rgba(0,0,0,0.5);">
@@ -78,7 +78,7 @@ require_once __DIR__ . '/includes/header.php';
 <section style="padding: 0 0 100px 0;">
   <div class="container">
     <div class="glass-card" style="padding: 48px;">
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+      <div class="responsive-split">
         <div>
           <span class="badge" style="margin-bottom: 12px; background: rgba(16,185,129,0.1); color:#10b981; border-color:rgba(16,185,129,0.3);"><i class="fa-solid fa-weight-hanging"></i> <?php echo __('prod_kati_badge'); ?></span>
           <h2 style="font-size: 2.2rem; margin-bottom: 16px;"><?php echo __('prod_kati_title'); ?></h2>

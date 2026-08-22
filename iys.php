@@ -76,7 +76,7 @@ require_once __DIR__ . '/includes/header.php';
 
     <!-- Screenshot Preview Panel -->
     <div class="glass-card" style="padding: 40px; margin-bottom: 60px;">
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
+      <div class="responsive-split reverse-mobile">
         <div>
           <a href="assets/images/iys-preview.svg" class="lightbox-trigger" data-caption="<?php echo __('iys_hero_title'); ?>">
             <img src="assets/images/iys-preview.svg" alt="<?php echo __('iys_hero_title'); ?>" style="border-radius: 16px; border: 1px solid rgba(225,0,255,0.3); box-shadow: 0 20px 40px rgba(0,0,0,0.5);">

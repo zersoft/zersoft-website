@@ -20,7 +20,7 @@ $projects = getProjects();
 
 <section style="padding: 40px 0 100px 0;">
   <div class="container">
-    <div class="features-grid" style="grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px;">
+    <div class="features-grid">
       <?php foreach ($projects as $project): ?>
         <div class="project-card">
           <div class="project-img" style="background-color: #111827; display: flex; align-items: center; justify-content: center; height: 200px;">

@@ -110,6 +110,9 @@ $canonicalUrl = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https
         <li><a href="portfolio.php" class="nav-link <?php echo $currentPage === 'portfolio' ? 'active' : ''; ?>"><?php echo __('nav_portfolio'); ?></a></li>
         <li><a href="about.php" class="nav-link <?php echo $currentPage === 'about' ? 'active' : ''; ?>"><?php echo __('nav_about'); ?></a></li>
         <li><a href="contact.php" class="nav-link <?php echo $currentPage === 'contact' ? 'active' : ''; ?>"><?php echo __('nav_contact'); ?></a></li>
+        <li class="nav-links-mobile-cta" style="display: none;">
+          <a href="contact.php" class="btn btn-primary" style="width:100%; text-align:center; justify-content:center;"><i class="fa-solid fa-paper-plane"></i> <?php echo __('nav_get_quote'); ?></a>
+        </li>
       </ul>
 
       <div class="header-actions">

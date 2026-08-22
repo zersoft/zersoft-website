@@ -64,12 +64,49 @@ function initMobileNav() {
   const navLinks = document.querySelector('.nav-links');
 
   if (toggleBtn && navLinks) {
-    toggleBtn.addEventListener('click', () => {
-      navLinks.classList.toggle('active');
+    function closeNav() {
+      navLinks.classList.remove('active');
+      document.body.style.overflow = '';
       const icon = toggleBtn.querySelector('i');
       if (icon) {
-        icon.classList.toggle('fa-bars');
-        icon.classList.toggle('fa-xmark');
+        icon.classList.add('fa-bars');
+        icon.classList.remove('fa-xmark');
+      }
+    }
+
+    function toggleNav() {
+      const isActive = navLinks.classList.toggle('active');
+      document.body.style.overflow = isActive ? 'hidden' : '';
+      const icon = toggleBtn.querySelector('i');
+      if (icon) {
+        if (isActive) {
+          icon.classList.remove('fa-bars');
+          icon.classList.add('fa-xmark');
+        } else {
+          icon.classList.add('fa-bars');
+          icon.classList.remove('fa-xmark');
+        }
+      }
+    }
+
+    toggleBtn.addEventListener('click', toggleNav);
+
+    // Close when clicking any nav link
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', closeNav);
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && navLinks.classList.contains('active')) {
+        closeNav();
+      }
+    });
+
+    // Reset on window resize to desktop
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 1040 && navLinks.classList.contains('active')) {
+        closeNav();
       }
     });
   }
