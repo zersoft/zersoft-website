@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 210 297" width="210mm" height="297mm" role="img" aria-label="Zersoft Kartvizit A4 Açık Minimalist ÖN YÜZ Baskı Dizilimi">
+  <defs>
+    <!-- Paper Sheet Shadow -->
+    <filter id="sheetShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="1" stdDeviation="0.5" flood-opacity="0.2"/>
+    </filter>
+
+    <!-- Source Card Defs -->
+    <linearGradient id="stream1W" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.4"/>
+      <stop offset="80%" stop-color="#22d3ee" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="stream2W" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.5"/>
+      <stop offset="80%" stop-color="#0ea5e9" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#0ea5e9" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="stream3W" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.35"/>
+      <stop offset="80%" stop-color="#6366f1" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="cyanLineW" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0ea5e9"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Single Business Card Symbol (85 × 55 mm scaled from 1050 × 600 px) -->
+    <g id="card_white_front">
+      <g transform="scale(0.08095238, 0.09166667)">
+        <!-- Clean Premium White Background -->
+  <rect width="1050" height="600" fill="#ffffff"/>
+  
+  <!-- Subtle gradient glow at bottom right -->
+  <circle cx="950" cy="500" r="300" fill="#0ea5e9" opacity="0.04"/>
+
+  <!-- Border Frame -->
+  <rect x="24" y="24" width="1002" height="552" rx="16" fill="none" stroke="#e2e8f0" stroke-width="1.5"/>
+
+  <!-- NFC Contactless Icon -->
+  <g transform="translate(940, 50)" opacity="0.3" stroke="#0ea5e9" stroke-width="2" fill="none">
+    <path d="M 0,28 A 20,20 0 0,1 20,8"/>
+    <path d="M 0,20 A 13,13 0 0,1 13,7"/>
+    <path d="M 0,12 A 6,6 0 0,1 6,6"/>
+  </g>
+
+  <!-- Main Centered Brand Block -->
+  <g transform="translate(235, 205)">
+    <!-- Convergence Mark Large -->
+    <g transform="translate(0, 5) scale(2.6)">
+      <polygon points="0,5  3,11  44,33  44,31" fill="url(#stream1W)"/>
+      <polygon points="0,29  0,35  44,33  44,31" fill="url(#stream2W)"/>
+      <polygon points="0,53  3,59  44,33  44,31" fill="url(#stream3W)"/>
+      <circle cx="44" cy="32" r="3.6" fill="#0ea5e9"/>
+      <circle cx="44" cy="32" r="1.5" fill="#ffffff"/>
+    </g>
+
+    <!-- Wordmark -->
+    <g transform="translate(150, 20)">
+      <text
+        x="0" y="80"
+        font-family="'Plus Jakarta Sans','Inter',system-ui,sans-serif"
+        font-size="70" font-weight="800"
+        letter-spacing="4"
+        textLength="420"
+        lengthAdjust="spacing"
+      ><tspan fill="#0f172a">ZER</tspan><tspan fill="#0ea5e9">SOFT</tspan></text>
+
+      <text
+        x="0" y="122"
+        font-family="'Plus Jakarta Sans','Inter',system-ui,sans-serif"
+        font-size="20.5" font-weight="600"
+        letter-spacing="2.2"
+        textLength="420"
+        lengthAdjust="spacing"
+        fill="#64748b"
+      >YENİ NESİL TEKNOLOJİ</text>
+    </g>
+  </g>
+
+  <!-- Bottom Accent Ribbon / Web URL -->
+  <g transform="translate(525, 520)" text-anchor="middle">
+    <text font-family="'Plus Jakarta Sans','Inter',sans-serif" font-size="14" font-weight="700" letter-spacing="4" fill="#0ea5e9">WWW.ZERSOFT.NET</text>
+  </g>
+      </g>
+    </g>
+  </defs>
+
+  <!-- Sheet Background -->
+  <rect width="210" height="297" fill="#f8fafc"/>
+
+  <!-- Top Sheet Metadata Header -->
+  <g transform="translate(105.00, 7.00)" text-anchor="middle">
+    <text font-family="'Plus Jakarta Sans','Inter',sans-serif" font-size="3.2" font-weight="800" fill="#0284c7" letter-spacing="0.3">
+      ZERSOFT TEKNOLOJİ &bull; KARTVİZİT BASKI DİZİLİMİ (A4 / 300 DPI) &bull; AÇIK MINIMALIST &bull; ÖN YÜZ
+    </text>
+    <text y="3.8" font-family="'Plus Jakarta Sans','Inter',sans-serif" font-size="2.1" font-weight="600" fill="#64748b" letter-spacing="0.1">
+      Ebat: 85 × 55 mm &bull; Adet: 10 Kart / Sayfa &bull; Çift Yönlü Baskıda 1:1 Simetrik Çakışma Garantili
+    </text>
+  </g>
+
+  <!-- Crop Marks (Kesim Kılavuzları) -->
+  <g id="cropMarks">
+    <line x1="20.00" y1="6.00" x2="20.00" y2="10.00" stroke="#0f172a" stroke-width="0.2"/>
+    <line x1="20.00" y1="287.00" x2="20.00" y2="291.00" stroke="#0f172a" stroke-width="0.2"/>
+    <line x1="105.00" y1="6.00" x2="105.00" y2="10.00" stroke="#0f172a" stroke-width="0.2"/>
+    <line x1="105.00" y1="287.00" x2="105.00" y2="291.00" stroke="#0f172a" stroke-width="0.2"/>
+    <line x1="190.00" y1="6.00" x2="190.00" y2="10.00" stroke="#0f172a" stroke-width="0.2"/>
+    <line x1="190.00" y1="287.00" x2="190.00" y2="291.00" stroke="#0f172a" stroke-width="0.2"/>
+    <line x1="15.00" y1="11.00" x2="19.00" y2="11.00" stroke="#0f172a" stroke-width="0.2"/>
+    <line x1="191.00" y1="11.00" x2="195.00" stroke="#0f172a" stroke-width="0.2"/>
+    <line x1="15.00" y1="66.00" x2="19.00" y2="66.00" stroke="#0f172a" stroke-width="0.2"/>
+    <line x1="191.00" y1="66.00" x2="195.00" stroke="#0f172a" stroke-width="0.2"/>
+    <line x1="15.00" y1="121.00" x2="19.00" y2="121.00" stroke="#0f172a" stroke-width="0.2"/>
+    <line x1="191.00" y1="121.00" x2="195.00" stroke="#0f172a" stroke-width="0.2"/>
+    <line x1="15.00" y1="176.00" x2="19.00" y2="176.00" stroke="#0f172a" stroke-width="0.2"/>
+    <line x1="191.00" y1="176.00" x2="195.00" stroke="#0f172a" stroke-width="0.2"/>
+    <line x1="15.00" y1="231.00" x2="19.00" y2="231.00" stroke="#0f172a" stroke-width="0.2"/>
+    <line x1="191.00" y1="231.00" x2="195.00" stroke="#0f172a" stroke-width="0.2"/>
+    <line x1="15.00" y1="286.00" x2="19.00" y2="286.00" stroke="#0f172a" stroke-width="0.2"/>
+    <line x1="191.00" y1="286.00" x2="195.00" stroke="#0f172a" stroke-width="0.2"/>
+  </g>
+
+  <!-- Cards Grid Layer -->
+  <g id="cardsGrid">
+    <use href="#card_white_front" x="20.00" y="11.00" />
+    <use href="#card_white_front" x="105.00" y="11.00" />
+    <use href="#card_white_front" x="20.00" y="66.00" />
+    <use href="#card_white_front" x="105.00" y="66.00" />
+    <use href="#card_white_front" x="20.00" y="121.00" />
+    <use href="#card_white_front" x="105.00" y="121.00" />
+    <use href="#card_white_front" x="20.00" y="176.00" />
+    <use href="#card_white_front" x="105.00" y="176.00" />
+    <use href="#card_white_front" x="20.00" y="231.00" />
+    <use href="#card_white_front" x="105.00" y="231.00" />
+  </g>
+
+  <!-- Bottom Registration & Info Bar -->
+  <g transform="translate(105.00, 292.50)" text-anchor="middle">
+    <text font-family="'Plus Jakarta Sans','Inter',sans-serif" font-size="2.1" font-weight="600" fill="#64748b" letter-spacing="0.2">
+      &copy; Zersoft Teknoloji &bull; Ramazan Tuncer (+90 555 587 93 70) &bull; Bursa, Türkiye &bull; www.zersoft.net
+    </text>
+  </g>
+</svg>

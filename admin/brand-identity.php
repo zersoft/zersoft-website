@@ -784,6 +784,87 @@ require_once __DIR__ . '/header.php';
     </div>
   </div>
 
+  <!-- ========================================================================= -->
+  <!-- BASKIYA HAZIR TABAKA DİZİLİMLERİ (A4 / A3 ARKALI ÖNLÜ MONTAJ)             -->
+  <!-- ========================================================================= -->
+  <div class="card-panel" style="margin-bottom: 28px;">
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-bottom: 16px;">
+      <div>
+        <div style="display: inline-block; font-size: 0.75rem; font-weight: 700; color: #38bdf8; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 4px;">
+          <i class="fa-solid fa-layer-group"></i> MATBAA &amp; DİJİTAL BASKI MONTAJI
+        </div>
+        <h2 style="font-size: 1.5rem; font-weight: 800; color: #fff;">
+          Baskıya Hazır Tabaka Dizilimleri (A4 &amp; A3)
+        </h2>
+        <p style="color: var(--admin-text-muted); font-size: 0.9rem;">
+          Arkalı önlü çift taraflı baskı için 1:1 simetrik hizalamalı, kesim kılavuzlu (crop marks) 300 DPI montaj sayfaları.
+        </p>
+      </div>
+
+      <!-- Controls: Paper, Theme, Face -->
+      <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+        <!-- Paper Size -->
+        <div style="display: flex; background: rgba(0,0,0,0.3); padding: 4px; border-radius: 8px; border: 1px solid var(--admin-border);">
+          <button id="impositionA4Btn" onclick="setImpositionPaper('A4')" class="btn-asset btn-asset-primary" style="padding: 6px 12px; font-size: 0.8rem;">
+            A4 (10 Kart)
+          </button>
+          <button id="impositionA3Btn" onclick="setImpositionPaper('A3')" class="btn-asset btn-asset-secondary" style="padding: 6px 12px; font-size: 0.8rem;">
+            A3 (21 Kart)
+          </button>
+        </div>
+
+        <!-- Theme -->
+        <div style="display: flex; background: rgba(0,0,0,0.3); padding: 4px; border-radius: 8px; border: 1px solid var(--admin-border);">
+          <button id="impositionDarkBtn" onclick="setImpositionTheme('dark')" class="btn-asset btn-asset-primary" style="padding: 6px 12px; font-size: 0.8rem;">
+            Koyu Mat
+          </button>
+          <button id="impositionWhiteBtn" onclick="setImpositionTheme('white')" class="btn-asset btn-asset-secondary" style="padding: 6px 12px; font-size: 0.8rem;">
+            Beyaz Minimal
+          </button>
+        </div>
+
+        <!-- Face -->
+        <div style="display: flex; background: rgba(0,0,0,0.3); padding: 4px; border-radius: 8px; border: 1px solid var(--admin-border);">
+          <button id="impositionFrontBtn" onclick="setImpositionFace('front')" class="btn-asset btn-asset-primary" style="padding: 6px 12px; font-size: 0.8rem;">
+            Ön Yüz
+          </button>
+          <button id="impositionBackBtn" onclick="setImpositionFace('back')" class="btn-asset btn-asset-secondary" style="padding: 6px 12px; font-size: 0.8rem;">
+            Arka Yüz (QR)
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Live Imposition Sheet Preview Stage -->
+    <div style="display: flex; justify-content: center; background: #03060a; padding: 24px; border-radius: 12px; border: 1px solid var(--admin-border); margin-bottom: 20px; overflow-x: auto;">
+      <div style="box-shadow: 0 20px 50px rgba(0,0,0,0.8); border-radius: 4px; overflow: hidden; background: #fff; max-width: 100%;">
+        <img id="impositionPreviewImg" src="../assets/images/brand/print/print-a4-dark-front.svg" alt="Baskı Montaj Önizleme" style="max-height: 520px; width: auto; display: block;">
+      </div>
+    </div>
+
+    <!-- Imposition Actions -->
+    <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 12px;">
+      <button onclick="printCurrentImposition()" class="btn-admin-primary" style="padding: 10px 24px; font-size: 0.9rem;">
+        <i class="fa-solid fa-print"></i> Doğrudan Yazdır / PDF Kaydet (Print)
+      </button>
+      <button onclick="downloadCurrentImpositionPng()" class="btn-asset btn-asset-secondary" style="padding: 10px 18px;">
+        <i class="fa-solid fa-download"></i> Tabaka PNG (300 DPI)
+      </button>
+      <button onclick="downloadCurrentImpositionSvg()" class="btn-asset btn-asset-secondary" style="padding: 10px 18px;">
+        <i class="fa-solid fa-vector-square"></i> Tabaka Vektör SVG
+      </button>
+      <a id="impositionDirectLink" href="../assets/images/brand/print/print-a4-dark-front.svg" target="_blank" class="btn-asset btn-asset-secondary" style="padding: 10px 18px;">
+        <i class="fa-solid fa-arrow-up-right-from-square"></i> Yeni Sekmede Aç
+      </a>
+    </div>
+
+    <!-- Duplex Printing Info Note -->
+    <div style="margin-top: 18px; padding: 14px 18px; background: rgba(255,255,255,0.03); border: 1px dashed rgba(255,255,255,0.12); border-radius: 8px; font-size: 0.82rem; color: var(--admin-text-muted); line-height: 1.6;">
+      <strong style="color: #fff;"><i class="fa-solid fa-circle-info text-gradient"></i> Çift Taraflı (Arkalı Önlü) Baskı İpucu:</strong>
+      Yazıcınızdan veya matbaa dijital baskı makinesinden çıktı alırken çift taraflı (Duplex) ayarını <strong>"Uzun Kenardan Çevir (Flip on Long Edge)"</strong> olarak seçiniz. Sayfa kenar boşlukları matematiksel olarak 1:1 simetrik tasarlandığı için ön ve arka yüzdeki kartlar ve kesim çizgileri arkalı önlü kusursuz çakışacaktır.
+    </div>
+  </div>
+
   <!-- Letterhead & Email Signature Row -->
   <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 24px;">
     
@@ -1087,6 +1168,131 @@ function downloadCurrentCardSvg(face) {
   a.click();
   document.body.removeChild(a);
   showToast(`${face === 'front' ? 'Ön' : 'Arka'} SVG İndirildi!`);
+}
+
+// ==========================================
+// Imposition Sheet Management (A4 & A3)
+// ==========================================
+let impositionState = {
+  paper: 'A4',   // 'A4' | 'A3'
+  theme: 'dark', // 'dark' | 'white'
+  face: 'front'  // 'front' | 'back'
+};
+
+function getImpositionFilename() {
+  const p = impositionState.paper.toLowerCase();
+  const t = impositionState.theme;
+  const f = impositionState.face;
+  return `print-${p}-${t}-${f}.svg`;
+}
+
+function updateImpositionView() {
+  const filename = getImpositionFilename();
+  const path = `../assets/images/brand/print/${filename}`;
+  const img = document.getElementById('impositionPreviewImg');
+  const directLink = document.getElementById('impositionDirectLink');
+  
+  if (img) img.src = path;
+  if (directLink) directLink.href = path;
+
+  // Update button active classes
+  // Paper buttons
+  document.getElementById('impositionA4Btn').className = (impositionState.paper === 'A4') ? 'btn-asset btn-asset-primary' : 'btn-asset btn-asset-secondary';
+  document.getElementById('impositionA3Btn').className = (impositionState.paper === 'A3') ? 'btn-asset btn-asset-primary' : 'btn-asset btn-asset-secondary';
+  
+  // Theme buttons
+  document.getElementById('impositionDarkBtn').className = (impositionState.theme === 'dark') ? 'btn-asset btn-asset-primary' : 'btn-asset btn-asset-secondary';
+  document.getElementById('impositionWhiteBtn').className = (impositionState.theme === 'white') ? 'btn-asset btn-asset-primary' : 'btn-asset btn-asset-secondary';
+  
+  // Face buttons
+  document.getElementById('impositionFrontBtn').className = (impositionState.face === 'front') ? 'btn-asset btn-asset-primary' : 'btn-asset btn-asset-secondary';
+  document.getElementById('impositionBackBtn').className = (impositionState.face === 'back') ? 'btn-asset btn-asset-primary' : 'btn-asset btn-asset-secondary';
+}
+
+function setImpositionPaper(paper) {
+  impositionState.paper = paper;
+  updateImpositionView();
+  showToast(`${paper} Tabaka Seçildi (${paper === 'A4' ? '10 Kart' : '21 Kart'})`);
+}
+
+function setImpositionTheme(theme) {
+  impositionState.theme = theme;
+  updateImpositionView();
+  showToast(theme === 'dark' ? 'Koyu Lüks Mat Tabaka Seçildi' : 'Beyaz Minimalist Tabaka Seçildi');
+}
+
+function setImpositionFace(face) {
+  impositionState.face = face;
+  updateImpositionView();
+  showToast(face === 'front' ? 'Ön Yüz Tabakası Seçildi' : 'Arka Yüz (QR) Tabakası Seçildi');
+}
+
+function downloadCurrentImpositionPng() {
+  const filename = getImpositionFilename();
+  const path = `../assets/images/brand/print/${filename}`;
+  const outName = `zersoft-tabaka-${impositionState.paper}-${impositionState.theme}-${impositionState.face}-300dpi.png`;
+  
+  // A4 @ 300 DPI: 2480 x 3508 | A3 @ 300 DPI: 3508 x 4960
+  const w = (impositionState.paper === 'A4') ? 2480 : 3508;
+  const h = (impositionState.paper === 'A4') ? 3508 : 4960;
+  
+  downloadSvgAsPng(path, outName, w, h);
+}
+
+function downloadCurrentImpositionSvg() {
+  const filename = getImpositionFilename();
+  const path = `../assets/images/brand/print/${filename}`;
+  
+  const a = document.createElement('a');
+  a.href = path;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  showToast('Tabaka SVG İndirildi!');
+}
+
+function printCurrentImposition() {
+  const filename = getImpositionFilename();
+  const path = `../assets/images/brand/print/${filename}`;
+  const paper = impositionState.paper;
+
+  const printWindow = window.open('', '_blank');
+  printWindow.document.write(`
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <title>Zersoft Kartvizit ${paper} Baskı Montajı</title>
+      <style>
+        @page {
+          size: ${paper};
+          margin: 0;
+        }
+        body {
+          margin: 0;
+          padding: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: #ffffff;
+        }
+        img {
+          width: 100vw;
+          height: 100vh;
+          object-fit: contain;
+          display: block;
+        }
+        @media print {
+          body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+        }
+      </style>
+    </head>
+    <body>
+      <img src="${path}" onload="window.print();">
+    </body>
+    </html>
+  `);
+  printWindow.document.close();
 }
 
 // Toast notification helper

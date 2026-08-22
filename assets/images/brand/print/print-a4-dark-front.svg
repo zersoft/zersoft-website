@@ -1,0 +1,172 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 210 297" width="210mm" height="297mm" role="img" aria-label="Zersoft Kartvizit A4 Koyu Lüks Mat ÖN YÜZ Baskı Dizilimi">
+  <defs>
+    <!-- Paper Sheet Shadow -->
+    <filter id="sheetShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="1" stdDeviation="0.5" flood-opacity="0.2"/>
+    </filter>
+
+    <!-- Source Card Defs -->
+    <!-- Background Gradient -->
+    <radialGradient id="bcDarkBg" cx="30%" cy="40%" r="80%">
+      <stop offset="0%" stop-color="#0e172a"/>
+      <stop offset="60%" stop-color="#070c15"/>
+      <stop offset="100%" stop-color="#03060a"/>
+    </radialGradient>
+
+    <!-- Holographic Foil Gradient -->
+    <linearGradient id="foilGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="35%" stop-color="#38bdf8"/>
+      <stop offset="70%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#0ea5e9"/>
+    </linearGradient>
+
+    <linearGradient id="stream1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.4"/>
+      <stop offset="80%" stop-color="#22d3ee" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#22d3ee" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="stream2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0ea5e9" stop-opacity="0.5"/>
+      <stop offset="80%" stop-color="#0ea5e9" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#0ea5e9" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="stream3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.35"/>
+      <stop offset="80%" stop-color="#6366f1" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Grid Pattern -->
+    <pattern id="microGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(255,255,255,0.02)" stroke-width="1"/>
+    </pattern>
+
+    <filter id="bcGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Single Business Card Symbol (85 × 55 mm scaled from 1050 × 600 px) -->
+    <g id="card_dark_front">
+      <g transform="scale(0.08095238, 0.09166667)">
+        <!-- Card Background -->
+  <rect width="1050" height="600" fill="url(#bcDarkBg)"/>
+  <rect width="1050" height="600" fill="url(#microGrid)"/>
+
+  <!-- Subtle ambient glow in center left -->
+  <circle cx="350" cy="300" r="280" fill="#0ea5e9" opacity="0.08" filter="blur(60px)"/>
+  <circle cx="700" cy="300" r="220" fill="#6366f1" opacity="0.06" filter="blur(50px)"/>
+
+  <!-- Luxury Card Border Frame -->
+  <rect x="24" y="24" width="1002" height="552" rx="16" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1.5"/>
+  <rect x="24" y="24" width="1002" height="552" rx="16" fill="none" stroke="url(#foilGrad)" stroke-width="1.5" stroke-opacity="0.4" stroke-dasharray="160 300 200 400"/>
+
+  <!-- Top Right NFC Contactless Chip Icon -->
+  <g transform="translate(940, 50)" opacity="0.4" stroke="#94a3b8" stroke-width="2" fill="none">
+    <path d="M 0,28 A 20,20 0 0,1 20,8"/>
+    <path d="M 0,20 A 13,13 0 0,1 13,7"/>
+    <path d="M 0,12 A 6,6 0 0,1 6,6"/>
+  </g>
+
+  <!-- Main Centered Brand Block -->
+  <g transform="translate(235, 205)">
+    <!-- Convergence Mark Large -->
+    <g transform="translate(0, 5) scale(2.6)" filter="url(#bcGlow)">
+      <polygon points="0,5  3,11  44,33  44,31" fill="url(#stream1)"/>
+      <polygon points="0,29  0,35  44,33  44,31" fill="url(#stream2)"/>
+      <polygon points="0,53  3,59  44,33  44,31" fill="url(#stream3)"/>
+      <circle cx="44" cy="32" r="3.6" fill="#0ea5e9"/>
+      <circle cx="44" cy="32" r="1.5" fill="#ffffff"/>
+    </g>
+
+    <!-- Wordmark -->
+    <g transform="translate(150, 20)">
+      <text
+        x="0" y="80"
+        font-family="'Plus Jakarta Sans','Inter',system-ui,sans-serif"
+        font-size="70" font-weight="800"
+        letter-spacing="4"
+        textLength="420"
+        lengthAdjust="spacing"
+      ><tspan fill="#f0f9ff">ZER</tspan><tspan fill="#38bdf8">SOFT</tspan></text>
+
+      <text
+        x="0" y="122"
+        font-family="'Plus Jakarta Sans','Inter',system-ui,sans-serif"
+        font-size="20.5" font-weight="600"
+        letter-spacing="2.2"
+        textLength="420"
+        lengthAdjust="spacing"
+        fill="#94a3b8"
+      >YENİ NESİL TEKNOLOJİ</text>
+    </g>
+  </g>
+
+  <!-- Bottom Accent Ribbon / Web URL -->
+  <g transform="translate(525, 520)" text-anchor="middle">
+    <text font-family="'Plus Jakarta Sans','Inter',sans-serif" font-size="14" font-weight="600" letter-spacing="4" fill="#38bdf8" opacity="0.8">WWW.ZERSOFT.NET</text>
+  </g>
+      </g>
+    </g>
+  </defs>
+
+  <!-- Sheet Background -->
+  <rect width="210" height="297" fill="#060a12"/>
+
+  <!-- Top Sheet Metadata Header -->
+  <g transform="translate(105.00, 7.00)" text-anchor="middle">
+    <text font-family="'Plus Jakarta Sans','Inter',sans-serif" font-size="3.2" font-weight="800" fill="#38bdf8" letter-spacing="0.3">
+      ZERSOFT TEKNOLOJİ &bull; KARTVİZİT BASKI DİZİLİMİ (A4 / 300 DPI) &bull; KOYU LÜKS MAT &bull; ÖN YÜZ
+    </text>
+    <text y="3.8" font-family="'Plus Jakarta Sans','Inter',sans-serif" font-size="2.1" font-weight="600" fill="#94a3b8" letter-spacing="0.1">
+      Ebat: 85 × 55 mm &bull; Adet: 10 Kart / Sayfa &bull; Çift Yönlü Baskıda 1:1 Simetrik Çakışma Garantili
+    </text>
+  </g>
+
+  <!-- Crop Marks (Kesim Kılavuzları) -->
+  <g id="cropMarks">
+    <line x1="20.00" y1="6.00" x2="20.00" y2="10.00" stroke="#0ea5e9" stroke-width="0.2"/>
+    <line x1="20.00" y1="287.00" x2="20.00" y2="291.00" stroke="#0ea5e9" stroke-width="0.2"/>
+    <line x1="105.00" y1="6.00" x2="105.00" y2="10.00" stroke="#0ea5e9" stroke-width="0.2"/>
+    <line x1="105.00" y1="287.00" x2="105.00" y2="291.00" stroke="#0ea5e9" stroke-width="0.2"/>
+    <line x1="190.00" y1="6.00" x2="190.00" y2="10.00" stroke="#0ea5e9" stroke-width="0.2"/>
+    <line x1="190.00" y1="287.00" x2="190.00" y2="291.00" stroke="#0ea5e9" stroke-width="0.2"/>
+    <line x1="15.00" y1="11.00" x2="19.00" y2="11.00" stroke="#0ea5e9" stroke-width="0.2"/>
+    <line x1="191.00" y1="11.00" x2="195.00" stroke="#0ea5e9" stroke-width="0.2"/>
+    <line x1="15.00" y1="66.00" x2="19.00" y2="66.00" stroke="#0ea5e9" stroke-width="0.2"/>
+    <line x1="191.00" y1="66.00" x2="195.00" stroke="#0ea5e9" stroke-width="0.2"/>
+    <line x1="15.00" y1="121.00" x2="19.00" y2="121.00" stroke="#0ea5e9" stroke-width="0.2"/>
+    <line x1="191.00" y1="121.00" x2="195.00" stroke="#0ea5e9" stroke-width="0.2"/>
+    <line x1="15.00" y1="176.00" x2="19.00" y2="176.00" stroke="#0ea5e9" stroke-width="0.2"/>
+    <line x1="191.00" y1="176.00" x2="195.00" stroke="#0ea5e9" stroke-width="0.2"/>
+    <line x1="15.00" y1="231.00" x2="19.00" y2="231.00" stroke="#0ea5e9" stroke-width="0.2"/>
+    <line x1="191.00" y1="231.00" x2="195.00" stroke="#0ea5e9" stroke-width="0.2"/>
+    <line x1="15.00" y1="286.00" x2="19.00" y2="286.00" stroke="#0ea5e9" stroke-width="0.2"/>
+    <line x1="191.00" y1="286.00" x2="195.00" stroke="#0ea5e9" stroke-width="0.2"/>
+  </g>
+
+  <!-- Cards Grid Layer -->
+  <g id="cardsGrid">
+    <use href="#card_dark_front" x="20.00" y="11.00" />
+    <use href="#card_dark_front" x="105.00" y="11.00" />
+    <use href="#card_dark_front" x="20.00" y="66.00" />
+    <use href="#card_dark_front" x="105.00" y="66.00" />
+    <use href="#card_dark_front" x="20.00" y="121.00" />
+    <use href="#card_dark_front" x="105.00" y="121.00" />
+    <use href="#card_dark_front" x="20.00" y="176.00" />
+    <use href="#card_dark_front" x="105.00" y="176.00" />
+    <use href="#card_dark_front" x="20.00" y="231.00" />
+    <use href="#card_dark_front" x="105.00" y="231.00" />
+  </g>
+
+  <!-- Bottom Registration & Info Bar -->
+  <g transform="translate(105.00, 292.50)" text-anchor="middle">
+    <text font-family="'Plus Jakarta Sans','Inter',sans-serif" font-size="2.1" font-weight="600" fill="#94a3b8" letter-spacing="0.2">
+      &copy; Zersoft Teknoloji &bull; Ramazan Tuncer (+90 555 587 93 70) &bull; Bursa, Türkiye &bull; www.zersoft.net
+    </text>
+  </g>
+</svg>
